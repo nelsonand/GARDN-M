@@ -1,0 +1,23 @@
+Name,URL,How easy to get manually,Notes
+infogram_socialEquityCitiesRanking,https://infogram.com/social-equity-cities-ranking-1hkv2ne58kqn2x3,easy,
+nationalEquityAtlas,https://nationalequityatlas.org/getting-started,easy,data can be downloaded from here: https://nationalequityatlas.org/research/racial_equity_index/index#/?geoSectionName=State
+usNews_stateRankingsEquality,https://www.usnews.com/news/best-states/rankings/opportunity/equality,hard,python requests to usnews.com aren't working
+wallethub_statesRacialEquality,https://wallethub.com/edu/state-economies-with-most-racial-equality/75810,easy,
+wallethub_racialIntegration,https://wallethub.com/edu/states-with-the-most-and-least-racial-progress/18428,easy,
+wisevoter_mostDiverseStates,https://wisevoter.com/state-rankings/most-diverse-states/,easy,
+bloomberg_blackWomenMetros,https://www.bloomberg.com/news/articles/2020-01-09/the-best-and-worst-cities-for-black-women,hard,"couldn't find a link to the data, but maybe it could be parsed from the images?"
+georgetown_usaIndex,https://giwps.georgetown.edu/usa-index/,easy,
+geotgetown_usaIndex2,https://giwps.georgetown.edu/usa-index/,easy,
+usaNews_statesGenderEquality,https://www.usnews.com/news/best-states/articles/maryland-is-the-best-state-for-gender-equality,hard,python requests to usnews.com aren't working
+statusWomen_bestWorstStates,https://statusofwomendata.org/national-trends/best-worst-states/,easy,
+iwpr_reproductiveRights,https://iwpr.org/iwpr-issues/research-and-action-hub/status-of-women/iwpr-reproductive-rights-index-a-state-by-state-analysis-and-ranking/,easy,
+wallethub_womenEquity,https://wallethub.com/edu/best-and-worst-states-for-women-equality/5835,easy,
+hrc_stateEquityIndex,https://www.hrc.org/resources/state-equality-index#state-categories,hard,not sure what the best way to compare states is with this data
+move_lgbtqFamily,https://www.move.org/best-worst-states-start-lgbtq-family/,easy,
+map_equaliltyMaps,https://www.lgbtmap.org/equality-maps,easy,
+axios_lgbtq_equality,https://www.axios.com/2022/06/06/best-and-worst-states-for-lgbtq-equality,,couldn't find the actual data
+wallethub_citiesDisabilities,https://wallethub.com/edu/best-worst-cities-for-people-with-disabilities/7164,easy,
+benefitspro_citiesDisabilities,https://www.benefitspro.com/2022/10/12/the-most-and-least-accessible-u-s-cities-for-people-with-disabilities/,,couldn't get the link to the report to work
+ncaj_disabilityAccess,https://ncaj.org/state-rankings/justice-index/disability-access,easy,(download source data button)
+disabilityin_deiReport,https://disabilityin.org/2022-dei-report/,,don't see the state specific info
+,,,
