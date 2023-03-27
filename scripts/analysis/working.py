@@ -13,6 +13,68 @@ This is just a working script to start building up the GARDN-M calculation
 ## It has a few steps:
     
     
+    
+### THIS SHOULD BE SAVED SOMEWHERE ELSE ###    
+statename_to_abbr = {
+# States
+'Alabama': 'AL',
+'Montana': 'MT',
+'Alaska': 'AK',
+'Nebraska': 'NE',
+'Arizona': 'AZ',
+'Nevada': 'NV',
+'Arkansas': 'AR',
+'New Hampshire': 'NH',
+'California': 'CA',
+'New Jersey': 'NJ',
+'Colorado': 'CO',
+'New Mexico': 'NM',
+'Connecticut': 'CT',
+'New York': 'NY',
+'Delaware': 'DE',
+'North Carolina': 'NC',
+'Florida': 'FL',
+'North Dakota': 'ND',
+'Georgia': 'GA',
+'Ohio': 'OH',
+'Hawaii': 'HI',
+'Oklahoma': 'OK',
+'Idaho': 'ID',
+'Oregon': 'OR',
+'Illinois': 'IL',
+'Pennsylvania': 'PA',
+'Indiana': 'IN',
+'Rhode Island': 'RI',
+'Iowa': 'IA',
+'South Carolina': 'SC',
+'Kansas': 'KS',
+'South Dakota': 'SD',
+'Kentucky': 'KY',
+'Tennessee': 'TN',
+'Louisiana': 'LA',
+'Texas': 'TX',
+'Maine': 'ME',
+'Utah': 'UT',
+'Maryland': 'MD',
+'Vermont': 'VT',
+'Massachusetts': 'MA',
+'Virginia': 'VA',
+'Michigan': 'MI',
+'Washington': 'WA',
+'Minnesota': 'MN',
+'West Virginia': 'WV',
+'Mississippi': 'MS',
+'Wisconsin': 'WI',
+'Missouri': 'MO',
+'Wyoming': 'WY',
+
+# Other
+'District of Columbia': 'DC',
+'D.C.':'DC',
+'Puerto Rico': 'PR',
+}
+    
+    
 
 ## (1) Load all the data from GARDN-M/data/processed_data
 
@@ -36,10 +98,12 @@ data = {}
 datadir = './data/processed_data/'
 for source in sources:
     try:
-        data[source] = pd.read_csv(datadir+f'{source}.csv')#, index_col='State') # TODO: THIS DOES NOT WORK WITH CITIES YET
+        data[source] = pd.read_csv(datadir+f'{source}.csv')
+        data[source]['State'] = data[source]['State'].replace(statename_to_abbr) # change to abbeviations
     except FileNotFoundError:
         pass # TODO, this is noisy for now
         #print(f'WARNING: processed data for {source}.csv was not found... skipping!')    
+
 
 
 
@@ -49,6 +113,7 @@ for source in sources:
 def assign_CompScore(sdata):
     if 'Score' in sdata.keys():
         sdata['CompScore'] = sdata.Score / 10 # TODO: Assumes score in percents
+        # or should this be normalized to max/min score?  = sdata.Score / max(sdata.Score) * 10
     elif 'Rank' in sdata.keys():
         nNorm = len(sdata.Rank) # this should be the number of states... (50, 51?)
         if nNorm != 50:
@@ -67,9 +132,10 @@ def assign_M(sdata, source):
 for source, sdata in data.items():
     if 'City' not in sdata.keys():
         sdata['City'] = np.NaN
+    sdata.City = sdata.City.fillna('')
     sdata = assign_CompScore(sdata)
     sdata = assign_M(sdata, source)
-
+    
 
 
 # (3) Combine data arrats into final rankings
@@ -77,16 +143,25 @@ for source, sdata in data.items():
 # get all states and initialize rankings
 states = np.unique(np.concatenate([sdata.State.values for sdata in data.values()]))
 rankings = pd.DataFrame({'State':states}) 
-rankings['City'] = np.NaN # TODO: enable cities
+rankings['City'] = ''
+for sdata in data.values():
+    rankings = pd.concat([rankings, sdata])
+rankings = rankings.drop_duplicates(['State', 'City'])[['State', 'City']]
 rankings['M'] = np.NaN # initialize M column
 
 # combine individual metrics into rankings
 for source, sdata in data.items():
     rankings = pd.merge(rankings, sdata[['State', 'City', 'M']], on=['State', 'City'], how='left', suffixes=(None, f'_{source}'))
 
-# Sum and normalize M values
+# fill data from sets missing cities
+rankings.sort_values(by=['State', 'City'], inplace=True) # sort so that fillna(method='ffil')  is appropriate
+rankings = rankings.where(rankings['City']!='', rankings.fillna('tmp')) # fill no-city entries with placeholders
+rankings.fillna(method='ffill', inplace=True) # fill city-specific rows with no-city entries
+rankings.replace('tmp', np.nan, inplace=True) # replace no-city placeholders
+
+# sum and normalize M values
 Mi = [x for x in rankings.keys() if 'M_' in x]
 rankings['n'] = rankings[Mi].count(axis=1) # number of non null Mi entries
 rankings['M'] = rankings[Mi].sum(axis=1) / rankings['n'] # 1/n sum(Mi)
 
-print(rankings[['State','M', 'n']])
+print(rankings[['State', 'City', 'M', 'n']].sort_values('M', ascending=False))
