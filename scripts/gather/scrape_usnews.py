@@ -65,7 +65,7 @@ def get_all_state_data():
 
     results = []
 
-    results.append(['State', 'Equality Rank'])
+    results.append(['State', 'Rank'])
 
     # Loop through all 50 states and get their equality rank
     for i, state in enumerate(list_of_states):
@@ -77,7 +77,7 @@ def get_all_state_data():
 
     print()
 
-    write_array_to_csv(results, 'usnews_state_equality_rankings.csv')
+    write_array_to_csv(results, 'usNews_stateRankingsEquality.csv')
 
     return results
 
