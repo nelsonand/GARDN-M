@@ -10,7 +10,14 @@ This is just a working script to start building up the GARDN-M calculation
 
 ### Ok, so this is a working script to start figuring out how the calculation is going to work
 
-## It has a few steps:
+## It has a few steps: (TODO, explain)
+
+
+## (0) Define run parameters
+
+verbose = False # some extra print statements for debugging
+noramlizeAll = True # normalize results from every source to span the full 0-10 scale
+filename = 'gardnm_test' # where to save the results of this run
     
     
     
@@ -79,11 +86,6 @@ statename_to_abbr = {
 'Guam': 'GU'
 }
 
-
-
-verbose = False
-
-
 ## (1) Load all the data from GARDN-M/data/processed_data
 
 import git # requires gitpython module
@@ -119,11 +121,10 @@ for source in sources:
 
 ## (2) Normalize and process all availible data
 
-# Assign normalized composite scores 
+# Assign composite scores 
 def assign_CompScore(sdata, source):
     if 'Score' in sdata.keys():
         sdata['CompScore'] = sdata.Score / 10 # TODO: Assumes score in percents
-        # or should this be normalized to max/min score?  = sdata.Score / max(sdata.Score) * 10
     elif 'Rank' in sdata.keys():
         nNorm = len(sdata.Rank) # this should be the number of states... (50, 51?)
         if source == 'statusWomen_bestWorstStates':
@@ -138,6 +139,13 @@ def assign_CompScore(sdata, source):
         print(f' ---   WARNING: unclear interpretation of CompScore for {source}... this will break!') 
     return sdata
 
+# Normalized composite scores 
+def nornalize_CompScore(sdata):
+    minScore = min(sdata['CompScore'])
+    maxScore = max(sdata['CompScore'])
+    sdata['CompScore'] = (sdata['CompScore']-minScore) / (maxScore-minScore) * 10
+    return sdata
+
 # Assign individual measures, requires CompScore entry
 def assign_M(sdata, source): 
     PSW = np.prod(source_ratings[source]) # P * S * W
@@ -150,6 +158,8 @@ for source, sdata in data.items():
         sdata['City'] = np.NaN
     sdata.City = sdata.City.fillna('')
     sdata = assign_CompScore(sdata, source)
+    if noramlizeAll:
+        sdata = nornalize_CompScore(sdata)
     sdata = assign_M(sdata, source)
 
 # (3) Combine data arrats into final rankings
@@ -178,4 +188,8 @@ Mi = [x for x in rankings.keys() if 'M_' in x]
 rankings['n'] = rankings[Mi].count(axis=1) # number of non null Mi entries
 rankings['M'] = rankings[Mi].sum(axis=1) / rankings['n'] # 1/n sum(Mi)
 
-print(rankings[['State', 'City', 'M', 'n']].sort_values('M', ascending=False))
+print(rankings[['State', 'City', 'M', 'n']].sort_values('City', ascending=False))#.to_string())
+
+# (4) Save the output
+
+rankings.to_csv(f'data/outputs/{filename}.csv')
