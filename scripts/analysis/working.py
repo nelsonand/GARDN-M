@@ -19,80 +19,18 @@ verbose = False # some extra print statements for debugging
 noramlizeAll = True # normalize results from every source to span the full 0-10 scale
 filename = 'gardnm_test' # where to save the results of this run
     
-    
-    
-### THIS SHOULD BE SAVED SOMEWHERE ELSE ###    
-statename_to_abbr = {
-# States
-'Alabama': 'AL',
-'Montana': 'MT',
-'Alaska': 'AK',
-'Nebraska': 'NE',
-'Arizona': 'AZ',
-'Nevada': 'NV',
-'Arkansas': 'AR',
-'New Hampshire': 'NH',
-'California': 'CA',
-'New Jersey': 'NJ',
-'Colorado': 'CO',
-'New Mexico': 'NM',
-'Connecticut': 'CT',
-'New York': 'NY',
-'Delaware': 'DE',
-'North Carolina': 'NC',
-'Florida': 'FL',
-'North Dakota': 'ND',
-'Georgia': 'GA',
-'Ohio': 'OH',
-'Hawaii': 'HI',
-'Oklahoma': 'OK',
-'Idaho': 'ID',
-'Oregon': 'OR',
-'Illinois': 'IL',
-'Pennsylvania': 'PA',
-'Indiana': 'IN',
-'Rhode Island': 'RI',
-'Iowa': 'IA',
-'South Carolina': 'SC',
-'Kansas': 'KS',
-'South Dakota': 'SD',
-'Kentucky': 'KY',
-'Tennessee': 'TN',
-'Louisiana': 'LA',
-'Texas': 'TX',
-'Maine': 'ME',
-'Utah': 'UT',
-'Maryland': 'MD',
-'Vermont': 'VT',
-'Massachusetts': 'MA',
-'Virginia': 'VA',
-'Michigan': 'MI',
-'Washington': 'WA',
-'Minnesota': 'MN',
-'West Virginia': 'WV',
-'Mississippi': 'MS',
-'Wisconsin': 'WI',
-'Missouri': 'MO',
-'Wyoming': 'WY',
-
-# Other
-'District of Columbia': 'DC',
-'D.C.':'DC',
-'Puerto Rico': 'PR',
-'Washington, D.C.': 'DC',
-'American Samoa': 'AS',
-'Northern Mariana Islands': 'NMI',
-'U.S. Virgin Islands': 'USVI',
-'Guam': 'GU'
-}
-
-## (1) Load all the data from GARDN-M/data/processed_data
-
 import git # requires gitpython module
 import pandas as pd
 import os
 import json
 import numpy as np
+    
+with open('./data/utils/statename_to_abbr.json', 'r') as f:
+    statename_to_abbr = json.load(f)
+
+
+
+## (1) Load all the data from GARDN-M/data/processed_data
 
 # establish relative directories
 repo = git.Repo('.', search_parent_directories=True)
@@ -101,6 +39,7 @@ os.chdir(repo.working_tree_dir)
 # get source data
 with open('./data/sources/source_ratings.json', 'r') as f:
     source_ratings = json.load(f)
+
 sources = source_ratings.keys()
 
 # get processed data
@@ -114,8 +53,7 @@ for source in sources:
         data[source]['State'] = data[source]['State'].replace(statename_to_abbr) # change to abbeviations
     except FileNotFoundError:
         #pass # TODO, this is noisy for now
-        print(f'   ---   WARNING: processed data for {source}.csv was not found... skipping!')    
-
+        print(f' ---   WARNING: processed data for {source}.csv was not found... skipping!')    
 
 
 
@@ -130,7 +68,7 @@ def assign_CompScore(sdata, source):
         if source == 'statusWomen_bestWorstStates':
             nNorm = 50 # we know this dataset is incomplete, and expect it to be, but nNorm is still 50
         if nNorm != 50:
-            print(f'WARNING: nNorm for {source} was {nNorm}...')
+            print(f' ---   WARNING: nNorm for {source} was {nNorm}...')
         compscore = (nNorm-(sdata.Rank-1)) / (nNorm/10) # normalized ranking (0-10)
         sdata['CompScore'] = compscore
     elif 'Processed' in sdata.keys():
@@ -162,6 +100,8 @@ for source, sdata in data.items():
         sdata = nornalize_CompScore(sdata)
     sdata = assign_M(sdata, source)
 
+
+
 # (3) Combine data arrats into final rankings
 
 # get all states and initialize rankings
@@ -189,6 +129,8 @@ rankings['n'] = rankings[Mi].count(axis=1) # number of non null Mi entries
 rankings['M'] = rankings[Mi].sum(axis=1) / rankings['n'] # 1/n sum(Mi)
 
 print(rankings[['State', 'City', 'M', 'n']].sort_values('City', ascending=False))#.to_string())
+
+
 
 # (4) Save the output
 
