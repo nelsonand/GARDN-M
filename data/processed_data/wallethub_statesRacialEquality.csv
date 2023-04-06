@@ -1,52 +1,52 @@
-State,City,Score
-Alaska,,85.36
-New Mexico,,81.29
-Arizona,,78.55
-Hawaii,,78.38
-Texas,,76.3
-Washington,,76.17
-Florida,,75.06
-South Dakota,,74.33
-Kentucky,,74.32
-Colorado,,74.21
-Maryland,,72.64
-Montana,,72.52
-Delaware,,72.21
-Idaho,,72.16
-Virginia,,72.09
-Tennessee,,71.87
-Rhode Island,,71.4
-Oregon,,71.25
-North Carolina,,70.63
-Massachusetts,,69.62
-California,,69.48
-Maine,,69.41
-Missouri,,68.8
-West Virginia,,68.79
-New Hampshire,,68.43
-South Carolina,,68.18
-Georgia,,67.85
-Oklahoma,,67.28
-Nevada,,67.05
-Connecticut,,66.85
-Arkansas,,65.75
-Vermont,,65.69
-Kansas,,65.36
-Alabama,,65.33
-New Jersey,,65.21
-Utah,,65.01
-Wyoming,,63.32
-Indiana,,61.36
-Nebraska,,60.87
-Mississippi,,59.95
-New York,,59.71
-Pennsylvania,,59.02
-Ohio,,58.52
-North Dakota,,56.85
-Louisiana,,56.33
-Michigan,,55.68
-Minnesota,,53.87
-Iowa,,51.44
-Wisconsin,,47.46
-Illinois,,46.15
-District of Columbia,,15.25
+State,Score,Comp Score
+Alaska,85.36,8.54
+New Mexico,81.29,8.13
+Arizona,78.55,7.86
+Hawaii,78.38,7.84
+Texas,76.3,7.63
+Washington,76.17,7.62
+Florida,75.06,7.51
+South Dakota,74.33,7.43
+Kentucky,74.32,7.43
+Colorado,74.21,7.42
+Maryland,72.64,7.26
+Montana,72.52,7.25
+Delaware,72.21,7.22
+Idaho,72.16,7.22
+Virginia,72.09,7.21
+Tennessee,71.87,7.19
+Rhode Island,71.4,7.14
+Oregon,71.25,7.13
+North Carolina,70.63,7.06
+Massachusetts,69.62,6.96
+California,69.48,6.95
+Maine,69.41,6.94
+Missouri,68.8,6.88
+West Virginia,68.79,6.88
+New Hampshire,68.43,6.84
+South Carolina,68.18,6.82
+Georgia,67.85,6.79
+Oklahoma,67.28,6.73
+Nevada,67.05,6.71
+Connecticut,66.85,6.69
+Arkansas,65.75,6.58
+Vermont,65.69,6.57
+Kansas,65.36,6.54
+Alabama,65.33,6.53
+New Jersey,65.21,6.52
+Utah,65.01,6.50
+Wyoming,63.32,6.33
+Indiana,61.36,6.14
+Nebraska,60.87,6.09
+Mississippi,59.95,6.00
+New York,59.71,5.97
+Pennsylvania,59.02,5.90
+Ohio,58.52,5.85
+North Dakota,56.85,5.69
+Louisiana,56.33,5.63
+Michigan,55.68,5.57
+Minnesota,53.87,5.39
+Iowa,51.44,5.14
+Wisconsin,47.46,4.75
+Illinois,46.15,4.62
+District of Columbia,15.25,1.53

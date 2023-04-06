@@ -92,17 +92,18 @@ os.chdir(repo.working_tree_dir)
 with open('./data/sources/source_ratings.json', 'r') as f:
     source_ratings = json.load(f)
 sources = source_ratings.keys()
-    
+
 # get processed data
 data = {}
 datadir = './data/processed_data/'
 for source in sources:
+    print(f'Reading data from {source}...')
     try:
         data[source] = pd.read_csv(datadir+f'{source}.csv')
         data[source]['State'] = data[source]['State'].replace(statename_to_abbr) # change to abbeviations
     except FileNotFoundError:
-        pass # TODO, this is noisy for now
-        #print(f'WARNING: processed data for {source}.csv was not found... skipping!')    
+        #pass # TODO, this is noisy for now
+        print(f'   ---   WARNING: processed data for {source}.csv was not found... skipping!')    
 
 
 
@@ -110,16 +111,22 @@ for source in sources:
 ## (2) Normalize and process all availible data
 
 # Assign normalized composite scores 
-def assign_CompScore(sdata):
+def assign_CompScore(sdata, source):
     if 'Score' in sdata.keys():
         sdata['CompScore'] = sdata.Score / 10 # TODO: Assumes score in percents
         # or should this be normalized to max/min score?  = sdata.Score / max(sdata.Score) * 10
     elif 'Rank' in sdata.keys():
         nNorm = len(sdata.Rank) # this should be the number of states... (50, 51?)
+        if source == 'statusWomen_bestWorstStates':
+            nNorm = 50 # we know this dataset is incomplete, and expect it to be, but nNorm is still 50
         if nNorm != 50:
-            print(f'WARNING: nNorm = {nNorm}')
+            print(f'WARNING: nNorm for {source} was {nNorm}...')
         compscore = (nNorm-(sdata.Rank-1)) / (nNorm/10) # normalized ranking (0-10)
         sdata['CompScore'] = compscore
+    elif 'Processed' in sdata.keys():
+        sdata['CompScore'] = sdata.Processed
+    else:
+        print(f' ---   WARNING: unclear interpretation of CompScore for {source}... this will break!') 
     return sdata
 
 # Assign individual measures, requires CompScore entry
@@ -133,9 +140,10 @@ for source, sdata in data.items():
     if 'City' not in sdata.keys():
         sdata['City'] = np.NaN
     sdata.City = sdata.City.fillna('')
-    sdata = assign_CompScore(sdata)
+    sdata = assign_CompScore(sdata, source)
     sdata = assign_M(sdata, source)
     
+
 
 
 # (3) Combine data arrats into final rankings
