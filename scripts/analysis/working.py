@@ -72,9 +72,16 @@ statename_to_abbr = {
 'District of Columbia': 'DC',
 'D.C.':'DC',
 'Puerto Rico': 'PR',
+'Washington, D.C.': 'DC',
+'American Samoa': 'AS',
+'Northern Mariana Islands': 'NMI',
+'U.S. Virgin Islands': 'USVI'
 }
-    
-    
+
+
+
+verbose = False
+
 
 ## (1) Load all the data from GARDN-M/data/processed_data
 
@@ -97,7 +104,8 @@ sources = source_ratings.keys()
 data = {}
 datadir = './data/processed_data/'
 for source in sources:
-    print(f'Reading data from {source}...')
+    if verbose: 
+        print(f'Reading data from {source}...')
     try:
         data[source] = pd.read_csv(datadir+f'{source}.csv')
         data[source]['State'] = data[source]['State'].replace(statename_to_abbr) # change to abbeviations
@@ -140,6 +148,7 @@ for source, sdata in data.items():
     if 'City' not in sdata.keys():
         sdata['City'] = np.NaN
     sdata.City = sdata.City.fillna('')
+    if 'Boston' in sdata.State.values: print(source)
     sdata = assign_CompScore(sdata, source)
     sdata = assign_M(sdata, source)
     
@@ -147,6 +156,8 @@ for source, sdata in data.items():
 
 
 # (3) Combine data arrats into final rankings
+
+#print([sdata.State.values for sdata in data.values()])
 
 # get all states and initialize rankings
 states = np.unique(np.concatenate([sdata.State.values for sdata in data.values()]))
