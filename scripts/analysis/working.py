@@ -75,7 +75,8 @@ statename_to_abbr = {
 'Washington, D.C.': 'DC',
 'American Samoa': 'AS',
 'Northern Mariana Islands': 'NMI',
-'U.S. Virgin Islands': 'USVI'
+'U.S. Virgin Islands': 'USVI',
+'Guam': 'GU'
 }
 
 
@@ -148,16 +149,10 @@ for source, sdata in data.items():
     if 'City' not in sdata.keys():
         sdata['City'] = np.NaN
     sdata.City = sdata.City.fillna('')
-    if 'Boston' in sdata.State.values: print(source)
     sdata = assign_CompScore(sdata, source)
     sdata = assign_M(sdata, source)
-    
-
-
 
 # (3) Combine data arrats into final rankings
-
-#print([sdata.State.values for sdata in data.values()])
 
 # get all states and initialize rankings
 states = np.unique(np.concatenate([sdata.State.values for sdata in data.values()]))
