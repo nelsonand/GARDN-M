@@ -16,7 +16,7 @@ This is just a working script to start building up the GARDN-M calculation
 ## (0) Define run parameters
 
 verbose = False # some extra print statements for debugging
-noramlizeAll = True # normalize results from every source to span the full 0-10 scale
+noramlizeAll = False # normalize results from every source to span the full 0-10 scale
 filename = 'gardnm_test' # where to save the results of this run
     
 import git # requires gitpython module
@@ -128,10 +128,12 @@ Mi = [x for x in rankings.keys() if 'M_' in x]
 rankings['n'] = rankings[Mi].count(axis=1) # number of non null Mi entries
 rankings['M'] = rankings[Mi].sum(axis=1) / rankings['n'] # 1/n sum(Mi)
 
-print(rankings[['State', 'City', 'M', 'n']].sort_values('City', ascending=False))#.to_string())
+if verbose:
+    print(rankings[['State', 'City', 'M', 'n']].sort_values('City', ascending=False))#.to_string())
 
 
 
 # (4) Save the output
 
 rankings.to_csv(f'data/outputs/{filename}.csv')
+print(f'Data has been saved to data/outputs/{filename}.csv!')
