@@ -18,6 +18,7 @@ This is just a working script to start building up the GARDN-M calculation
 verbose = False # some extra print statements for debugging
 noramlizeAll = False # normalize results from every source to span the full 0-10 scale
 filename = 'gardnm_test' # where to save the results of this run
+setPbyCity = True # if True, uses P=5 for city data and P=4 for state data, regardless of the entry in source_ratings.json
     
 import git # requires gitpython module
 import pandas as pd
@@ -86,8 +87,12 @@ def nornalize_CompScore(sdata):
 
 # Assign individual measures, requires CompScore entry
 def assign_M(sdata, source): 
+    P = source_ratings[source][0]
     PSW = np.prod(source_ratings[source]) # P * S * W
     sdata['M'] = sdata['CompScore'] * PSW / 10 # out of 10
+    if setPbyCity: # adjust the P value to give stronger weighting to city-specific info
+        sdata['M'].where(sdata.City != '', sdata['M']/P*4, inplace=True)
+        sdata['M'].where(sdata.City == '', sdata['M']/P*5, inplace=True)
     return sdata
 
 # Run stanard analysis on each source
