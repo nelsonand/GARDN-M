@@ -1,0 +1,112 @@
+{
+      "infogram_socialEquityCitiesRanking": [
+            5,
+            1,
+            2
+      ],
+      "nationalEquityAtlas": [
+            4,
+            0.5,
+            2
+      ],
+      "usNews_stateRankingsEquality": [
+            4,
+            1,
+            2
+      ],
+      "wallethub_statesRacialEquality": [
+            4,
+            0.5,
+            1
+      ],
+      "wallethub_racialIntegration": [
+            4,
+            1,
+            2
+      ],
+      "wisevoter_mostDiverseStates": [
+            4,
+            1,
+            2
+      ],
+      "bloomberg_blackWomenMetros": [
+            5,
+            0.5,
+            2
+      ],
+      "georgetown_usaIndex": [
+            4,
+            1,
+            2
+      ],
+      "geotgetown_usaIndex2": [
+            5,
+            1,
+            2
+      ],
+      "usaNews_statesGenderEquality": [
+            4,
+            1,
+            2
+      ],
+      "statusWomen_bestWorstStates": [
+            4,
+            1,
+            2
+      ],
+      "iwpr_reproductiveRights": [
+            4,
+            1,
+            2
+      ],
+      "wallethub_womenEquity": [
+            4,
+            1,
+            2
+      ],
+      "hrc_stateEquityIndex": [
+            4,
+            1,
+            2
+      ],
+      "move_lgbtqFamily": [
+            4,
+            1,
+            2
+      ],
+      "map_equaliltyMaps": [
+            4,
+            1,
+            2
+      ],
+      "axios_lgbtq_equality": [
+            4,
+            1,
+            2
+      ],
+      "wallethub_citiesDisabilities": [
+            5,
+            1,
+            2
+      ],
+      "benefitspro_citiesDisabilities": [
+            5,
+            1,
+            2
+      ],
+      "ncaj_disabilityAccess": [
+            4,
+            1,
+            2
+      ],
+      "usNews_equalityRankings": [
+            4,
+            1,
+            2
+      ],
+      "disabilityin_deiReport": [
+            5,
+            1,
+            3
+      ]
+}
