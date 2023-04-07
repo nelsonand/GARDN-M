@@ -16,7 +16,7 @@ This is just a working script to start building up the GARDN-M calculation
 ## (0) Define run parameters
 
 verbose = False # some extra print statements for debugging
-noramlizeAll = False # normalize results from every source to span the full 0-10 scale
+noramlizeAll = True # normalize results from every source to span the full 0-10 scale
 filename = 'gardnm_test' # where to save the results of this run
 setPbyCity = True # if True, uses P=5 for city data and P=4 for state data, regardless of the entry in source_ratings.json
     
