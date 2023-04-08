@@ -18,7 +18,6 @@ cities_to_print = ['Atlanta', 'Boston', 'Memphis'] # print the output of a speci
 
 
 
-
 ## (0) Setup enviornment
 
 import git # requires gitpython module
@@ -59,6 +58,9 @@ for source in sources:
     except FileNotFoundError:
         #pass # TODO, this is noisy for now
         print(f' ---   WARNING: processed data for {source}.csv was not found... skipping!')    
+
+# redefine sources array for future use (now excludes missing files)
+sources = data.keys()
 
 
 
@@ -127,7 +129,13 @@ rankings['City'] = ''
 for sdata in data.values():
     rankings = pd.concat([rankings, sdata])
 rankings = rankings.drop_duplicates(['State', 'City'])[['State', 'City']]
-rankings['M'] = np.NaN # initialize M column
+
+# initialize results columns so that they appear in the beginning of the structure
+rankings['M'] = np.NaN 
+rankings['n'] = np.NaN 
+for stype in source_types.keys(): 
+    rankings[f'M_{stype}'] = np.NaN 
+    rankings[f'n_{stype}'] = np.NaN 
 
 # combine individual metrics into rankings
 for source, sdata in data.items():
@@ -144,7 +152,13 @@ Mi = [x for x in rankings.keys() if 'M_' in x]
 rankings['n'] = rankings[Mi].count(axis=1) # number of non null Mi entries
 rankings['M'] = rankings[Mi].sum(axis=1) / rankings['n'] # 1/n sum(Mi)
 
-# calculate M's for downselected groups
+# calculate individual M's for each source type
+for stype in source_types.keys():
+    tsources = [st for st in source_types[stype] if st in sources]
+    trankings = rankings[[f'M_{ts}' for ts in tsources]]
+    Mi = [x for x in trankings.keys() if 'M_' in x]
+    rankings[f'n_{stype}'] = trankings[Mi].count(axis=1) # number of non null Mi entries
+    rankings[f'M_{stype}'] = trankings[Mi].sum(axis=1) / rankings[f'n_{stype}'] # 1/n sum(Mi)
 
 if verbose:
     print(rankings[['State', 'City', 'M', 'n']].sort_values('City', ascending=False))#.to_string())
