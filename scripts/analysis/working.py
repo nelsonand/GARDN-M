@@ -16,6 +16,9 @@ filename = 'gardnm_test' # where to save the results of this run
 setPbyCity = True # if True, uses P=5 for city data and P=4 for state data, regardless of the entry in source_ratings.json
 cities_to_print = ['Atlanta', 'Boston', 'Memphis'] # print the output of a specific city to the console    
 
+
+
+
 ## (0) Setup enviornment
 
 import git # requires gitpython module
@@ -27,17 +30,22 @@ import numpy as np
 with open('./data/utils/statename_to_abbr.json', 'r') as f:
     statename_to_abbr = json.load(f)
 
+# get source data
+with open('./data/sources/source_ratings.json', 'r') as f:
+    source_ratings = json.load(f)
+
+with open('./data/sources/source_types.json', 'r') as f:
+    source_types = json.load(f)
+
+sources = source_ratings.keys()
+
+
+
 ## (1) Load all the data from GARDN-M/data/processed_data
 
 # establish relative directories
 repo = git.Repo('.', search_parent_directories=True)
 os.chdir(repo.working_tree_dir)
-
-# get source data
-with open('./data/sources/source_ratings.json', 'r') as f:
-    source_ratings = json.load(f)
-
-sources = source_ratings.keys()
 
 # get processed data
 data = {}

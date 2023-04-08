@@ -1,0 +1,32 @@
+{
+      "race": [
+            "infogram_socialEquityCitiesRanking",
+            "nationalEquityAtlas",
+            "usNews_stateRankingsEquality",
+            "wallethub_statesRacialEquality",
+            "wallethub_racialIntegration",
+            "wisevoter_mostDiverseStates"
+      ],
+      "gender": [
+            "bloomberg_blackWomenMetros",
+            "georgetown_usaIndex",
+            "geotgetown_usaIndex2",
+            "usaNews_statesGenderEquality",
+            "statusWomen_bestWorstStates",
+            "iwpr_reproductiveRights",
+            "wallethub_womenEquity"
+      ],
+      "sexual_orientation": [
+            "hrc_stateEquityIndex",
+            "move_lgbtqFamily",
+            "map_equaliltyMaps",
+            "axios_lgbtq_equality"
+      ],
+      "disabilities": [
+            "wallethub_citiesDisabilities",
+            "benefitspro_citiesDisabilities",
+            "ncaj_disabilityAccess",
+            "usNews_equalityRankings",
+            "disabilityin_deiReport"
+      ]
+}
