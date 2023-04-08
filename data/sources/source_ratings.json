@@ -6,7 +6,7 @@
       ],
       "nationalEquityAtlas": [
             4,
-            0.5,
+            1,
             2
       ],
       "usNews_stateRankingsEquality": [
@@ -16,8 +16,8 @@
       ],
       "wallethub_statesRacialEquality": [
             4,
-            0.5,
-            1
+            1,
+            2
       ],
       "wallethub_racialIntegration": [
             4,
@@ -31,7 +31,7 @@
       ],
       "bloomberg_blackWomenMetros": [
             5,
-            0.5,
+            1,
             2
       ],
       "georgetown_usaIndex": [
@@ -107,6 +107,6 @@
       "disabilityin_deiReport": [
             5,
             1,
-            3
+            2
       ]
 }

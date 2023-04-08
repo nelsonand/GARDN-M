@@ -1,52 +1,52 @@
-State,Education gap by race,Employment gap by disability status,Employment gap by race,Income gap by gender,Income gap by race,Labor force participation gap by gender,Processed
-Hawaii,35,4,1,2,8,14,0.80
-Vermont,5,40,27,1,24,1,8.00
-Kentucky,4,29,12,27,3,24,5.80
-West Virginia,1,13,10,41,2,43,2.60
-Virginia,13,7,20,26,7,22,1.40
-Oregon,12,24,4,21,5,21,4.80
-New Hampshire,3,49,41,14,1,20,9.80
-Maryland,22,42,29,3,12,9,8.40
-Missouri,9,43,30,22,6,12,8.60
-Tennessee,10,16,22,19,10,30,3.20
-Maine,2,50,2,23,17,8,10.00
-Washington,6,31,3,33,4,45,6.20
-Arkansas,25,11,15,30,11,33,2.20
-Delaware,15,41,21,12,18,13,8.20
-Michigan,8,25,36,36,9,27,5.00
-Indiana,7,15,31,43,14,29,3.00
-Rhode Island,38,10,38,8,37,4,2.00
-Florida,21,19,7,13,33,28,3.80
-Ohio,11,26,44,32,13,17,5.20
-Massachusetts,23,39,25,16,30,7,7.80
-Georgia,20,17,16,18,23,31,3.40
-Mississippi,36,2,42,40,28,16,0.40
-New Jersey,16,23,13,20,21,35,4.60
-Nevada,33,3,6,5,39,46,0.60
-Montana,19,9,48,38,16,10,1.80
-North Carolina,28,21,24,7,27,37,4.20
-Iowa,18,32,40,35,29,5,6.40
-New York,34,37,32,6,31,18,7.40
-Pennsylvania,14,38,39,31,20,15,7.60
-Minnesota,17,45,43,15,38,3,9.00
-Illinois,26,30,34,34,35,25,6.00
-Alaska,49,1,45,9,42,38,0.20
-Connecticut,37,34,19,10,48,11,6.80
-Alabama,24,6,35,46,15,48,1.20
-California,39,12,9,4,49,47,2.40
-Wisconsin,30,48,37,17,43,2,9.60
-Louisiana,32,14,33,48,32,26,2.80
-Idaho,27,28,5,44,22,44,5.60
-Kansas,40,36,28,28,34,34,7.20
-Arizona,47,22,14,11,45,41,4.40
-Oklahoma,29,18,17,47,26,42,3.60
-New Mexico,50,5,8,37,44,39,1.00
-South Carolina,45,27,23,39,40,36,5.40
-Nebraska,43,35,47,24,46,19,7.00
-Texas,42,8,11,29,47,49,1.60
-Colorado,48,47,18,25,41,40,9.40
-Wyoming,46,20,46,50,19,32,4.00
-Utah,41,33,26,49,25,50,6.60
-North Dakota,31,44,50,42,36,23,8.80
-South Dakota,44,46,49,45,50,6,9.20
-DC,,,,,,,4.90
+State,Education gap by race,Employment gap by disability status,Employment gap by race,Income gap by gender,Income gap by race,Labor force participation gap by gender,Rank
+Hawaii,35,4,1,2,8,14,4.00
+Vermont,5,40,27,1,24,1,40.00
+Kentucky,4,29,12,27,3,24,29.00
+West Virginia,1,13,10,41,2,43,13.00
+Virginia,13,7,20,26,7,22,7.00
+Oregon,12,24,4,21,5,21,24.00
+New Hampshire,3,49,41,14,1,20,49.00
+Maryland,22,42,29,3,12,9,42.00
+Missouri,9,43,30,22,6,12,43.00
+Tennessee,10,16,22,19,10,30,16.00
+Maine,2,50,2,23,17,8,50.00
+Washington,6,31,3,33,4,45,31.00
+Arkansas,25,11,15,30,11,33,11.00
+Delaware,15,41,21,12,18,13,41.00
+Michigan,8,25,36,36,9,27,25.00
+Indiana,7,15,31,43,14,29,15.00
+Rhode Island,38,10,38,8,37,4,10.00
+Florida,21,19,7,13,33,28,19.00
+Ohio,11,26,44,32,13,17,26.00
+Massachusetts,23,39,25,16,30,7,39.00
+Georgia,20,17,16,18,23,31,17.00
+Mississippi,36,2,42,40,28,16,2.00
+New Jersey,16,23,13,20,21,35,23.00
+Nevada,33,3,6,5,39,46,3.00
+Montana,19,9,48,38,16,10,9.00
+North Carolina,28,21,24,7,27,37,21.00
+Iowa,18,32,40,35,29,5,32.00
+New York,34,37,32,6,31,18,37.00
+Pennsylvania,14,38,39,31,20,15,38.00
+Minnesota,17,45,43,15,38,3,45.00
+Illinois,26,30,34,34,35,25,30.00
+Alaska,49,1,45,9,42,38,1.00
+Connecticut,37,34,19,10,48,11,34.00
+Alabama,24,6,35,46,15,48,6.00
+California,39,12,9,4,49,47,12.00
+Wisconsin,30,48,37,17,43,2,48.00
+Louisiana,32,14,33,48,32,26,14.00
+Idaho,27,28,5,44,22,44,28.00
+Kansas,40,36,28,28,34,34,36.00
+Arizona,47,22,14,11,45,41,22.00
+Oklahoma,29,18,17,47,26,42,18.00
+New Mexico,50,5,8,37,44,39,5.00
+South Carolina,45,27,23,39,40,36,27.00
+Nebraska,43,35,47,24,46,19,35.00
+Texas,42,8,11,29,47,49,8.00
+Colorado,48,47,18,25,41,40,47.00
+Wyoming,46,20,46,50,19,32,20.00
+Utah,41,33,26,49,25,50,33.00
+North Dakota,31,44,50,42,36,23,44.00
+South Dakota,44,46,49,45,50,6,46.00
+DC,,,,,,,

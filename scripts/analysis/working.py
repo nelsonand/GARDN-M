@@ -10,16 +10,14 @@ This is just a working script to start building up the GARDN-M calculation
 
 ### Ok, so this is a working script to start figuring out how the calculation is going to work
 
-## It has a few steps: (TODO, explain)
-
-
-## (0) Define run parameters
-
 verbose = False # some extra print statements for debugging
 noramlizeAll = True # normalize results from every source to span the full 0-10 scale
 filename = 'gardnm_test' # where to save the results of this run
 setPbyCity = True # if True, uses P=5 for city data and P=4 for state data, regardless of the entry in source_ratings.json
-    
+cities_to_print = ['Atlanta', 'Boston', 'Memphis'] # print the output of a specific city to the console    
+
+## (0) Setup enviornment
+
 import git # requires gitpython module
 import pandas as pd
 import os
@@ -28,8 +26,6 @@ import numpy as np
     
 with open('./data/utils/statename_to_abbr.json', 'r') as f:
     statename_to_abbr = json.load(f)
-
-
 
 ## (1) Load all the data from GARDN-M/data/processed_data
 
@@ -62,6 +58,7 @@ for source in sources:
 
 # Assign composite scores 
 def assign_CompScore(sdata, source):
+
     if 'Score' in sdata.keys():
         sdata['CompScore'] = sdata.Score / 10 # TODO: Assumes score in percents
     elif 'Rank' in sdata.keys():
@@ -76,27 +73,33 @@ def assign_CompScore(sdata, source):
         sdata['CompScore'] = sdata.Processed
     else:
         print(f' ---   WARNING: unclear interpretation of CompScore for {source}... this will break!') 
+
     return sdata
 
 # Normalized composite scores 
 def nornalize_CompScore(sdata):
+
     minScore = min(sdata['CompScore'])
     maxScore = max(sdata['CompScore'])
     sdata['CompScore'] = (sdata['CompScore']-minScore) / (maxScore-minScore) * 10
+
     return sdata
 
 # Assign individual measures, requires CompScore entry
 def assign_M(sdata, source): 
+
     P = source_ratings[source][0]
     PSW = np.prod(source_ratings[source]) # P * S * W
     sdata['M'] = sdata['CompScore'] * PSW / 10 # out of 10
     if setPbyCity: # adjust the P value to give stronger weighting to city-specific info
         sdata['M'].where(sdata.City != '', sdata['M']/P*4, inplace=True)
         sdata['M'].where(sdata.City == '', sdata['M']/P*5, inplace=True)
+
     return sdata
 
 # Run stanard analysis on each source
 for source, sdata in data.items():
+
     if 'City' not in sdata.keys():
         sdata['City'] = np.NaN
     sdata.City = sdata.City.fillna('')
@@ -107,7 +110,7 @@ for source, sdata in data.items():
 
 
 
-# (3) Combine data arrats into final rankings
+# (3) Combine data arrays into final rankings
 
 # get all states and initialize rankings
 states = np.unique(np.concatenate([sdata.State.values for sdata in data.values()]))
@@ -133,12 +136,23 @@ Mi = [x for x in rankings.keys() if 'M_' in x]
 rankings['n'] = rankings[Mi].count(axis=1) # number of non null Mi entries
 rankings['M'] = rankings[Mi].sum(axis=1) / rankings['n'] # 1/n sum(Mi)
 
+# calculate M's for downselected groups
+
 if verbose:
     print(rankings[['State', 'City', 'M', 'n']].sort_values('City', ascending=False))#.to_string())
 
 
 
-# (4) Save the output
+# (4) Save the output and print results
 
 rankings.to_csv(f'data/outputs/{filename}.csv')
 print(f'Data has been saved to data/outputs/{filename}.csv!')
+
+if len(cities_to_print):
+    inds_to_print = []
+    for city_to_print in cities_to_print:
+        if city_to_print in rankings['City'].values:
+            inds_to_print += [np.where(rankings['City']==city_to_print)[0][0]]
+        else:
+            print(f'Sorry, {city_to_print} was not found in the data...')
+    print(rankings.iloc[inds_to_print].transpose().to_string())
