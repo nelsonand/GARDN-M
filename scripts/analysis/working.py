@@ -108,8 +108,7 @@ def assign_M(sdata, source):
 
     else:
         # normalized primacy hierarchy (P): scored from 1-5 (5 being lowest[best] on the hierarchy and 1 being highest[worst])
-        P = 5 # for all sources, since I don't understand the primacy hierarchy
-        sdata[f'P'] = P
+        sdata[f'P'] = source_ratings[source][0]
 
         # sensitivity index (S): Rank metric sensitivity and normalize from 1-2
         S_city = 2
