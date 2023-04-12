@@ -12,10 +12,10 @@ This is just a working script to start building up the GARDN-M calculation
 
 verbose = False # some extra print statements for debugging
 noramlizeAll = True # normalize results from every source to span the full 0-10 scale
-filename = 'gardnm_test' # where to save the results of this run
+filename = 'gardnm' # where to save the results of this run
 setPbyCity = True # if True, uses P=5 for city data and P=4 for state data, regardless of the entry in source_ratings.json
 cities_to_print = ['Atlanta', 'Boston', 'Memphis', 'New Orleans', 'Charlotte', 'Raleigh', 'Norfolk', 'Chicago', 'Louisville'] # print the output of a specific city to the console    
-oldPSW = False#True # use Royce's original weighting implementation (True) or modified version (False)
+oldPSW = False # use Royce's original weighting implementation (True) or modified version (False)
 
 
 
@@ -62,6 +62,15 @@ for source in sources:
 
 # redefine sources array for future use (now excludes missing files)
 sources = data.keys()
+
+# set filename
+if oldPSW:
+    filename += '_oldWeighting'
+else: 
+    filename += '_newWeighting'
+
+if noramlizeAll:
+    filename += '_normalized'
 
 
 
