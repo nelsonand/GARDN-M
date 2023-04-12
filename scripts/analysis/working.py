@@ -14,8 +14,9 @@ verbose = False # some extra print statements for debugging
 noramlizeAll = True # normalize results from every source to span the full 0-10 scale
 filename = 'gardnm_test' # where to save the results of this run
 setPbyCity = True # if True, uses P=5 for city data and P=4 for state data, regardless of the entry in source_ratings.json
-cities_to_print = ['Atlanta', 'Boston', 'Memphis'] # print the output of a specific city to the console    
-oldPSW = False # use Royce's implementation (True) or how Oak expects it to be (False)
+cities_to_print = ['Atlanta', 'Boston', 'Memphis', 'New Orleans', 'Charlotte', 'Raleigh', 'Norfolk', 'Chicago', 'Louisville'] # print the output of a specific city to the console    
+oldPSW = False#True # use Royce's original weighting implementation (True) or modified version (False)
+
 
 
 ## (0) Setup enviornment
@@ -116,7 +117,7 @@ def assign_M(sdata, source):
         sdata[f'S'] = S_state
         sdata[f'S'].where(sdata.City == '', S_city, inplace=True)
 
-        # repetition weight(W): Score of 0-1 depending on how many repeated entries there are for this branch
+        # repetition weight (W): Score of 0-1 depending on how many repeated entries there are for this branch
         source_type = [st for st, st_list in source_types.items() if source in st_list]
         if len(source_type) == 1: 
             W = 1 / len(source_types[source_type[0]])
@@ -199,15 +200,18 @@ rankings['M'] = rankings[Mi].sum(axis=1) / rankings['n'] # the average is 1/n su
 # calculate individual M's for each source type
 for stype in source_types.keys():
     tsources = [st for st in source_types[stype] if st in sources]
-    trankings = rankings[[f'M_{ts}' for ts in tsources] + [f'PSW_{ts}' for ts in tsources]] * 1
+    if oldPSW: 
+        trankings = rankings[[f'M_{ts}' for ts in tsources]] * 1
+    else:
+        trankings = rankings[[f'M_{ts}' for ts in tsources] + [f'PSW_{ts}' for ts in tsources]] * 1
 
-    # renormalize each entry in trankings (TODO: IS THIS NECESSARY? OR EVEN CORRECT?)
-    PSWi = [x for x in trankings.keys() if 'PSW_' in x]
-    nPSW = trankings[PSWi].count(axis=1) # number of non null PSW entries
-    trankings['PSW'] =  trankings[PSWi].sum(axis=1) / nPSW # the average is 1/n sum(PSWi)
-    for source in tsources:
-        trankings[f'M_{source}'] = trankings[f'M_{source}'].multiply(rankings['PSW']/10) 
-        trankings[f'M_{source}'] = trankings[f'M_{source}'].divide(trankings['PSW']/10)
+        # renormalize each entry in trankings (TODO: IS THIS NECESSARY? OR EVEN CORRECT?)
+        PSWi = [x for x in trankings.keys() if 'PSW_' in x]
+        nPSW = trankings[PSWi].count(axis=1) # number of non null PSW entries
+        trankings['PSW'] =  trankings[PSWi].sum(axis=1) / nPSW # the average is 1/n sum(PSWi)
+        for source in tsources:
+            trankings[f'M_{source}'] = trankings[f'M_{source}'].multiply(rankings['PSW']/10) 
+            trankings[f'M_{source}'] = trankings[f'M_{source}'].divide(trankings['PSW']/10)
 
     # calculate individual M for each type       
     Mi = [x for x in trankings.keys() if 'M_' in x]
@@ -231,5 +235,5 @@ if len(cities_to_print):
             inds_to_print += [np.where(rankings['City']==city_to_print)[0][0]]
         else:
             print(f'Sorry, {city_to_print} was not found in the data...')
-    items_to_print = ['State','City','M'] + [f'M_{st}' for st in source_types]
+    items_to_print = ['State','City','M'] + [f'M_{st}' for st in source_types] #+ [f'M_{s}' for s in sources]
     print(rankings[items_to_print].iloc[inds_to_print].transpose().to_string())

@@ -1,14 +1,16 @@
 {
-      "race": [
+      "social": [
             "infogram_socialEquityCitiesRanking",
-            "nationalEquityAtlas",
+            "nationalEquityAtlas"
+      ],
+      "race": [
             "usNews_stateRankingsEquality",
             "wallethub_statesRacialEquality",
             "wallethub_racialIntegration",
-            "wisevoter_mostDiverseStates"
+            "wisevoter_mostDiverseStates",
+            "bloomberg_blackWomenMetros"
       ],
       "gender": [
-            "bloomberg_blackWomenMetros",
             "georgetown_usaIndex",
             "georgetown_usaIndex2",
             "usaNews_statesGenderEquality",
