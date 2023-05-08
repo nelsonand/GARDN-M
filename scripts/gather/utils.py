@@ -63,7 +63,7 @@ def get_processed_data_directory():
     Returns the path to the processed data directory.
     '''
 
-    return os.path.abspath(f"{__file__}/../../../data/processed_data")
+    return os.path.abspath(f"{__file__}/../../../data/scraped_data")
 
 
 
