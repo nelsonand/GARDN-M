@@ -55,7 +55,7 @@ def get_state_data(state):
     return equality_rank
 
 
-def get_all_state_data():
+def scrape_usnews():
     '''
     Retrieves the equality rank of all 50 US states and returns the results as a NumPy array.
 
@@ -84,4 +84,4 @@ def get_all_state_data():
 
 if __name__ == '__main__':
 
-    get_all_state_data()
+    scrape_usnews()
