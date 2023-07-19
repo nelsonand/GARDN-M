@@ -7,6 +7,7 @@ This script manages all gathering of data.
 
 from scrape_moveLgbtq import scrape_movelgbtq
 from scrape_usnews import scrape_usnews
+from scrape_wallethub import scrape_wallethub_all
 
 
 def main():
@@ -15,6 +16,7 @@ def main():
     """
     scrape_movelgbtq()
     scrape_usnews()
+    scrape_wallethub_all()
 
 
 if __name__ == '__main__':
