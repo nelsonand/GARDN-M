@@ -14,13 +14,16 @@ import os
 import json
 import numpy as np
 
+# establish relative directories
+repo = git.Repo('.', search_parent_directories=True)
+os.chdir(repo.working_tree_dir)
 
 def gardnm(
     cities_to_print = ['Atlanta', 'Boston', 'Memphis'],  
     noramlizeAll = True, 
-    setPbyCity = True,   
     filename = 'gardnm', 
     oldPSW = False, 
+    setPbyCity = True,   
     verbose = False, 
 ):
     """Calculation of GARDN-M coefficients
@@ -28,16 +31,16 @@ def gardnm(
     Args:
         cities_to_print: print the output of these cities to the console 
         noramlizeAll: normalize raw data from every source to span the full 0-10 scale
-        setPbyCity: if True, uses P=5 for city data and P=4 for state data, regardless of the entry in source_ratings.json
         filename: prefix for filename to use when saving this run
         oldPSW: use Royce's original weighting implementation (True) or modified version (False)
+        setPbyCity: if True, uses P=5 for city data and P=4 for state data, regardless of the entry in source_ratings.json (oldPSW only)
         verbose: some extra print statements that may be useful when debugging
 
     Returns:
         Nothing yet, but it saves stuff to a file
     """
 
-    ## Get source data
+    ## (1) Load all the data from GARDN-M/data/processed_data
 
     with open('./data/utils/statename_to_abbr.json', 'r') as f:
         statename_to_abbr = json.load(f)
@@ -49,14 +52,6 @@ def gardnm(
         source_types = json.load(f)
 
     sources = source_ratings.keys()
-
-
-
-    ## (1) Load all the data from GARDN-M/data/processed_data
-
-    # establish relative directories
-    repo = git.Repo('.', search_parent_directories=True)
-    os.chdir(repo.working_tree_dir)
 
     # get processed data
     data = {}
@@ -85,6 +80,7 @@ def gardnm(
 
 
 
+
     ## (2) Normalize and process all availible data
 
     # Run standard analysis on each source
@@ -96,7 +92,7 @@ def gardnm(
         sdata = assign_CompScore(sdata, source)
         if noramlizeAll:
             sdata = nornalize_CompScore(sdata)
-        sdata = assign_M(sdata, source, sources, source_ratings, source_types, oldPSW)
+        sdata = assign_M(sdata, source, sources, source_ratings, source_types, oldPSW, setPbyCity)
 
 
 
@@ -191,11 +187,11 @@ def assign_CompScore(sdata, source):
     """Assign composite scores 
 
     Args:
-        sdata: 
-        source:
+        sdata: source data
+        source: source name
 
     Returns:
-        
+        sdata: source data, but with composite scores assigned
     """
     if 'Score' in sdata.keys():
         sdata['CompScore'] = sdata.Score / 10 # TODO: Assumes score in percents
@@ -218,10 +214,10 @@ def nornalize_CompScore(sdata):
     """Normalize composite scores 
 
     Args:
-        sdata: 
+        sdata: source data
 
     Returns:
-        
+        sdata: source data, but normalized
     """
     minScore = min(sdata['CompScore'])
     maxScore = max(sdata['CompScore'])
@@ -229,19 +225,20 @@ def nornalize_CompScore(sdata):
 
     return sdata
 
-def assign_M(sdata, source, sources, source_ratings, source_types, oldPSW): 
+def assign_M(sdata, source, sources, source_ratings, source_types, oldPSW=False, setPbyCity=True): 
     """Assign individual measures, requires CompScore entry
 
     Args:
-        sdata: 
-        source:
-        sources:
-        source_ratings:
-        source_types:
-        oldPSW:
+        sdata: source data
+        source: source name
+        sources: a list of all the source names
+        source_ratings: a list of all the source ratings
+        source_types: a list of all the source types
+        oldPSW: flag to use old weighting scheme
+        setPbyCity: flag to set P by city (only used with old weighting scheme)
 
     Returns:
-        
+        sdata: source data, but with individual measures assigned
     """
     if oldPSW:
         P = source_ratings[source][0]
@@ -282,12 +279,6 @@ def assign_M(sdata, source, sources, source_ratings, source_types, oldPSW):
     sdata['M'] /= 10 # final score should be out of 10
 
     return sdata
-
-
-
-
-
-
 
 if __name__ == '__main__':
     gardnm()
