@@ -22,8 +22,6 @@ def gardnm(
     cities_to_print = ['Atlanta', 'Boston', 'Memphis'],  
     noramlizeAll = True, 
     filename = 'gardnm', 
-    oldPSW = False, 
-    setPbyCity = True,   
     verbose = False, 
 ):
     """Calculation of GARDN-M coefficients
@@ -32,8 +30,6 @@ def gardnm(
         cities_to_print: print the output of these cities to the console 
         noramlizeAll: normalize raw data from every source to span the full 0-10 scale
         filename: prefix for filename to use when saving this run
-        oldPSW: use Royce's original weighting implementation (True) or modified version (False)
-        setPbyCity: if True, uses P=5 for city data and P=4 for state data, regardless of the entry in source_ratings.json (oldPSW only)
         verbose: some extra print statements that may be useful when debugging
 
     Returns:
@@ -70,10 +66,7 @@ def gardnm(
     sources = data.keys()
 
     # set filename
-    if oldPSW:
-        filename += '_oldWeighting'
-    else: 
-        filename += '_newWeighting'
+    filename += '_algorithm_rework'
 
     if noramlizeAll:
         filename += '_normalized'
@@ -92,7 +85,7 @@ def gardnm(
         sdata = assign_CompScore(sdata, source)
         if noramlizeAll:
             sdata = nornalize_CompScore(sdata)
-        sdata = assign_M(sdata, source, sources, source_ratings, source_types, oldPSW, setPbyCity)
+        sdata = assign_M(sdata, source, sources, source_ratings, source_types)
 
 
 
@@ -110,18 +103,14 @@ def gardnm(
     # initialize results columns so that they appear in the beginning of the structure
     rankings['M'] = np.NaN 
     rankings['n'] = np.NaN 
-    if not oldPSW:
-        rankings['PSW'] = np.NaN # this will later hold the sum
+    rankings['PSW'] = np.NaN # this will later hold the sum
     for stype in source_types.keys(): 
         rankings[f'M_{stype}'] = np.NaN 
         rankings[f'n_{stype}'] = np.NaN 
 
     # combine individual metrics into rankings
     for source, sdata in data.items():
-        if oldPSW:
-            rankings = pd.merge(rankings, sdata[['State', 'City', 'M']], on=['State', 'City'], how='left', suffixes=(None, f'_{source}'))
-        else: # if the new normalization was selected, keep track of the weight
-            rankings = pd.merge(rankings, sdata[['State', 'City', 'M', 'PSW']], on=['State', 'City'], how='left', suffixes=(None, f'_{source}'))
+        rankings = pd.merge(rankings, sdata[['State', 'City', 'M', 'PSW']], on=['State', 'City'], how='left', suffixes=(None, f'_{source}'))
 
     # fill data from sets missing cities
     rankings.sort_values(by=['State', 'City'], inplace=True) # sort so that fillna(method='ffil')  is appropriate
@@ -129,12 +118,12 @@ def gardnm(
     rankings.fillna(method='ffill', inplace=True) # fill city-specific rows with no-city entries
     rankings.replace('tmp', np.nan, inplace=True) # replace no-city placeholders
 
-    if not oldPSW: # if the new normalization was selected, we need to divide by the sum of the weights for each city
-        PSWi = [x for x in rankings.keys() if 'PSW_' in x]
-        nPSW = rankings[PSWi].count(axis=1) # number of non null PSW entries
-        rankings['PSW'] =  rankings[PSWi].sum(axis=1) / nPSW # the average is 1/n sum(PSWi)
-        for source in sources: # divide each M by the average weight for a weighted average
-            rankings[f'M_{source}'] = rankings[f'M_{source}'].divide(rankings['PSW']/10) # extra x10 comes from max(PSW)=10
+    # we need to divide by the sum of the weights for each city
+    PSWi = [x for x in rankings.keys() if 'PSW_' in x]
+    nPSW = rankings[PSWi].count(axis=1) # number of non null PSW entries
+    rankings['PSW'] =  rankings[PSWi].sum(axis=1) / nPSW # the average is 1/n sum(PSWi)
+    for source in sources: # divide each M by the average weight for a weighted average
+        rankings[f'M_{source}'] = rankings[f'M_{source}'].divide(rankings['PSW']/10) # extra x10 comes from max(PSW)=10
 
     # sum and normalize M values
     Mi = [x for x in rankings.keys() if 'M_' in x]
@@ -144,18 +133,15 @@ def gardnm(
     # calculate individual M's for each source type
     for stype in source_types.keys():
         tsources = [st for st in source_types[stype] if st in sources]
-        if oldPSW: 
-            trankings = rankings[[f'M_{ts}' for ts in tsources]] * 1
-        else:
-            trankings = rankings[[f'M_{ts}' for ts in tsources] + [f'PSW_{ts}' for ts in tsources]] * 1
+        trankings = rankings[[f'M_{ts}' for ts in tsources] + [f'PSW_{ts}' for ts in tsources]] * 1
 
-            # renormalize each entry in trankings (TODO: IS THIS NECESSARY? OR EVEN CORRECT?)
-            PSWi = [x for x in trankings.keys() if 'PSW_' in x]
-            nPSW = trankings[PSWi].count(axis=1) # number of non null PSW entries
-            trankings['PSW'] =  trankings[PSWi].sum(axis=1) / nPSW # the average is 1/n sum(PSWi)
-            for source in tsources:
-                trankings[f'M_{source}'] = trankings[f'M_{source}'].multiply(rankings['PSW']/10) 
-                trankings[f'M_{source}'] = trankings[f'M_{source}'].divide(trankings['PSW']/10)
+        # renormalize each entry in trankings (TODO: IS THIS NECESSARY? OR EVEN CORRECT?)
+        PSWi = [x for x in trankings.keys() if 'PSW_' in x]
+        nPSW = trankings[PSWi].count(axis=1) # number of non null PSW entries
+        trankings['PSW'] =  trankings[PSWi].sum(axis=1) / nPSW # the average is 1/n sum(PSWi)
+        for source in tsources:
+            trankings[f'M_{source}'] = trankings[f'M_{source}'].multiply(rankings['PSW']/10) 
+            trankings[f'M_{source}'] = trankings[f'M_{source}'].divide(trankings['PSW']/10)
 
         # calculate individual M for each type       
         Mi = [x for x in trankings.keys() if 'M_' in x]
@@ -225,7 +211,7 @@ def nornalize_CompScore(sdata):
 
     return sdata
 
-def assign_M(sdata, source, sources, source_ratings, source_types, oldPSW=False, setPbyCity=True): 
+def assign_M(sdata, source, sources, source_ratings, source_types): 
     """Assign individual measures, requires CompScore entry
 
     Args:
@@ -234,47 +220,36 @@ def assign_M(sdata, source, sources, source_ratings, source_types, oldPSW=False,
         sources: a list of all the source names
         source_ratings: a list of all the source ratings
         source_types: a list of all the source types
-        oldPSW: flag to use old weighting scheme
-        setPbyCity: flag to set P by city (only used with old weighting scheme)
 
     Returns:
         sdata: source data, but with individual measures assigned
     """
-    if oldPSW:
-        P = source_ratings[source][0]
-        PSW = np.prod(source_ratings[source]) # P * S * W
-        sdata['M'] = sdata['CompScore'] * PSW
-        if setPbyCity: # adjust the P value to give stronger weighting to city-specific info
-            sdata['M'].where(sdata.City != '', sdata['M']/P*4, inplace=True)
-            sdata['M'].where(sdata.City == '', sdata['M']/P*5, inplace=True)
+    # normalized primacy hierarchy (P): scored from 1-5 (5 being lowest[best] on the hierarchy and 1 being highest[worst])
+    sdata[f'P'] = source_ratings[source][0]
 
+    # sensitivity index (S): Rank metric sensitivity and normalize from 1-2
+    S_city = 2
+    S_state = 1
+    sdata[f'S'] = S_state
+    sdata[f'S'].where(sdata.City == '', S_city, inplace=True)
+
+    # repetition weight (W): Score of 0-1 depending on how many repeated entries there are for this branch
+    source_type = [st for st, st_list in source_types.items() if source in st_list]
+    if len(source_type) == 1: 
+        W = 1 / len(source_types[source_type[0]])
+    elif len(source_type) > 1:
+        print(f' ---   WARNING: repitition weight for {source} is undefined... setting to 1...') 
+        W = 1
     else:
-        # normalized primacy hierarchy (P): scored from 1-5 (5 being lowest[best] on the hierarchy and 1 being highest[worst])
-        sdata[f'P'] = source_ratings[source][0]
+        W = 1
+    total_dataset_normalization = len(sources)/len(source_types)
+    sdata['W'] = W * total_dataset_normalization
 
-        # sensitivity index (S): Rank metric sensitivity and normalize from 1-2
-        S_city = 2
-        S_state = 1
-        sdata[f'S'] = S_state
-        sdata[f'S'].where(sdata.City == '', S_city, inplace=True)
+    # apply the weighting
+    sdata['PSW'] = sdata['P'] * sdata['S'] * sdata['W']
+    sdata['M'] = sdata['CompScore'] * sdata['PSW']
 
-        # repetition weight (W): Score of 0-1 depending on how many repeated entries there are for this branch
-        source_type = [st for st, st_list in source_types.items() if source in st_list]
-        if len(source_type) == 1: 
-            W = 1 / len(source_types[source_type[0]])
-        elif len(source_type) > 1:
-            print(f' ---   WARNING: repitition weight for {source} is undefined... setting to 1...') 
-            W = 1
-        else:
-            W = 1
-        total_dataset_normalization = len(sources)/len(source_types)
-        sdata['W'] = W * total_dataset_normalization
-
-        # apply the weighting
-        sdata['PSW'] = sdata['P'] * sdata['S'] * sdata['W']
-        sdata['M'] = sdata['CompScore'] * sdata['PSW']
-
-        # to get a true weighted average, we need to divide by the sum of the weights... this is done later...
+    # to get a true weighted average, we need to divide by the sum of the weights... this is done later...
 
     sdata['M'] /= 10 # final score should be out of 10
 
