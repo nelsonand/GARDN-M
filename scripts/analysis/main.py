@@ -125,18 +125,20 @@ def gardnm(
              # we need to divide by the sum of the weights for each city
             PSWi = [x for x in subrankings[source_type].keys() if 'PSW_' in x]
             subrankings[source_type]['avgPSW'] =  subrankings[source_type][PSWi].mean(axis=1) 
-        else:
-            pass #TODO
 
-        # calculate individual M
-        for source in st_list: # divide each M by the average weight for a weighted average
-            subrankings[source_type][f'M_{source}'] = subrankings[source_type][f'B_{source}'] * subrankings[source_type][f'PSW_{source}']
-            subrankings[source_type][f'M_{source}'] = subrankings[source_type][f'M_{source}'].divide(subrankings[source_type]['avgPSW']) # extra x10 comes from max(PSW)=10
+            # calculate individual M
+            for source in st_list: # divide each M by the average weight for a weighted average
+                subrankings[source_type][f'M_{source}'] = subrankings[source_type][f'B_{source}'] * subrankings[source_type][f'PSW_{source}']
+                subrankings[source_type][f'M_{source}'] = subrankings[source_type][f'M_{source}'].divide(subrankings[source_type]['avgPSW']) 
+
+        else: 
+            pass #TODO, this will fail
+
 
         # sum and average M values from each source
         Mi = [x for x in subrankings[source_type].keys() if 'M_' in x]
         subrankings[source_type]['n'] = subrankings[source_type][Mi].count(axis=1).astype(int) # number of non null Mi entries
-        subrankings[source_type]['M'] = subrankings[source_type][Mi].mean(axis=1) # the average is 1/n * sum(Mi)
+        subrankings[source_type]['M'] = subrankings[source_type][Mi].mean(axis=1) 
 
         # fill data from sets missing cities
         subrankings[source_type].sort_values(by=['State', 'City'], inplace=True) # sort so that fillna(method='ffil')  is appropriate
