@@ -38,6 +38,12 @@ def gardnm(
 
     ## (1) Load all the data from GARDN-M/data/processed_data
 
+     # set filename
+    filename += '_algorithm_rework' # based on git commit for the moment
+
+    if noramlizeAll:
+        filename += '_normalized'
+
     with open('./data/utils/statename_to_abbr.json', 'r') as f:
         statename_to_abbr = json.load(f)
 
@@ -59,18 +65,10 @@ def gardnm(
             data[source] = pd.read_csv(datadir+f'{source}.csv')
             data[source]['State'] = data[source]['State'].replace(statename_to_abbr) # change to abbeviations
         except FileNotFoundError:
-            #pass # TODO, this is noisy for now
-            print(f' ---   WARNING: processed data for {source}.csv was not found... skipping!')    
-
-    # redefine sources array for future use (now excludes missing files)
+            print(f' ---   WARNING: processed data for {source}.csv was not found... skipping!')  
+            
+    # we need to remove fail-to-find sources from the master list
     sources = data.keys()
-
-    # set filename
-    filename += '_algorithm_rework'
-
-    if noramlizeAll:
-        filename += '_normalized'
-
 
 
 
@@ -89,71 +87,58 @@ def gardnm(
 
 
 
-
-    # (3) Combine data arrays into final rankings
+    # (3) Combine data arrays into subrankings arrays
 
     # get all states and initialize rankings
     states = np.unique(np.concatenate([sdata.State.values for sdata in data.values()]))
+    subrankings = {}
+    for source_type, st_list in source_types.items():
+        st_list = [s for s in st_list if s in sources] # remove missing sources from st_list
+
+        subrankings[source_type] = pd.DataFrame({'State':states}) 
+        subrankings[source_type]['City'] = ''
+        for sdata in [sd for source, sd in data.items() if source in st_list]:
+            subrankings[source_type] = pd.concat([subrankings[source_type], sdata])
+        subrankings[source_type] = subrankings[source_type].drop_duplicates(['State', 'City'])[['State', 'City']]
+
+        # initialize results columns so that they appear in the beginning of the structure
+        subrankings[source_type]['M'] = np.NaN 
+        subrankings[source_type]['n'] = np.NaN 
+        subrankings[source_type]['PSW'] = np.NaN # this will later hold the sum
+
+        # combine individual metrics into rankings
+        for source, sdata in [(source, sd) for source, sd in data.items() if source in st_list]:
+            subrankings[source_type] = pd.merge(subrankings[source_type], sdata[['State', 'City', 'M', 'PSW']], on=['State', 'City'], how='left', suffixes=(None, f'_{source}'))
+
+        # fill data from sets missing cities
+        subrankings[source_type].sort_values(by=['State', 'City'], inplace=True) # sort so that fillna(method='ffil')  is appropriate
+        subrankings[source_type] = subrankings[source_type].where(subrankings[source_type]['City']!='', subrankings[source_type].fillna('tmp')) # fill no-city entries with placeholders
+        subrankings[source_type].fillna(method='ffill', inplace=True) # fill city-specific rows with no-city entries
+        subrankings[source_type].replace('tmp', np.nan, inplace=True) # replace no-city placeholders
+
+        # we need to divide by the sum of the weights for each city
+        PSWi = [x for x in subrankings[source_type].keys() if 'PSW_' in x]
+        nPSW = subrankings[source_type][PSWi].count(axis=1) # number of non null PSW entries
+        subrankings[source_type]['PSW'] =  subrankings[source_type][PSWi].sum(axis=1) / nPSW # the average is 1/n sum(PSWi)
+        for source in st_list: # divide each M by the average weight for a weighted average
+            subrankings[source_type][f'M_{source}'] = subrankings[source_type][f'M_{source}'].divide(subrankings[source_type]['PSW']/10) # extra x10 comes from max(PSW)=10
+
+        # sum and normalize M values
+        Mi = [x for x in subrankings[source_type].keys() if 'M_' in x]
+        subrankings[source_type]['n'] = subrankings[source_type][Mi].count(axis=1) # number of non null Mi entries
+        subrankings[source_type]['M'] = subrankings[source_type][Mi].sum(axis=1) / subrankings[source_type]['n'] # the average is 1/n sum(Mi)
+
+        if verbose:
+            print(subrankings[source_type][['State', 'City', 'M', 'n']].sort_values('City', ascending=False))#.to_string())
+
+
+
+    # (4) Combine subrankings into final rankings
+
     rankings = pd.DataFrame({'State':states}) 
-    rankings['City'] = ''
-    for sdata in data.values():
-        rankings = pd.concat([rankings, sdata])
-    rankings = rankings.drop_duplicates(['State', 'City'])[['State', 'City']]
-
-    # initialize results columns so that they appear in the beginning of the structure
-    rankings['M'] = np.NaN 
-    rankings['n'] = np.NaN 
-    rankings['PSW'] = np.NaN # this will later hold the sum
-    for stype in source_types.keys(): 
-        rankings[f'M_{stype}'] = np.NaN 
-        rankings[f'n_{stype}'] = np.NaN 
-
-    # combine individual metrics into rankings
-    for source, sdata in data.items():
-        rankings = pd.merge(rankings, sdata[['State', 'City', 'M', 'PSW']], on=['State', 'City'], how='left', suffixes=(None, f'_{source}'))
-
-    # fill data from sets missing cities
-    rankings.sort_values(by=['State', 'City'], inplace=True) # sort so that fillna(method='ffil')  is appropriate
-    rankings = rankings.where(rankings['City']!='', rankings.fillna('tmp')) # fill no-city entries with placeholders
-    rankings.fillna(method='ffill', inplace=True) # fill city-specific rows with no-city entries
-    rankings.replace('tmp', np.nan, inplace=True) # replace no-city placeholders
-
-    # we need to divide by the sum of the weights for each city
-    PSWi = [x for x in rankings.keys() if 'PSW_' in x]
-    nPSW = rankings[PSWi].count(axis=1) # number of non null PSW entries
-    rankings['PSW'] =  rankings[PSWi].sum(axis=1) / nPSW # the average is 1/n sum(PSWi)
-    for source in sources: # divide each M by the average weight for a weighted average
-        rankings[f'M_{source}'] = rankings[f'M_{source}'].divide(rankings['PSW']/10) # extra x10 comes from max(PSW)=10
-
-    # sum and normalize M values
-    Mi = [x for x in rankings.keys() if 'M_' in x]
-    rankings['n'] = rankings[Mi].count(axis=1) # number of non null Mi entries
-    rankings['M'] = rankings[Mi].sum(axis=1) / rankings['n'] # the average is 1/n sum(Mi)
-
-    # calculate individual M's for each source type
-    for stype in source_types.keys():
-        tsources = [st for st in source_types[stype] if st in sources]
-        trankings = rankings[[f'M_{ts}' for ts in tsources] + [f'PSW_{ts}' for ts in tsources]] * 1
-
-        # renormalize each entry in trankings (TODO: IS THIS NECESSARY? OR EVEN CORRECT?)
-        PSWi = [x for x in trankings.keys() if 'PSW_' in x]
-        nPSW = trankings[PSWi].count(axis=1) # number of non null PSW entries
-        trankings['PSW'] =  trankings[PSWi].sum(axis=1) / nPSW # the average is 1/n sum(PSWi)
-        for source in tsources:
-            trankings[f'M_{source}'] = trankings[f'M_{source}'].multiply(rankings['PSW']/10) 
-            trankings[f'M_{source}'] = trankings[f'M_{source}'].divide(trankings['PSW']/10)
-
-        # calculate individual M for each type       
-        Mi = [x for x in trankings.keys() if 'M_' in x]
-        rankings[f'n_{stype}'] = trankings[Mi].count(axis=1) # number of non null Mi entries
-        rankings[f'M_{stype}'] = trankings[Mi].sum(axis=1) / rankings[f'n_{stype}'] # the average is 1/n sum(Mi)
-
-    if verbose:
-        print(rankings[['State', 'City', 'M', 'n']].sort_values('City', ascending=False))#.to_string())
 
 
-
-    # (4) Save the output and print results
+    # (5) Save the output and print results
 
     rankings.to_csv(f'data/outputs/{filename}.csv')
     if verbose:
@@ -168,6 +153,7 @@ def gardnm(
                 print(f'Sorry, {city_to_print} was not found in the data...')
         items_to_print = ['State','City','M'] + [f'M_{st}' for st in source_types] #+ [f'M_{s}' for s in sources]
         print(rankings[items_to_print].iloc[inds_to_print].transpose().to_string())
+    
 
 def assign_CompScore(sdata, source):
     """Assign composite scores 
