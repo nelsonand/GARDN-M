@@ -96,25 +96,19 @@ def gardnm(
         st_list = [s for s in st_list if s in sources] # remove missing sources from st_list
 
         subrankings[source_type] = pd.DataFrame({'State':states}) 
-        subrankings[source_type]['City'] = ''
+        subrankings[source_type]['City'] = '' # initialize
         for sdata in [sd for source, sd in data.items() if source in st_list]:
             subrankings[source_type] = pd.concat([subrankings[source_type], sdata])
         subrankings[source_type] = subrankings[source_type].drop_duplicates(['State', 'City'])[['State', 'City']]
 
         # initialize results columns so that they appear in the beginning of the structure
-        subrankings[source_type]['M'] = np.NaN 
-        subrankings[source_type]['n'] = np.NaN 
+        subrankings[source_type]['M'] = np.NaN # initialize
+        subrankings[source_type]['n'] = np.NaN # initialize
         subrankings[source_type]['PSW'] = np.NaN # this will later hold the sum
 
         # combine individual metrics into rankings
         for source, sdata in [(source, sd) for source, sd in data.items() if source in st_list]:
             subrankings[source_type] = pd.merge(subrankings[source_type], sdata[['State', 'City', 'M', 'PSW']], on=['State', 'City'], how='left', suffixes=(None, f'_{source}'))
-
-        # fill data from sets missing cities
-        subrankings[source_type].sort_values(by=['State', 'City'], inplace=True) # sort so that fillna(method='ffil')  is appropriate
-        subrankings[source_type] = subrankings[source_type].where(subrankings[source_type]['City']!='', subrankings[source_type].fillna('tmp')) # fill no-city entries with placeholders
-        subrankings[source_type].fillna(method='ffill', inplace=True) # fill city-specific rows with no-city entries
-        subrankings[source_type].replace('tmp', np.nan, inplace=True) # replace no-city placeholders
 
         # we need to divide by the sum of the weights for each city
         PSWi = [x for x in subrankings[source_type].keys() if 'PSW_' in x]
@@ -125,8 +119,14 @@ def gardnm(
 
         # sum and normalize M values
         Mi = [x for x in subrankings[source_type].keys() if 'M_' in x]
-        subrankings[source_type]['n'] = subrankings[source_type][Mi].count(axis=1) # number of non null Mi entries
-        subrankings[source_type]['M'] = subrankings[source_type][Mi].sum(axis=1) / subrankings[source_type]['n'] # the average is 1/n sum(Mi)
+        subrankings[source_type]['n'] = subrankings[source_type][Mi].count(axis=1).astype(int) # number of non null Mi entries
+        subrankings[source_type]['M'] = subrankings[source_type][Mi].mean(axis=1) # the average is 1/n * sum(Mi)
+
+        # fill data from sets missing cities
+        subrankings[source_type].sort_values(by=['State', 'City'], inplace=True) # sort so that fillna(method='ffil')  is appropriate
+        subrankings[source_type] = subrankings[source_type].where(subrankings[source_type]['City']!='', subrankings[source_type].fillna('tmp')) # fill no-city entries with placeholders
+        subrankings[source_type].fillna(method='ffill', inplace=True) # fill city-specific rows with no-city entries
+        subrankings[source_type].replace('tmp', np.nan, inplace=True) # replace no-city placeholders
 
         if verbose:
             print(subrankings[source_type][['State', 'City', 'M', 'n']].sort_values('City', ascending=False))#.to_string())
@@ -136,6 +136,21 @@ def gardnm(
     # (4) Combine subrankings into final rankings
 
     rankings = pd.DataFrame({'State':states}) 
+    rankings['City'] = '' # initialize
+    rankings['M'] = np.NaN # initialize
+    rankings['n'] = np.NaN # initialize
+    for source_type, stdata in subrankings.items():
+        rankings = pd.merge(rankings, stdata[['State', 'City', 'M', 'n']], on=['State', 'City'], how='outer', suffixes=(None, f'_{source_type}'))
+    
+    # fill data from source_types missing cities
+    rankings.sort_values(by=['State', 'City'], inplace=True) # sort so that fillna(method='ffil')  is appropriate
+    rankings = rankings.where(rankings['City']!='', rankings.fillna('tmp')) # fill no-city entries with placeholders
+    rankings.fillna(method='ffill', inplace=True) # fill city-specific rows with no-city entries
+    rankings.replace('tmp', np.nan, inplace=True) # replace no-city placeholders
+
+    rankings['n'] = rankings[[f'n_{st}' for st in source_types]].sum(axis=1).astype(int)
+    rankings['M'] = rankings[[f'M_{st}' for st in source_types]].mean(axis=1)
+
 
 
     # (5) Save the output and print results
