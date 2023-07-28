@@ -20,7 +20,7 @@ os.chdir(repo.working_tree_dir)
 
 def gardnm(
     cities_to_print = ['Atlanta', 'Boston', 'Memphis'],  
-    noramlizeAll = True, 
+    normalizeAll = True, 
     filename = 'gardnm', 
     ignore_subtypes = True, 
     verbose = False, 
@@ -29,7 +29,7 @@ def gardnm(
 
     Args:
         cities_to_print: print the output of these cities to the console 
-        noramlizeAll: normalize raw data from every source to span the full 0-10 scale
+        normalizeAll: normalize raw data from every source to span the full 0-10 scale
         filename: prefix for filename to use when saving this run
         ignore_subtypes: option to ignore the various subtypes in source_subtypes
         verbose: some extra print statements that may be useful when debugging
@@ -41,7 +41,7 @@ def gardnm(
     # set filename
     filename += '_algorithm_rework' # based on git commit for the moment
 
-    if noramlizeAll:
+    if normalizeAll:
         filename += '_normalized'
 
     ## (1) Load all the data from GARDN-M/data/processed_data
@@ -86,7 +86,7 @@ def gardnm(
             sdata['City'] = np.NaN
         sdata.City = sdata.City.fillna('')
         sdata = assign_CompScore(sdata, source)
-        if noramlizeAll:
+        if normalizeAll:
             sdata = normalize_CompScore(sdata)
         sdata = assign_PSW(sdata, source, source_ratings, source_subtypes, ignore_subtypes)
 
