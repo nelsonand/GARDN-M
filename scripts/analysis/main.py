@@ -14,7 +14,7 @@ import os
 import json
 import numpy as np
 
-# establish relative directories
+# establish relative directories (use pathlib)
 repo = git.Repo('.', search_parent_directories=True)
 os.chdir(repo.working_tree_dir)
 
