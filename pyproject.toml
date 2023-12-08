@@ -1,0 +1,24 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+  "setuptools >= 61.2.0",
+  "setuptools-scm >= 6.3.2",
+  "wheel >= 0.37.0",
+]
+
+[project]
+name = "gardn_m"
+description = "Python implementation of metrics from GARDN-m"
+readme = "README.md"
+keywords = [
+  "site selection",
+]
+license = {file = "LICENSE.md"}
+requires-python = ">=3.9"
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "License :: OSI Approved :: BSD License",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+]
