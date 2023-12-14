@@ -1,0 +1,10 @@
+cff-version: 0.1.0
+message: "If you use this software, please cite it using these metadata."
+authors:
+  - family-names: Nelson
+    given-names: Andrew
+    orcid: https://orcid.org/0000-0002-9612-1936
+title: "The GARDN-M Protocol"
+version: 0.1.0
+date-released: "2023-12-31"
+repository-code: https://github.com/nelsonand/GARDN-M
