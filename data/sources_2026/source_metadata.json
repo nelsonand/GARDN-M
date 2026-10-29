@@ -1,0 +1,167 @@
+{
+      "oxfam_bestStatesToWork_2025": {
+            "data_year": 2025,
+            "scale": "absolute",
+            "stale_adjustment": 0
+      },
+      "census_acsGiniIndex_2025": {
+            "data_year": 2025,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "infogram_socialEquityCitiesRanking": {
+            "data_year": 2020,
+            "scale": "relative",
+            "stale_adjustment": -2
+      },
+      "usNews_raceEqualityGaps_2026": {
+            "data_year": 2026,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "wallethub_statesRacialEquality_2024": {
+            "data_year": 2024,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "wallethub_racialIntegration_2026": {
+            "data_year": 2026,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "wallethub_racialEqualityEducation_2026": {
+            "data_year": 2026,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "census_diversityIndex_2025": {
+            "data_year": 2025,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "sentencingProject_blackWhiteImprisonmentDisparity_2021": {
+            "data_year": 2021,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "berkeleyOBI_citySegregation_2023": {
+            "data_year": 2023,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "wallethub_womenEquity_2026": {
+            "data_year": 2026,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "wallethub_bestStatesWomen_2026": {
+            "data_year": 2026,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "commonwealthFund_womensHealthReproCare_2024": {
+            "data_year": 2024,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "populationInstitute_reproFreedomReportCard_2026": {
+            "data_year": 2026,
+            "scale": "absolute",
+            "stale_adjustment": 0
+      },
+      "crr_abortionLawsByState_2026": {
+            "data_year": 2026,
+            "scale": "absolute",
+            "stale_adjustment": 0
+      },
+      "map_equaliltyMaps_2026": {
+            "data_year": 2026,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "hrc_stateEquityIndex_2024": {
+            "data_year": 2024,
+            "scale": "absolute",
+            "stale_adjustment": 0
+      },
+      "hrc_municipalEqualityIndex_2025": {
+            "data_year": 2025,
+            "scale": "absolute",
+            "stale_adjustment": 0
+      },
+      "outLeadership_lgbtqBusinessClimate_2026": {
+            "data_year": 2026,
+            "scale": "absolute",
+            "stale_adjustment": 0
+      },
+      "move_lgbtqFamily_2025": {
+            "data_year": 2025,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "erinInTheMorning_transAdultRiskMap_2026": {
+            "data_year": 2026,
+            "scale": "absolute",
+            "stale_adjustment": 0
+      },
+      "safehome_lgbtqStateSafety_2026": {
+            "data_year": 2026,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "wallethub_citiesDisabilities_2026": {
+            "data_year": 2026,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "usNews_equalityRankings_2026": {
+            "data_year": 2026,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "census_acsDisabilityEmploymentParity_2025": {
+            "data_year": 2025,
+            "scale": "absolute",
+            "stale_adjustment": 0
+      },
+      "newAmerica_competitiveIntegratedEmployment_2026": {
+            "data_year": 2026,
+            "scale": "absolute",
+            "stale_adjustment": 0
+      },
+      "fta_ntdAdaAccessibleStations_2025": {
+            "data_year": 2025,
+            "scale": "absolute",
+            "stale_adjustment": 0
+      },
+      "ncaj_disabilityAccess": {
+            "data_year": 2021,
+            "scale": "absolute",
+            "stale_adjustment": -1
+      },
+      "ilrc_stateImmigrationEnforcement_2026": {
+            "data_year": 2026,
+            "scale": "absolute",
+            "stale_adjustment": 0
+      },
+      "giffords_gunLawScorecard_2025": {
+            "data_year": 2025,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "nationalEquityAtlas_2024": {
+            "data_year": 2024,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "aarp_ltssScorecard_2023": {
+            "data_year": 2023,
+            "scale": "relative",
+            "stale_adjustment": 0
+      },
+      "commonwealthFund_healthSystemPerformance_2025": {
+            "data_year": 2025,
+            "scale": "relative",
+            "stale_adjustment": 0
+      }
+}

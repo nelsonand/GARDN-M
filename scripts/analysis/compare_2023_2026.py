@@ -5,10 +5,14 @@ Run main.py for both data versions first.
 """
 import json
 import os
+import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from main import gar_zone as gar  # noqa: E402
 
 os.chdir(Path(__file__).resolve().parents[2])
 
@@ -17,11 +21,6 @@ CITIES = [('MA', 'Boston'), ('VA', 'Richmond'), ('KY', 'Louisville'), ('OH', 'Cl
           ('NM', 'Albuquerque'), ('GA', 'Atlanta'), ('DC', 'Washington'), ('TX', 'Houston'), ('IL', 'Chicago'),
           ('VA', 'Arlington'), ('TN', 'Memphis'), ('CO', 'Denver'), ('WA', 'Seattle'), ('CA', 'San Diego'),
           ('FL', 'Orlando'), ('PA', 'Pittsburgh'), ('NC', 'Charlotte'), ('UT', 'Salt Lake City'), ('NV', 'Las Vegas')]
-
-
-def gar(m):
-    """Green/Amber/Red zone from the composite score (cutoffs from the original GARDN-M write-up)"""
-    return np.where(m.isna(), '', np.where(m >= 6.0, 'Green', np.where(m >= 3.6, 'Amber', 'Red')))
 
 
 def load(name):

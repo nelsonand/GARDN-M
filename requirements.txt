@@ -2,3 +2,4 @@ numpy>=2
 pandas>=2.2
 requests
 beautifulsoup4
+pytest
