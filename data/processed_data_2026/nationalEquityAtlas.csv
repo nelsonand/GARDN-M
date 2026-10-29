@@ -1,0 +1,199 @@
+City,State,Score
+,VT,72.18
+,VA,69.84
+,CO,68.75
+,KS,67.07
+,MD,65.31
+,ME,64.10
+,MA,62.50
+,CT,61.51
+,OH,61.30
+,WA,60.99
+,NH,60.34
+,UT,59.82
+,HI,59.53
+,IN,59.03
+,GA,58.28
+,NC,58.26
+,MO,58.18
+,MT,57.22
+,PA,56.13
+,SC,55.73
+,WY,55.66
+,DE,55.55
+,OK,55.34
+,NJ,55.06
+,TN,54.63
+,TX,54.57
+,OR,53.89
+,NE,53.00
+,ID,51.56
+,IL,51.41
+,WI,50.52
+,KY,49.55
+,MI,49.39
+,AL,49.38
+,FL,48.66
+,RI,47.65
+,AZ,46.49
+,MN,44.91
+,AK,42.98
+,NV,40.83
+,IA,40.03
+,AR,40.00
+,SD,38.41
+,ND,38.16
+,CA,36.74
+,LA,36.69
+,NM,35.40
+,NY,31.58
+,WV,30.45
+,MS,21.65
+Ann Arbor,MI,76.25
+Colorado Springs,CO,75.74
+San Jose,CA,72.48
+Huntsville,AL,72.25
+Columbia,SC,71.57
+Virginia Beach,VA,71.46
+Austin,TX,71.44
+Palm Bay,FL,71.18
+Denve,CO,70.74
+Honolulu,HI,70.63
+Reno-Sparks,NV,70.17
+Killeen-Temple-Fort Hood,TX,69.95
+Dayton,OH,69.88
+Baltimore-Towson,MD,69.76
+Spokane,WA,69.47
+Washington,DC,69.46
+Columbus,OH,69.37
+Worcester,MA,68.88
+Jacksonville,FL,68.83
+Richmond,VA,68.81
+Raleigh-Cary,NC,68.62
+Seattle,WA,68.57
+Oxnard,CA,68.48
+Lexington,KY,68.48
+Dallas,TX,68.43
+Wilmington,NC,68.05
+Wichita,KS,67.84
+Salt Lake City,UT,67.75
+Provo-Orem,UT,67.74
+Indianapolis,IN,67.71
+San Francisco,CA,67.42
+Santa Rosa,CA,67.41
+Charlotte,NC,67.35
+Lansing-East Lansing,MI,67.34
+Akron,OH,67.22
+Durham,NC,67.20
+Canton,OH,67.12
+Fort Wayne,IN,66.82
+Tampa-St. Petersburg,FL,66.67
+Sarasota,FL,66.65
+Cincinnati,OH,66.49
+Manchester,NH,66.48
+Little Rock,AR,66.41
+Kansas City,MO,66.39
+New Haven,CT,66.34
+Orlando,FL,66.30
+Kalamazoo,MI,66.17
+Ogden,UT,66.16
+Greensboro,NC,66.14
+Oklahoma City,OK,65.89
+Greenville,SC,65.78
+San Antonio,TX,65.74
+Tulsa,OK,65.60
+Atlanta,GA,65.59
+Hartford,CT,65.55
+Sacramento,CA,65.47
+Knoxville,TN,65.47
+Tucson,AZ,65.23
+Savannah,GA,65.10
+St. Louis,MO,65.06
+Fayetteville,NC,65.06
+Vallejo,CA,64.90
+Pittsburgh,PA,64.85
+Boston,MA,64.61
+South Bend,IN,64.60
+Louisville,KY,64.44
+Bridgeport,CT,64.39
+Springfield,MO,64.37
+Albuquerque,NM,64.34
+Poughkeepsie,NY,63.91
+Santa Barbara,CA,63.90
+Toledo,OH,63.85
+Omaha,NE,63.20
+Cleveland,OH,63.04
+Springfield,MA,63.01
+Boise City,ID,63.00
+Cape Coral,FL,62.82
+Nashville,TN,62.67
+Houston,TX,62.46
+Davenport,IA,62.46
+Providence,RI,62.44
+Pensacola,FL,62.34
+Chattanooga,TN,62.20
+Augusta,GA,62.14
+Winston,NC,62.13
+Philadelphia,PA,62.11
+Hickory,NC,61.85
+Lancaster,PA,61.71
+Allentown,PA,61.09
+Detroit,MI,60.95
+Charleston,SC,60.93
+Trenton,NJ,60.93
+Montgomery,AL,60.89
+Phoenix,AZ,60.75
+San Diego,CA,60.71
+Ocala,FL,60.61
+Milwaukee,WI,60.47
+Port St. Lucie,FL,60.43
+Asheville,NC,60.17
+Memphis,TN,59.84
+Baton Rouge,LA,59.72
+Deltona,FL,59.70
+Birmingham,AL,59.62
+Anchorage,AK,59.59
+Chicago,IL,59.55
+Grand Rapids,MI,59.22
+Miami,FL,59.04
+Youngstown,OH,58.85
+Portland,OR,58.82
+Lakeland,FL,58.70
+Fayetteville,AR,58.52
+Shreveport,LA,58.45
+Eugene,OR,58.40
+Rockford,IL,58.35
+Las Vegas,NV,58.20
+Harrisburg,PA,58.01
+Buffalo,NY,58.00
+Evansville,IN,57.82
+Tallahassee,FL,57.77
+Des Moines,IA,57.62
+Albany,NY,57.56
+Flint,MI,57.52
+New Orleans,LA,56.06
+Salinas,CA,55.98
+Salem,OR,55.88
+Beaumont,TX,55.67
+Mobile,AL,55.44
+Corpus Christi,TX,55.36
+Syracuse,NY,53.69
+Peoria,IL,53.49
+Riverside,CA,52.97
+Reading,PA,52.66
+Jackson,MS,50.97
+Stockton,CA,48.99
+Fresno,CA,48.87
+New York,NY,47.87
+Modesto,CA,47.07
+Los Angeles,CA,46.71
+Rochester,NY,46.50
+Minneapolis,MN,45.60
+El Paso,TX,45.58
+Naples,FL,44.88
+York,PA,43.47
+Bakersfield,CA,42.00
+Madison,WI,38.69
+Brownsville,TX,34.72
+Visalia,CA,33.14
+McAllen,TX,16.86

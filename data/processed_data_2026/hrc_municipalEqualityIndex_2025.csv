@@ -1,0 +1,510 @@
+State,City,Jurisdiction_Note,Score,URL_Scorecard,City_source
+AK,Anchorage,,89,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Anchorage-Alaska.pdf,Anchorage
+AK,Fairbanks,,40,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fairbanks-Alaska.pdf,Fairbanks
+AK,Homer,,14,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Homer-Alaska.pdf,Homer
+AK,Juneau,,95,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Juneau-Alaska.pdf,Juneau
+AK,Ketchikan,,67,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Ketchikan-Alaska.pdf,Ketchikan
+AK,Sitka,,34,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Sitka-Alaska.pdf,Sitka
+AK,Wasilla,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Wasilla-Alaska.pdf,Wasilla
+AL,Auburn,,13,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Auburn-Alabama.pdf,Auburn
+AL,Birmingham,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Birmingham-Alabama.pdf,Birmingham
+AL,Florence,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Florence-Alabama.pdf,Florence
+AL,Hoover,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/2025-MEI-Hoover-Alabama.pdf,Hoover
+AL,Huntsville,,26,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Huntsville-Alabama.pdf,Huntsville
+AL,Mobile,,36,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Mobile-Alabama.pdf,Mobile
+AL,Montgomery,,37,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Montgomery-Alabama.pdf,Montgomery
+AL,Tuscaloosa,,27,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Tuscaloosa-Alabama.pdf,Tuscaloosa
+AR,Conway,,26,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Conway-Arkansas.pdf,Conway
+AR,Eureka Springs,,26,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Eureka-Springs-Arkansas.pdf,Eureka Springs
+AR,Fayetteville,,38,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fayetteville-Arkansas.pdf,Fayetteville
+AR,Fort Smith,,26,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fort-Smith-Arkansas.pdf,Fort Smith
+AR,Jonesboro,,0,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Jonesboro-Arkansas.pdf,Jonesboro
+AR,Little Rock,,51,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Little-Rock-Arkansas.pdf,Little Rock
+AR,North Little Rock,,14,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-North-Little-Rock-Arkansas.pdf,North Little Rock
+AR,Springdale,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Springdale-Arkansas.pdf,Springdale
+AZ,Avondale,,21,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Avondale-Arizona.pdf,Avondale
+AZ,Chandler,,87,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Chandler-Arizona.pdf,Chandler
+AZ,Flagstaff,,97,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Flagstaff-Arizona.pdf,Flagstaff
+AZ,Gilbert,,62,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Gilbert-Arizona.pdf,Gilbert
+AZ,Glendale,,96,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Glendale-Arizona.pdf,Glendale
+AZ,Mesa,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Mesa-Arizona.pdf,Mesa
+AZ,Peoria,,27,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Peoria-Arizona.pdf,Peoria
+AZ,Phoenix,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Phoenix-Arizona.pdf,Phoenix
+AZ,Scottsdale,,74,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Scottsdale-Arizona.pdf,Scottsdale
+AZ,Tempe,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Tempe-Arizona.pdf,Tempe
+AZ,Tucson,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Tucson-Arizona.pdf,Tucson
+CA,Anaheim,,77,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Anaheim-California.pdf,Anaheim
+CA,Bakersfield,,58,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bakersfield-California.pdf,Bakersfield
+CA,Berkeley,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Berkeley-California.pdf,Berkeley
+CA,Brisbane,,70,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Brisbane-California.pdf,Brisbane
+CA,Cathedral City,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Cathedral-City-California.pdf,Cathedral City
+CA,Chula Vista,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Chula-Vista-California.pdf,Chula Vista
+CA,Concord,,85,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Concord-California.pdf,Concord
+CA,Corona,,66,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Corona-California.pdf,Corona
+CA,Elk Grove,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Elk-Grove-California.pdf,Elk Grove
+CA,Escondido,,70,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Escondido-California.pdf,Escondido
+CA,Fontana,,52,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fontana-California.pdf,Fontana
+CA,Fremont,,97,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fremont-California.pdf,Fremont
+CA,Fresno,,95,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fresno-California.pdf,Fresno
+CA,Fullerton,,68,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fullerton-California.pdf,Fullerton
+CA,Garden Grove,,60,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Garden-Grove-California.pdf,Garden Grove
+CA,Glendale,,72,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Glendale-California.pdf,Glendale
+CA,Guerneville,Sonoma County,91,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Guerneville-Sonoma-County-California.pdf,Guerneville
+CA,Hayward,,88,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/Hayward-CA.pdf,Hayward
+CA,Huntington Beach,,61,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Huntington-Beach-California.pdf,Huntington Beach
+CA,Irvine,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Irvine-California.pdf,Irvine
+CA,Lancaster,,58,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lancaster-California.pdf,Lancaster
+CA,Long Beach,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Long-Beach-California.pdf,Long Beach
+CA,Modesto,,81,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Modesto-California.pdf,Modesto
+CA,Moreno Valley,,46,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Moreno-Valley-California.pdf,Moreno Valley
+CA,Oakland,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Oakland-California.pdf,Oakland
+CA,Oceanside,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Oceanside-California.pdf,Oceanside
+CA,Ontario,,56,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Ontario-California.pdf,Ontario
+CA,Orange,,57,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Orange-California.pdf,Orange
+CA,Oxnard,,69,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Oxnard-California.pdf,Oxnard
+CA,Palm Desert,,97,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Palm-Desert-California.pdf,Palm Desert
+CA,Palm Springs,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Palm-Springs-California.pdf,Palm Springs
+CA,Palmdale,,78,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Palmdale-California.pdf,Palmdale
+CA,Pasadena,,88,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Pasadena-California.pdf,Pasadena
+CA,Pomona,,66,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Pomona-California.pdf,Pomona
+CA,Rancho Cucamonga,,47,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Rancho-Cucamonga-California.pdf,Rancho Cucamonga
+CA,Rancho Mirage,,98,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Rancho-Mirage-California.pdf,Rancho Mirage
+CA,Richmond,,95,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Richmond-California.pdf,Richmond
+CA,Riverside,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Riverside-California.pdf,Riverside
+CA,Sacramento,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Sacramento-California.pdf,Sacramento
+CA,Salinas,,74,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Salinas-California.pdf,Salinas
+CA,San Bernardino,,55,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-San-Bernardino-California.pdf,San Bernardino
+CA,San Diego,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-San-Diego-California.pdf,San Diego
+CA,San Francisco,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-San-Francisco-California.pdf,San Francisco
+CA,San Jose,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-San-Jose-California.pdf,San Jose
+CA,Santa Ana,,84,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Santa-Ana-California.pdf,Santa Ana
+CA,Santa Clarita,,65,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Santa-Clarita-California.pdf,Santa Clarita
+CA,Santa Monica,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Santa-Monica-California.pdf,Santa Monica
+CA,Santa Rosa,,82,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Santa-Rosa-California.pdf,Santa Rosa
+CA,Signal Hill,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Signal-Hill-California.pdf,Signal Hill
+CA,Stockton,,88,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Stockton-California.pdf,Stockton
+CA,Sunnyvale,,91,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Sunnyvale-California.pdf,Sunnyvale
+CA,Thousand Oaks,,56,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Thousand-Oaks-California.pdf,Thousand Oaks
+CA,Torrance,,72,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Torrance-California.pdf,Torrance
+CA,Vallejo,,83,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Vallejo-California.pdf,Vallejo
+CA,Visalia,,82,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Visalia-California.pdf,Visalia
+CA,West Hollywood,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-West-Hollywood-California.pdf,West Hollywood
+CO,Aspen,,94,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Aspen-Colorado.pdf,Aspen
+CO,Aurora,,74,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Aurora-Colorado.pdf,Aurora
+CO,Boulder,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Boulder-Colorado.pdf,Boulder
+CO,Colorado Springs,,82,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Colorado-Springs-Colorado.pdf,Colorado Springs
+CO,Denver,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Denver-Colorado.pdf,Denver
+CO,Fort Collins,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fort-Collins-Colorado.pdf,Fort Collins
+CO,Lakewood,,62,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lakewood-Colorado.pdf,Lakewood
+CO,Littleton,,48,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Littleton-Colorado.pdf,Littleton
+CT,Bridgeport,,40,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bridgeport-Connecticut.pdf,Bridgeport
+CT,Fairfield,,52,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fairfield-Connecticut.pdf,Fairfield
+CT,Hartford,,85,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Hartford-Connecticut.pdf,Hartford
+CT,New Britain,,81,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-New-Britain-Connecticut.pdf,New Britain
+CT,New Haven,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-New-Haven-Connecticut.pdf,New Haven
+CT,Norwalk,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Norwalk-Connecticut.pdf,Norwalk
+CT,Stamford,,99,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Stamford-Connecticut.pdf,Stamford
+CT,Storrs (Mansfield),,65,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Storrs-Mansfield-Connecticut.pdf,Storrs (Mansfield)
+CT,Waterbury,,54,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Waterbury-Connecticut.pdf,Waterbury
+DE,Bethany Beach,,51,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bethany-Beach-Delaware.pdf,Bethany Beach
+DE,Dover,,69,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Dover-Delaware.pdf,Dover
+DE,Middletown,,64,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Middletown-Delaware.pdf,Middletown
+DE,Milford,,83,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Milford-Delaware.pdf,Milford
+DE,Newark,,72,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Newark-Delaware.pdf,Newark
+DE,Rehoboth Beach,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Rehoboth-Beach-Delaware.pdf,Rehoboth Beach
+DE,Smyrna,,59,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Smyrna-Delaware.pdf,Smyrna
+DE,Wilmington,,76,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Wilmington-Delaware.pdf,Wilmington
+FL,Cape Coral,,56,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Cape-Coral-Florida.pdf,Cape Coral
+FL,Coral Gables,,92,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Coral-Gables-Florida.pdf,Coral Gables
+FL,Daytona Beach,,39,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Daytona-Beach-Florida.pdf,Daytona Beach
+FL,Fort Lauderdale,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fort-Lauderdale-Florida.pdf,Fort Lauderdale
+FL,Gainesville,,84,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Gainesville-Florida.pdf,Gainesville
+FL,Hialeah,,54,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Hialeah-Florida.pdf,Hialeah
+FL,Hollywood,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Hollywood-Florida.pdf,Hollywood
+FL,Jacksonville,,73,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Jacksonville-Florida.pdf,Jacksonville
+FL,Lake Worth Beach,,91,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lake-Worth-Beach-Florida.pdf,Lake Worth Beach
+FL,Miami,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Miami-Florida.pdf,Miami
+FL,Miami Beach,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Miami-Beach-Florida.pdf,Miami Beach
+FL,Miami Shores,,92,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Miami-Shores-Florida.pdf,Miami Shores
+FL,Oakland Park,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Oakland-Park-Florida.pdf,Oakland Park
+FL,Orlando,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Orlando-Florida.pdf,Orlando
+FL,Pembroke Pines,,69,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Pembroke-Pines-Florida.pdf,Pembroke Pines
+FL,Port St. Lucie,,77,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Port-Saint-Lucie-Florida.pdf,Port Saint Lucie
+FL,St. Petersburg,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-St-Petersburg-Florida.pdf,St. Petersburg
+FL,Tallahassee,,96,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Tallahassee-Florida.pdf,Tallahassee
+FL,Tampa,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Tampa-Florida.pdf,Tampa
+FL,Wilton Manors,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Wilton-Manors-Florida.pdf,Wilton Manors
+GA,Athens-Clarke County,,91,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Athens-Clarke-County-Georgia.pdf,Athens-Clarke County
+GA,Atlanta,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Atlanta-Georgia.pdf,Atlanta
+GA,Augusta,,21,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Augusta-Richmond-County-Georgia.pdf,Augusta-Richmond County
+GA,Avondale Estates,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Avondale-Estates-Georgia.pdf,Avondale Estates
+GA,Columbus,,49,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Columbus-Georgia.pdf,Columbus
+GA,Decatur,,89,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Decatur-Georgia.pdf,Decatur
+GA,North Druid Hills,Dekalb County,47,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-North-Druid-Hills-Dekalb-County-Georgia.pdf,North Druid Hills
+GA,Roswell,,0,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Roswell-Georgia.pdf,Roswell
+GA,Sandy Springs,,20,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Sandy-Springs-Georgia.pdf,Sandy Springs
+GA,Savannah,,80,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Savannah-Georgia.pdf,Savannah
+HI,Hawaii County,,70,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Hawaii-County-Hawaii.pdf,Hawaii County
+HI,Honolulu,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Honolulu-County-Hawaii.pdf,Honolulu County
+HI,Kalawao County,,36,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Kalawao-County-Hawaii.pdf,Kalawao County
+HI,Kauai County,,47,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Kauai-County-Hawaii.pdf,Kauai County
+HI,Maui County,,92,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Maui-County-Hawaii.pdf,Maui County
+IA,Ames,,69,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Ames-Iowa.pdf,Ames
+IA,Cedar Rapids,,97,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Cedar-Rapids-Iowa.pdf,Cedar Rapids
+IA,Davenport,,95,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Davenport-Iowa.pdf,Davenport
+IA,Des Moines,,92,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Des-Moines-Iowa.pdf,Des Moines
+IA,Dubuque,,91,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Dubuque-Iowa.pdf,Dubuque
+IA,Iowa City,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Iowa-City-Iowa.pdf,Iowa City
+IA,Sioux City,,35,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Sioux-City-Iowa.pdf,Sioux City
+IA,Waterloo,,78,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Waterloo-Iowa.pdf,Waterloo
+IA,West Des Moines,,81,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-West-Des-Moines-Iowa.pdf,West Des Moines
+ID,Boise,,82,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Boise-Idaho.pdf,Boise
+ID,Coeur d'Alene,,55,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Coeur-dAlene-Idaho.pdf,Coeur d'Alene
+ID,Idaho Falls,,53,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Idaho-Falls-Idaho.pdf,Idaho Falls
+ID,Meridian,,51,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Meridian-Idaho.pdf,Meridian
+ID,Moscow,,58,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Moscow-Idaho.pdf,Moscow
+ID,Nampa,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Nampa-Idaho.pdf,Nampa
+ID,Pocatello,,65,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Pocatello-Idaho.pdf,Pocatello
+IL,Aurora,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Aurora-Illinois.pdf,Aurora
+IL,Carbondale,,79,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Carbondale-Illinois.pdf,Carbondale
+IL,Champaign,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Champaign-Illinois.pdf,Champaign
+IL,Chicago,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Chicago-Illinois.pdf,Chicago
+IL,Joliet,,70,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Joliet-Illinois.pdf,Joliet
+IL,Naperville,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Naperville-Illinois.pdf,Naperville
+IL,Peoria,,67,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Peoria-Illinois.pdf,Peoria
+IL,Rockford,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Rockford-Illinois.pdf,Rockford
+IL,Springfield,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Springfield-Illinois.pdf,Springfield
+IN,Bloomington,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bloomington-Indiana.pdf,Bloomington
+IN,Evansville,,93,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Evansville-Indiana.pdf,Evansville
+IN,Fort Wayne,,39,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fort-Wayne-Indiana.pdf,Fort Wayne
+IN,Hammond,,66,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Hammond-Indiana.pdf,Hammond
+IN,Indianapolis,,81,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Indianapolis-Indiana.pdf,Indianapolis
+IN,Muncie,,67,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Muncie-Indiana.pdf,Muncie
+IN,South Bend,,73,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-South-Bend-Indiana.pdf,South Bend
+IN,Terre Haute,,96,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Terre-Haute-Indiana.pdf,Terre Haute
+IN,West Lafayette,,81,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-West-Lafayette-Indiana.pdf,West Lafayette
+KS,Emporia,,48,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Emporia-Kansas.pdf,Emporia
+KS,Hutchinson,,66,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Hutchinson-Kansas.pdf,Hutchinson
+KS,Kansas City,,67,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Kansas-City-Kansas.pdf,Kansas City
+KS,Lawrence,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lawrence-Kansas.pdf,Lawrence
+KS,Manhattan,,78,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Manhattan-Kansas.pdf,Manhattan
+KS,Olathe,,62,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Olathe-Kansas.pdf,Olathe
+KS,Overland Park,,91,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Overland-Park-Kansas.pdf,Overland Park
+KS,Topeka,,93,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Topeka-Kansas.pdf,Topeka
+KS,Wichita,,89,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Wichita-Kansas.pdf,Wichita
+KY,Berea,,29,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Berea-Kentucky.pdf,Berea
+KY,Bowling Green,,31,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bowling-Green-Kentucky.pdf,Bowling Green
+KY,Covington,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Covington-Kentucky.pdf,Covington
+KY,Frankfort,,65,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Frankfort-Kentucky.pdf,Frankfort
+KY,Lexington,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lexington-Kentucky.pdf,Lexington
+KY,Louisville,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Louisville-Kentucky.pdf,Louisville
+KY,Morehead,,60,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Morehead-Kentucky.pdf,Morehead
+KY,Owensboro,,30,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Owensboro-Kentucky.pdf,Owensboro
+LA,Alexandria,,19,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Alexandria-Louisiana.pdf,Alexandria
+LA,Baton Rouge,,27,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Baton-Rouge-Louisiana.pdf,Baton Rouge
+LA,Lafayette,,0,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lafayette-Louisiana.pdf,Lafayette
+LA,Lake Charles,,14,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lake-Charles-Louisiana.pdf,Lake Charles
+LA,Metairie,Jefferson Parish County,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Metairie-Louisiana.pdf,Metairie
+LA,Monroe,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Monroe-Louisiana.pdf,Monroe
+LA,New Orleans,,88,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-New-Orleans-Louisiana.pdf,New Orleans
+LA,Shreveport,,66,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Shreveport-Louisiana.pdf,Shreveport
+MA,Amherst,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Amherst-Massachusetts.pdf,Amherst
+MA,Boston,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Boston-Massachusetts.pdf,Boston
+MA,Cambridge,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Cambridge-Massachusetts.pdf,Cambridge
+MA,Lowell,,95,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lowell-Massachusetts.pdf,Lowell
+MA,Northampton,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Northampton-Massachusetts.pdf,Northampton
+MA,Provincetown,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Provincetown-Massachusetts.pdf,Provincetown
+MA,Salem,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Salem-Massachusetts.pdf,Salem
+MA,Springfield,,83,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Springfield-Massachusetts.pdf,Springfield
+MA,Worcester,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Worcester-Massachusetts.pdf,Worcester
+MD,Annapolis,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Annapolis-Maryland.pdf,Annapolis
+MD,Baltimore,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Baltimore-Maryland.pdf,Baltimore
+MD,Bowie,,68,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bowie-Maryland.pdf,Bowie
+MD,College Park,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-College-Park-Maryland.pdf,College Park
+MD,Columbia,Howard County,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Columbia-Maryland.pdf,Columbia
+MD,Frederick,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Frederick-Maryland.pdf,Frederick
+MD,Gaithersburg,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Gaithersburg-Maryland.pdf,Gaithersburg
+MD,Hagerstown,,75,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Hagerstown-Maryland.pdf,Hagerstown
+MD,Rockville,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Rockville-Maryland.pdf,Rockville
+MD,Towson,Baltimore County,85,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Towson-Baltimore-County-Maryland.pdf,Towson
+ME,Auburn,,49,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Auburn-Maine.pdf,Auburn
+ME,Augusta,,48,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Augusta-Maine.pdf,Augusta
+ME,Bangor,,78,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bangor-Maine.pdf,Bangor
+ME,Brunswick,,73,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Brunswick-Maine.pdf,Brunswick
+ME,Lewiston,,69,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lewiston-Maine.pdf,Lewiston
+ME,Orono,,41,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Orono-Maine.pdf,Orono
+ME,Portland,,79,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Portland-Maine.pdf,Portland
+ME,Scarborough,,60,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Scarborough-Maine.pdf,Scarborough
+ME,South Portland,,73,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-South-Portland-Maine.pdf,South Portland
+MI,Ann Arbor,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Ann-Arbor-Michigan.pdf,Ann Arbor
+MI,Detroit,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Detroit-Michigan.pdf,Detroit
+MI,East Lansing,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-East-Lansing-Michigan.pdf,East Lansing
+MI,Ferndale,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Ferndale-Michigan.pdf,Ferndale
+MI,Grand Rapids,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Grand-Rapids-Michigan.pdf,Grand Rapids
+MI,Kalamazoo,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Kalamazoo-Michigan.pdf,Kalamazoo
+MI,Lansing,,94,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lansing-Michigan.pdf,Lansing
+MI,Pleasant Ridge,,69,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Pleasant-Ridge-Michigan.pdf,Pleasant Ridge
+MI,Sterling Heights,,99,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Sterling-Heights-Michigan.pdf,Sterling Heights
+MI,Traverse City,,88,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Traverse-City-Michigan.pdf,Traverse City
+MI,Warren,,73,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Warren-Michigan.pdf,Warren
+MN,Bloomington,,96,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bloomington-Minnesota.pdf,Bloomington
+MN,Duluth,,97,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Duluth-Minnesota.pdf,Duluth
+MN,Eden Prairie,,67,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Eden-Prairie-Minnesota.pdf,Eden Prairie
+MN,Minneapolis,,99,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Minneapolis-Minnesota.pdf,Minneapolis
+MN,Minnetonka,,60,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Minnetonka-Minnesota.pdf,Minnetonka
+MN,Rochester,,84,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Rochester-Minnesota.pdf,Rochester
+MN,St. Cloud,,56,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Saint-Cloud-Minnesota.pdf,Saint Cloud
+MN,St. Paul,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Saint-Paul-Minnesota.pdf,Saint Paul
+MO,Cape Girardeau,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Cape-Girardeau-Missouri.pdf,Cape Girardeau
+MO,Columbia,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Columbia-Missouri.pdf,Columbia
+MO,Independence,,53,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Independence-Missouri.pdf,Independence
+MO,Jefferson City,,41,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Jefferson-City-Missouri.pdf,Jefferson City
+MO,Kansas City,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Kansas-City-Missouri.pdf,Kansas City
+MO,Springfield,,55,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Springfield-Missouri.pdf,Springfield
+MO,St. Charles,,19,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-St-Charles-Missouri.pdf,St. Charles
+MO,St. Louis,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-St-Louis-Missouri.pdf,St. Louis
+MS,Bay St. Louis,,7,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bay-St-Louis-Mississippi.pdf,Bay St. Louis
+MS,Biloxi,,26,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Biloxi-Mississippi.pdf,Biloxi
+MS,Gulfport,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Gulfport-Mississippi.pdf,Gulfport
+MS,Hattiesburg,,42,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Hattiesburg-Mississippi.pdf,Hattiesburg
+MS,Jackson,,50,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Jackson-Mississippi.pdf,Jackson
+MS,Ocean Springs,,0,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Ocean-Springs-Mississippi.pdf,Ocean Springs
+MS,Oxford,,26,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Oxford-Mississippi.pdf,Oxford
+MS,Southaven,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Southaven-Mississippi.pdf,Southaven
+MS,Starkville,,31,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Starkville-Mississippi.pdf,Starkville
+MT,Billings,,17,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Billings-Montana.pdf,Billings
+MT,Bozeman,,84,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bozeman-Montana.pdf,Bozeman
+MT,Butte-Silver Bow,,65,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Butte-Silver-Bow-Montana.pdf,Butte-Silver Bow
+MT,Great Falls,,13,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Great-Falls-Montana.pdf,Great Falls
+MT,Helena,,44,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Helena-Montana.pdf,Helena
+MT,Kalispell,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Kalispell-Montana.pdf,Kalispell
+MT,Missoula,,95,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Missoula-Montana.pdf,Missoula
+MT,Whitefish,,60,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Whitefish-Montana.pdf,Whitefish
+NC,Carrboro,,93,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Carrboro-North-Carolina.pdf,Carrboro
+NC,Cary,,72,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Cary-North-Carolina.pdf,Cary
+NC,Chapel Hill,,76,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Chapel-Hill-North-Carolina.pdf,Chapel Hill
+NC,Charlotte,,80,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Charlotte-North-Carolina.pdf,Charlotte
+NC,Durham,,98,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Durham-North-Carolina.pdf,Durham
+NC,Fayetteville,,50,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fayetteville-North-Carolina.pdf,Fayetteville
+NC,Greensboro,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Greensboro-North-Carolina.pdf,Greensboro
+NC,Raleigh,,85,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Raleigh-North-Carolina.pdf,Raleigh
+NC,Wilmington,,47,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Wilmington-North-Carolina.pdf,Wilmington
+NC,Winston-Salem,,96,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Winston-Salem-North-Carolina.pdf,Winston-Salem
+ND,Bismarck,,33,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bismarck-North-Dakota.pdf,Bismarck
+ND,Fargo,,54,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fargo-North-Dakota.pdf,Fargo
+ND,Grand Forks,,50,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Grand-Forks-North-Dakota.pdf,Grand Forks
+ND,Jamestown,,19,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Jamestown-North-Dakota.pdf,Jamestown
+ND,Mandan,,26,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Mandan-North-Dakota.pdf,Mandan
+ND,Minot,,0,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Minot-North-Dakota.pdf,Minot
+ND,West Fargo,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-West-Fargo-North-Dakota.pdf,West Fargo
+NE,Bellevue,,14,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bellevue-Nebraska.pdf,Bellevue
+NE,Fremont,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fremont-Nebraska.pdf,Fremont
+NE,Grand Island,,13,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Grand-Island-Nebraska.pdf,Grand Island
+NE,Kearney,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Kearney-Nebraska.pdf,Kearney
+NE,Lincoln,,65,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lincoln-Nebraska.pdf,Lincoln
+NE,North Platte,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-North-Platte-Nebraska.pdf,North Platte
+NE,Omaha,,87,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Omaha-Nebraska.pdf,Omaha
+NH,Concord,,69,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Concord-New-Hampshire.pdf,Concord
+NH,Derry,,46,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Derry-New-Hampshire.pdf,Derry
+NH,Dover,,80,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Dover-New-Hampshire.pdf,Dover
+NH,Durham,,93,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Durham-New-Hampshire.pdf,Durham
+NH,Keene,,54,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Keene-New-Hampshire.pdf,Keene
+NH,Manchester,,81,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Manchester-New-Hampshire.pdf,Manchester
+NH,Nashua,,71,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Nashua-New-Hampshire.pdf,Nashua
+NH,Plymouth,,46,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Plymouth-New-Hampshire.pdf,Plymouth
+NH,Portsmouth,,95,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Portsmouth-New-Hampshire.pdf,Portsmouth
+NH,Rochester,,51,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Rochester-New-Hampshire.pdf,Rochester
+NJ,Asbury Park,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Asbury-Park-New-Jersey.pdf,Asbury Park
+NJ,Elizabeth,,80,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Elizabeth-New-Jersey.pdf,Elizabeth
+NJ,Hoboken,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Hoboken-New-Jersey.pdf,Hoboken
+NJ,Jersey City,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Jersey-City-New-Jersey.pdf,Jersey City
+NJ,Lambertville,,98,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lambertville-New-Jersey.pdf,Lambertville
+NJ,Maplewood,,96,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Maplewood-New-Jersey.pdf,Maplewood
+NJ,Montclair,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Montclair-New-Jersey.pdf,Montclair
+NJ,New Brunswick,,91,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-New-Brunswick-New-Jersey.pdf,New Brunswick
+NJ,Newark,,64,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Newark-New-Jersey.pdf,Newark
+NJ,Ocean Grove (Neptune),,54,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Ocean-Grove-Neptune-New-Jersey.pdf,Ocean Grove (Neptune)
+NJ,Paterson,,46,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Paterson-New-Jersey.pdf,Paterson
+NJ,Princeton,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Princeton-New-Jersey.pdf,Princeton
+NJ,Trenton,,61,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Trenton-New-Jersey.pdf,Trenton
+NM,Albuquerque,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Albuquerque-New-Mexico.pdf,Albuquerque
+NM,Eldorado at Santa Fe,Santa Fe County,68,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Eldorado-at-Santa-Fe-New-Mexico.pdf,Eldorado at Santa Fe
+NM,Farmington,,59,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Farmington-New-Mexico.pdf,Farmington
+NM,Gallup,,53,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Gallup-New-Mexico.pdf,Gallup
+NM,Las Cruces,,94,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Las-Cruces-New-Mexico.pdf,Las Cruces
+NM,Rio Rancho,,61,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Rio-Rancho-New-Mexico.pdf,Rio Rancho
+NM,Roswell,,60,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Roswell-New-Mexico.pdf,Roswell
+NM,Santa Fe,,60,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Santa-Fe-New-Mexico.pdf,Santa Fe
+NV,Carson City,,64,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Carson-City-Nevada.pdf,Carson City
+NV,Elko,,64,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Elko-Nevada.pdf,Elko
+NV,Enterprise,Clark County,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Enterprise-Clark-County-Nevada.pdf,Enterprise
+NV,Henderson,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Henderson-Nevada.pdf,Henderson
+NV,Las Vegas,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Las-Vegas-Nevada.pdf,Las Vegas
+NV,Mesquite,,65,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Mesquite-Nevada.pdf,Mesquite
+NV,North Las Vegas,,64,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-North-Las-Vegas-Nevada.pdf,North Las Vegas
+NV,Paradise,Clark County,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Paradise-Clark-County-Nevada.pdf,Paradise
+NV,Reno,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Reno-Nevada.pdf,Reno
+NV,Sparks,,72,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Sparks-Nevada.pdf,Sparks
+NY,Albany,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Albany-New-York.pdf,Albany
+NY,Brookhaven,,81,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Brookhaven-New-York.pdf,Brookhaven
+NY,Buffalo,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Buffalo-New-York.pdf,Buffalo
+NY,Hastings-on-Hudson,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Hastings-on-Hudson-New-York.pdf,Hastings-on-Hudson
+NY,Ithaca,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Ithaca-New-York.pdf,Ithaca
+NY,New York,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-New-York-New-York.pdf,New York
+NY,Northwest Harbor,,58,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Northwest-Harbor-New-York.pdf,Northwest Harbor
+NY,Rochester,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Rochester-New-York.pdf,Rochester
+NY,Syracuse,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Syracuse-New-York.pdf,Syracuse
+NY,White Plains,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-White-Plains-New-York.pdf,White Plains
+NY,Yonkers,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Yonkers-New-York.pdf,Yonkers
+OH,Akron,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Akron-Ohio.pdf,Akron
+OH,Cincinnati,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Cincinnati-Ohio.pdf,Cincinnati
+OH,Cleveland,,95,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Cleveland-Ohio.pdf,Cleveland
+OH,Columbus,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Columbus-Ohio.pdf,Columbus
+OH,Dayton,,97,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Dayton-Ohio.pdf,Dayton
+OH,Dublin,,90,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Dublin-Ohio.pdf,Dublin
+OH,Lakewood,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lakewood-Ohio.pdf,Lakewood
+OH,Toledo,,85,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Toledo-Ohio.pdf,Toledo
+OK,Broken Arrow,,26,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Broken-Arrow-Oklahoma.pdf,Broken Arrow
+OK,Edmond,,26,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Edmond-Oklahoma.pdf,Edmond
+OK,Lawton,,13,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lawton-Oklahoma.pdf,Lawton
+OK,Moore,,26,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Moore-Oklahoma.pdf,Moore
+OK,Norman,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Norman-Oklahoma.pdf,Norman
+OK,Oklahoma City,,75,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Oklahoma-City-Oklahoma.pdf,Oklahoma City
+OK,Stillwater,,32,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Stillwater-Oklahoma.pdf,Stillwater
+OK,Tulsa,,81,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Tulsa-Oklahoma.pdf,Tulsa
+OR,Ashland,,72,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Ashland-Oregon.pdf,Ashland
+OR,Bend,,91,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bend-Oregon.pdf,Bend
+OR,Corvallis,,82,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Corvallis-Oregon.pdf,Corvallis
+OR,Eugene,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Eugene-Oregon.pdf,Eugene
+OR,Gresham,,90,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Gresham-Oregon.pdf,Gresham
+OR,Hillsboro,,67,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Hillsboro-Oregon.pdf,Hillsboro
+OR,Portland,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Portland-Oregon.pdf,Portland
+OR,Salem,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Salem-Oregon.pdf,Salem
+PA,Allentown,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Allentown-Pennsylvania.pdf,Allentown
+PA,Carlisle,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Carlisle-Pennsylvania.pdf,Carlisle
+PA,Erie,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Erie-Pennsylvania.pdf,Erie
+PA,Harrisburg,,90,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Harrisburg-Pennsylvania.pdf,Harrisburg
+PA,New Hope,,77,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-New-Hope-Pennsylvania.pdf,New Hope
+PA,Philadelphia,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Philadelphia-Pennsylvania.pdf,Philadelphia
+PA,Pittsburgh,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Pittsburgh-Pennsylvania.pdf,Pittsburgh
+PA,Reading,,92,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Reading-Pennsylvania.pdf,Reading
+PA,State College,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-State-College-Pennsylvania.pdf,State College
+PA,Wilkes-Barre,,80,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Wilkes-Barre-Pennsylvania.pdf,Wilkes-Barre
+RI,Cranston,,66,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Cranston-Rhode-Island.pdf,Cranston
+RI,East Providence,,72,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-East-Providence-Rhode-Island.pdf,East Providence
+RI,Kingston,South Kingstown County,60,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Kingston-Kingstown-Rhode-Island.pdf,Kingston
+RI,Narragansett,,46,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Narragansett-Rhode-Island.pdf,Narragansett
+RI,Newport,,65,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Newport-Rhode-Island.pdf,Newport
+RI,Pawtucket,,65,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Pawtucket-Rhode-Island.pdf,Pawtucket
+RI,Providence,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Providence-Rhode-Island.pdf,Providence
+RI,Warwick,,64,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Warwick-Rhode-Island.pdf,Warwick
+SC,Charleston,,61,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Charleston-South-Carolina.pdf,Charleston
+SC,Clemson,,16,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Clemson-South-Carolina.pdf,Clemson
+SC,Columbia,,65,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Columbia-South-Carolina.pdf,Columbia
+SC,Greenville,,67,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Greenville-South-Carolina.pdf,Greenville
+SC,Mount Pleasant,,46,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Mount-Pleasant-South-Carolina.pdf,Mount Pleasant
+SC,Myrtle Beach,,98,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Myrtle-Beach-South-Carolina.pdf,Myrtle Beach
+SC,North Charleston,,43,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-North-Charleston-South-Carolina.pdf,North Charleston
+SC,Rock Hill,,31,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Rock-Hill-South-Carolina.pdf,Rock Hill
+SD,Aberdeen,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Aberdeen-South-Dakota.pdf,Aberdeen
+SD,Brookings,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Brookings-South-Dakota.pdf,Brookings
+SD,Mitchell,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Mitchell-South-Dakota.pdf,Mitchell
+SD,Pierre,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Pierre-South-Dakota.pdf,Pierre
+SD,Rapid City,,33,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Rapid-City-South-Dakota.pdf,Rapid City
+SD,Sioux Falls,,33,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Sioux-Falls-South-Dakota.pdf,Sioux Falls
+SD,Spearfish,,14,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Spearfish-South-Dakota.pdf,Spearfish
+SD,Vermillion,,86,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Vermillion-South-Dakota.pdf,Vermillion
+SD,Watertown,,19,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Watertown-South-Dakota.pdf,Watertown
+TN,Chattanooga,,41,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Chattanooga-Tennessee.pdf,Chattanooga
+TN,Clarksville,,32,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Clarksville-Tennessee.pdf,Clarksville
+TN,Franklin,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Franklin-Tennessee.pdf,Franklin
+TN,Johnson City,,27,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Johnson-City-Tennessee.pdf,Johnson City
+TN,Knoxville,,64,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Knoxville-Tennessee.pdf,Knoxville
+TN,Memphis,,63,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Memphis-Tennessee.pdf,Memphis
+TN,Murfreesboro,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Murfreesboro-Tennessee.pdf,Murfreesboro
+TN,Nashville,,80,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Nashville-Tennessee.pdf,Nashville
+TX,Amarillo,,53,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Amarillo-Texas.pdf,Amarillo
+TX,Arlington,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Arlington-Texas.pdf,Arlington
+TX,Austin,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Austin-Texas.pdf,Austin
+TX,Brownsville,,76,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Brownsville-Texas.pdf,Brownsville
+TX,College Station,,32,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-College-Station-Texas.pdf,College Station
+TX,Corpus Christi,,53,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Corpus-Christi-Texas.pdf,Corpus Christi
+TX,Dallas,,93,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Dallas-Texas.pdf,Dallas
+TX,Denton,,85,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Denton-Texas.pdf,Denton
+TX,El Paso,,65,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-El-Paso-Texas.pdf,El Paso
+TX,Fort Worth,,90,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fort-Worth-Texas.pdf,Fort Worth
+TX,Garland,,34,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Garland-Texas.pdf,Garland
+TX,Grand Prairie,,36,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Grand-Prairie-Texas.pdf,Grand Prairie
+TX,Houston,,77,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Houston-Texas.pdf,Houston
+TX,Irving,,61,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Irving-Texas.pdf,Irving
+TX,Killeen,,32,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Killeen-Texas.pdf,Killeen
+TX,Laredo,,34,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Laredo-Texas.pdf,Laredo
+TX,Lubbock,,48,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lubbock-Texas.pdf,Lubbock
+TX,McAllen,,32,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-McAllen-Texas.pdf,McAllen
+TX,McKinney,,32,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-McKinney-Texas.pdf,McKinney
+TX,Mesquite,,54,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Mesquite-Texas.pdf,Mesquite
+TX,Pasadena,,48,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Pasadena-Texas.pdf,Pasadena
+TX,Plano,,60,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Plano-Texas.pdf,Plano
+TX,Round Rock,,33,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Round-Rock-Texas.pdf,Round Rock
+TX,San Antonio,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-San-Antonio-Texas.pdf,San Antonio
+TX,Waco,,65,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Waco-Texas.pdf,Waco
+UT,Logan,,48,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Logan-Utah.pdf,Logan
+UT,Ogden,,56,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Ogden-City-Utah.pdf,Ogden City
+UT,Orem,,34,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Orem-Utah.pdf,Orem
+UT,Park City,,83,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Park-City-Utah.pdf,Park City
+UT,Provo,,54,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Provo-Utah.pdf,Provo
+UT,Salt Lake City,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/Salt-Lake-City-UT.pdf,Salt Lake City
+UT,West Jordan,,34,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-West-Jordan-Utah.pdf,West Jordan
+UT,West Valley City,,44,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-West-Valley-City-Utah.pdf,West Valley City
+VA,Alexandria,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Alexandria-Virginia.pdf,Alexandria
+VA,Arlington County,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Arlington-County-Virginia.pdf,Arlington County
+VA,Charlottesville,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Charlottesville-Virginia.pdf,Charlottesville
+VA,Chesapeake,,80,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Chesapeake-Virginia.pdf,Chesapeake
+VA,Fairfax County,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Fairfax-County-Virginia.pdf,Fairfax County
+VA,Hampton,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Hampton-Virginia.pdf,Hampton
+VA,Newport News,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Newport-News-Virginia.pdf,Newport News
+VA,Norfolk,,91,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Norfolk-Virginia.pdf,Norfolk
+VA,Richmond,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Richmond-Virginia.pdf,Richmond
+VA,Roanoke,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Roanoke-Virginia.pdf,Roanoke
+VA,Virginia Beach,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Virginia-Beach-Virginia.pdf,Virginia Beach
+VT,Barre,,62,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Barre-Vermont.pdf,Barre
+VT,Brattleboro,,60,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Brattleboro-Vermont.pdf,Brattleboro
+VT,Burlington,,99,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Burlington-Vermont.pdf,Burlington
+VT,Castleton,,48,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Castleton-Vermont.pdf,Castleton
+VT,Essex,,46,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Essex-Vermont.pdf,Essex
+VT,Montpelier,,63,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Montpelier-Vermont.pdf,Montpelier
+VT,Rutland,,62,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Rutland-Vermont.pdf,Rutland
+VT,South Burlington,,53,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-South-Burlington-Vermont.pdf,South Burlington
+VT,Winooski,,69,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Winooski-Vermont.pdf,Winooski
+WA,Bellevue,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bellevue-Washington.pdf,Bellevue
+WA,Bellingham,,83,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Bellingham-Washington.pdf,Bellingham
+WA,Kenmore,,74,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Kenmore-Washington.pdf,Kenmore
+WA,Kent,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Kent-Washington.pdf,Kent
+WA,Olympia,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Olympia-Washington.pdf,Olympia
+WA,Pullman,,65,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Pullman-Washington.pdf,Pullman
+WA,Seattle,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Seattle-Washington.pdf,Seattle
+WA,Spokane,,94,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Spokane-Washington.pdf,Spokane
+WA,Tacoma,,93,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Tacoma-Washington.pdf,Tacoma
+WA,Vancouver,,76,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Vancouver-Washington.pdf,Vancouver
+WA,Vashon,King County,77,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Vashon-King-County-Washington.pdf,Vashon
+WI,Appleton,,99,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Appleton-Wisconsin.pdf,Appleton
+WI,Green Bay,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Green-Bay-Wisconsin.pdf,Green Bay
+WI,Kenosha,,54,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Kenosha-Wisconsin.pdf,Kenosha
+WI,Madison,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Madison-Wisconsin.pdf,Madison
+WI,Milwaukee,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Milwaukee-Wisconsin.pdf,Milwaukee
+WI,Oshkosh,,95,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Oshkosh-Wisconsin.pdf,Oshkosh
+WI,Racine,,79,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Racine-Wisconsin.pdf,Racine
+WV,Charles Town,,48,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Charles-Town-West-Virginia.pdf,Charles Town
+WV,Charleston,,96,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Charleston-West-Virginia.pdf,Charleston
+WV,Huntington,,93,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Huntington-West-Virginia.pdf,Huntington
+WV,Lewisburg,,37,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Lewisburg-West-Virginia.pdf,Lewisburg
+WV,Morgantown,,100,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Morgantown-West-Virginia.pdf,Morgantown
+WV,Parkersburg,,12,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Parkersburg-West-Virginia.pdf,Parkersburg
+WV,Wheeling,,62,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Wheeling-West-Virginia.pdf,Wheeling
+WY,Casper,,92,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Casper-Wyoming.pdf,Casper
+WY,Cheyenne,,32,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Cheyenne-Wyoming.pdf,Cheyenne
+WY,Gillette,,26,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Gillette-Wyoming.pdf,Gillette
+WY,Jackson,,66,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Jackson-Wyoming.pdf,Jackson
+WY,Laramie,,94,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Laramie-Wyoming.pdf,Laramie
+WY,Rock Springs,,15,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Rock-Springs-Wyoming.pdf,Rock Springs
+WY,Sheridan,,32,https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/MEI-Scorecard-Assets/MEI-25-Scorecards/MEI-2025-Sheridan-Wyoming.pdf,Sheridan

@@ -1,0 +1,52 @@
+State,Risk_Tier,Processed
+Alabama,Worst,2
+Alaska,Moderate-Risk,6
+Arizona,Low-Risk,8
+Arkansas,Worst,2
+California,Most Protective,10
+Colorado,Most Protective,10
+Connecticut,Most Protective,10
+Delaware,Low-Risk,8
+District of Columbia,Low-Risk,8
+Florida,Do Not Travel,0
+Georgia,High-Risk,4
+Hawaii,Most Protective,10
+Idaho,Do Not Travel,0
+Illinois,Most Protective,10
+Indiana,Worst,2
+Iowa,Worst,2
+Kansas,Do Not Travel,0
+Kentucky,Moderate-Risk,6
+Louisiana,Worst,2
+Maine,Low-Risk,8
+Maryland,Most Protective,10
+Massachusetts,Most Protective,10
+Michigan,Low-Risk,8
+Minnesota,Most Protective,10
+Mississippi,Worst,2
+Missouri,High-Risk,4
+Montana,High-Risk,4
+Nebraska,High-Risk,4
+Nevada,Low-Risk,8
+New Hampshire,High-Risk,4
+New Jersey,Most Protective,10
+New Mexico,Most Protective,10
+New York,Most Protective,10
+North Carolina,Moderate-Risk,6
+North Dakota,Worst,2
+Ohio,Worst,2
+Oklahoma,Worst,2
+Oregon,Most Protective,10
+Pennsylvania,Low-Risk,8
+Rhode Island,Most Protective,10
+South Carolina,Worst,2
+South Dakota,Worst,2
+Tennessee,Worst,2
+Texas,Do Not Travel,0
+Utah,Worst,2
+Vermont,Most Protective,10
+Virginia,Low-Risk,8
+Washington,Most Protective,10
+West Virginia,Worst,2
+Wisconsin,Low-Risk,8
+Wyoming,Worst,2

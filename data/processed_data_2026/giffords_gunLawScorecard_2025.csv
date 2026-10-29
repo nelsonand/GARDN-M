@@ -1,0 +1,51 @@
+State,Rank,Grade,GunDeathsPer100k
+California,1,A,7.0
+New Jersey,2,A,4.0
+Connecticut,3,A,5.8
+New York,4,A,4.4
+Massachusetts,5,A,3.8
+Illinois,6,A,12.4
+Hawaii,7,A,3.7
+Maryland,8,A-,11.6
+Washington,9,A-,11.0
+Colorado,10,A-,15.3
+Oregon,11,A-,14.2
+Rhode Island,12,A-,4.6
+Delaware,13,A-,11.8
+Virginia,14,B+,12.8
+Minnesota,15,B,9.8
+Pennsylvania,16,B,11.9
+Michigan,17,B-,11.9
+Vermont,18,B-,10.6
+Nevada,19,B-,17.2
+New Mexico,20,B-,26.6
+Maine,21,C+,11.9
+Wisconsin,22,C,12.1
+Nebraska,23,C-,10.9
+Florida,24,C-,12.7
+North Carolina,25,C-,16.3
+Indiana,26,D-,17.2
+Texas,27,F,13.9
+Utah,28,F,13.3
+South Carolina,29,F,19.5
+Ohio,30,F,14.6
+Tennessee,30,F,19.8
+North Dakota,32,F,12.2
+West Virginia,32,F,15.3
+New Hampshire,34,F,10.2
+Iowa,35,F,11.8
+Alabama,36,F,23.7
+Louisiana,36,F,22.9
+Oklahoma,36,F,19.1
+Alaska,39,F,24.4
+Georgia,40,F,17.6
+Arizona,41,F,16.9
+Kansas,42,F,15.2
+Mississippi,43,F,28.0
+South Dakota,43,F,17.3
+Montana,45,F,20.2
+Idaho,46,F,15.9
+Missouri,46,F,19.6
+Kentucky,48,F,18.5
+Arkansas,49,F,20.6
+Wyoming,50,F,23.4

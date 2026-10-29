@@ -1,0 +1,54 @@
+TABLE 6   |     2025 STATE RANKINGS
+ *Numbers are rounded to the nearest hundredth.
+RANK STATE SCORE RANK STATE SCORE RANK STATE SCORE
+1 Utah 6.44
+2 Vermont 6.43
+3 Montana 6.31
+4 Wyoming 6.30
+5 Idaho 6.12
+6 Nebraska 6.12
+7 Colorado 6.10
+8 South Dakota 6.09
+9 Minnesota 5.99
+10 Iowa 5.99
+11 North Dakota 5.94
+12 New Hampshire 5.82
+13 Wisconsin 5.71
+14 Alaska 5.63
+15 Maine 5.53
+16 Kansas 5.51
+17 Washington 5.40
+18 Indiana 5.34
+19 Missouri 5.22
+20 Connecticut 5.18
+21 Maryland 5.14
+22 Delaware 5.13
+23 North Carolina 5.12
+24 Virginia 5.03
+25 Oregon 5.02
+26 Massachusetts 4.94
+27 Tennessee 4.90
+28 Arizona 4.89
+29 Michigan 4.89
+30 Ohio 4.80
+31 Pennsylvania 4.74
+32 Hawaii 4.65
+33 Oklahoma 4.60
+34 New Mexico 4.46
+35 South Carolina 4.40
+36 Florida 4.36
+37 Nevada 4.33
+38 Illinois 4.22
+39 Rhode Island 4.18
+40 California 4.16
+41 Kentucky 4.12
+42 Texas 4.05
+43 New Jersey 3.99
+44 Georgia 3.98
+45 West Virginia 3.91
+46 Arkansas 3.68
+47 New York 3.68
+48 Alabama 3.58
+49 Mississippi 3.24
+50 Louisiana 3.07
+NOTE: We caution against making conclusions based on changes to a state’s score or rank from our previous edition (2023). Due to 

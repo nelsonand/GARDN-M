@@ -1,0 +1,51 @@
+overall_rank,State,Score,rank_workplaceEnv,rank_educationHealth,rank_politicalEmpowerment
+1,Hawaii,77.74,1,4,1
+2,Maryland,73.36,3,2,12
+3,Alaska,71.51,8,7,2
+4,Maine,70.09,7,18,3
+5,Vermont,69.66,2,1,27
+6,New Mexico,69.31,10,5,10
+7,Iowa,68.04,13,8,8
+8,Oregon,67.41,4,24,15
+9,California,66.75,5,12,19
+10,Illinois,65.60,6,26,16
+11,New York,65.41,11,22,13
+12,Michigan,62.95,39,27,4
+13,Massachusetts,62.73,33,15,14
+14,Minnesota,62.17,26,31,7
+15,West Virginia,61.21,20,13,23
+16,Tennessee,60.62,16,3,32
+17,Wisconsin,60.50,31,20,17
+18,Connecticut,60.40,17,9,26
+19,Washington,60.27,34,32,9
+20,Florida,58.42,29,21,21
+21,Nevada,57.93,18,44,10
+22,Arizona,57.82,15,34,22
+23,North Dakota,56.79,23,10,47
+24,New Jersey,55.32,21,36,24
+25,New Hampshire,54.76,44,39,6
+26,Kansas,54.59,19,28,31
+27,Pennsylvania,54.33,36,6,37
+28,Delaware,54.27,41,41,5
+29,Colorado,54.15,22,42,20
+30,Nebraska,54.08,28,23,30
+31,Rhode Island,53.87,25,19,38
+32,Indiana,53.86,24,16,46
+33,Mississippi,52.96,40,17,33
+34,Kentucky,52.24,35,11,45
+35,Wyoming,50.98,27,47,18
+36,South Dakota,50.47,30,37,35
+37,North Carolina,49.39,14,40,36
+38,Ohio,49.37,32,33,41
+39,Alabama,48.25,49,25,28
+40,Missouri,48.22,38,29,49
+41,Louisiana,47.76,48,14,43
+42,Montana,46.62,12,48,34
+43,Virginia,46.47,45,43,25
+44,Georgia,46.46,43,35,40
+45,Arkansas,46.38,9,45,50
+46,South Carolina,42.87,46,38,44
+47,Idaho,41.30,50,30,48
+48,Texas,40.94,37,49,39
+49,Oklahoma,40.67,42,46,42
+50,Utah,32.18,47,50,29

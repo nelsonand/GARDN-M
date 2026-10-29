@@ -1,0 +1,52 @@
+State,crr_category,Processed
+Alabama,Illegal,0
+Alaska,Protected,7.5
+Arizona,Protected,7.5
+Arkansas,Illegal,0
+California,Expanded Access,10
+Colorado,Protected,7.5
+Connecticut,Expanded Access,10
+Delaware,Protected,7.5
+District of Columbia,Protected,7.5
+Florida,Hostile,2.5
+Georgia,Hostile,2.5
+Hawaii,Expanded Access,10
+Idaho,Illegal,0
+Illinois,Expanded Access,10
+Indiana,Illegal,0
+Iowa,Hostile,2.5
+Kansas,Protected,7.5
+Kentucky,Illegal,0
+Louisiana,Illegal,0
+Maine,Protected,7.5
+Maryland,Expanded Access,10
+Massachusetts,Protected,7.5
+Michigan,Protected,7.5
+Minnesota,Expanded Access,10
+Mississippi,Illegal,0
+Missouri,Protected,7.5
+Montana,Protected,7.5
+Nebraska,Hostile,2.5
+Nevada,Protected,7.5
+New Hampshire,Not Protected,5
+New Jersey,Expanded Access,10
+New Mexico,Not Protected,5
+New York,Expanded Access,10
+North Carolina,Hostile,2.5
+North Dakota,Illegal,0
+Ohio,Protected,7.5
+Oklahoma,Illegal,0
+Oregon,Expanded Access,10
+Pennsylvania,Hostile,2.5
+Rhode Island,Protected,7.5
+South Carolina,Hostile,2.5
+South Dakota,Illegal,0
+Tennessee,Illegal,0
+Texas,Illegal,0
+Utah,Hostile,2.5
+Vermont,Expanded Access,10
+Virginia,Not Protected,5
+Washington,Expanded Access,10
+West Virginia,Illegal,0
+Wisconsin,Hostile,2.5
+Wyoming,Protected,7.5

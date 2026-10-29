@@ -1,0 +1,51 @@
+State,Rank,ratio_BlackWhite,ratio_LatinoWhite
+Hawaii,1,2.4,0.4
+Mississippi,2,2.6,0.5
+Alabama,3,2.8,
+Georgia,3,2.8,0.6
+Kentucky,5,2.9,0.4
+Tennessee,6,3.4,0.5
+Texas,7,3.5,1.1
+Arkansas,7,3.5,0.6
+Missouri,9,3.6,0.5
+Louisiana,10,3.8,0.0
+West Virginia,10,3.8,0.3
+South Carolina,10,3.8,0.7
+North Carolina,13,3.9,0.9
+Florida,14,4.1,0.7
+Nevada,14,4.1,0.8
+Oklahoma,16,4.4,0.9
+Virginia,16,4.4,0.4
+Idaho,16,4.4,1.4
+Indiana,19,4.6,0.7
+Alaska,20,4.7,0.6
+Arizona,21,4.9,1.7
+New Hampshire,22,5.0,1.8
+Maryland,22,5.0,0.8
+Wyoming,22,5.0,1.4
+Oregon,25,5.2,1.0
+North Dakota,25,5.2,2.3
+Delaware,27,5.3,0.1
+Washington,28,5.5,1.2
+Ohio,29,5.7,1.1
+New Mexico,30,5.8,1.8
+South Dakota,31,5.9,1.5
+Kansas,32,6.3,1.4
+Colorado,33,6.6,2.2
+Michigan,34,6.7,0.3
+Massachusetts,35,7.0,4.0
+Montana,36,7.5,0.6
+Utah,37,7.6,1.8
+Pennsylvania,38,7.7,2.3
+Illinois,39,7.8,1.5
+New York,39,7.8,3.0
+Rhode Island,41,8.5,2.6
+Maine,42,8.8,3.6
+Nebraska,43,8.9,1.9
+California,44,9.2,2.0
+Iowa,45,9.3,1.4
+Connecticut,46,9.4,3.7
+Minnesota,47,9.9,1.9
+Wisconsin,48,11.9,2.1
+Vermont,49,12.3,0.2
+New Jersey,50,12.5,2.0

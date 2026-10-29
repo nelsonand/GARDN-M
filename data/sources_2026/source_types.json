@@ -1,0 +1,41 @@
+{
+      "social": [
+            "oxfam_bestStatesToWork_2025",
+            "census_acsGiniIndex_2025",
+            "infogram_socialEquityCitiesRanking",
+            "nationalEquityAtlas"
+      ],
+      "race": [
+            "usNews_raceEqualityGaps_2026",
+            "wallethub_statesRacialEquality_2024",
+            "wallethub_racialIntegration_2026",
+            "wallethub_racialEqualityEducation_2026",
+            "census_diversityIndex_2025",
+            "sentencingProject_blackWhiteImprisonmentDisparity_2021",
+            "berkeleyOBI_citySegregation_2023"
+      ],
+      "gender": [
+            "wallethub_womenEquity_2026",
+            "wallethub_bestStatesWomen_2026",
+            "commonwealthFund_womensHealthReproCare_2024",
+            "populationInstitute_reproFreedomReportCard_2026",
+            "crr_abortionLawsByState_2026"
+      ],
+      "sexual_orientation": [
+            "map_equaliltyMaps_2026",
+            "hrc_stateEquityIndex_2024",
+            "hrc_municipalEqualityIndex_2025",
+            "outLeadership_lgbtqBusinessClimate_2026",
+            "move_lgbtqFamily_2025",
+            "erinInTheMorning_transAdultRiskMap_2026",
+            "safehome_lgbtqStateSafety_2026"
+      ],
+      "disabilities": [
+            "wallethub_citiesDisabilities_2026",
+            "usNews_equalityRankings_2026",
+            "census_acsDisabilityEmploymentParity_2025",
+            "newAmerica_competitiveIntegratedEmployment_2026",
+            "fta_ntdAdaAccessibleStations_2025",
+            "ncaj_disabilityAccess"
+      ]
+}

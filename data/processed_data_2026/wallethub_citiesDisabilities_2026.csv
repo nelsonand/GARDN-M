@@ -1,0 +1,183 @@
+Overall Rank,City,State,Score,Economy Rank,Quality of Life Rank,Health Care Rank,City_source
+1,St. Louis,MO,61.17,92,3,2,St. Louis
+2,Minneapolis,MN,60.07,100,7,1,Minneapolis
+3,Columbus,OH,57.24,6,19,71,Columbus
+4,Huntington Beach,CA,57.18,31,24,16,Huntington Beach
+5,St. Paul,MN,56.96,113,33,3,St. Paul
+6,Grand Rapids,MI,56.8,48,23,11,Grand Rapids
+7,Scottsdale,AZ,55.9,9,53,39,Scottsdale
+8,Pittsburgh,PA,55.44,110,27,6,Pittsburgh
+9,Kansas City,MO,55.28,15,69,20,Kansas City
+10,Columbia,MD,55.09,4,82,57,Columbia
+11,Chandler,AZ,54.38,7,102,42,Chandler
+12,Peoria,AZ,54.27,3,114,46,Peoria
+13,Irvine,CA,54.27,77,52,10,Irvine
+14,Gilbert,AZ,54.19,2,132,40,Gilbert
+15,Portland,ME,53.9,130,30,13,Portland
+16,Denver,CO,53.85,61,22,66,Denver
+17,Oakland,CA,53.78,150,1,68,Oakland
+18,Glendale,CA,53.53,161,9,18,Glendale
+19,Virginia Beach,VA,53.45,5,85,98,Virginia Beach
+20,Mesa,AZ,53.44,10,84,63,Mesa
+21,Nashua,NH,53.3,66,73,21,Nashua
+22,Santa Ana,CA,53.12,79,44,37,Santa Ana
+23,San Jose,CA,52.99,111,48,22,San Jose
+24,San Francisco,CA,52.94,163,2,61,San Francisco
+25,Philadelphia,PA,52.93,158,11,33,Philadelphia
+26,Wilmington,DE,52.91,140,12,49,Wilmington
+27,Dover,DE,52.8,53,50,56,Dover
+28,Springfield,MO,52.77,38,66,50,Springfield
+29,Yonkers,NY,52.73,36,29,104,Yonkers
+30,Riverside,CA,52.64,56,41,74,Riverside
+31,Plano,TX,52.63,1,98,134,Plano
+32,Colorado Springs,CO,52.54,13,90,62,Colorado Springs
+33,Indianapolis,IN,52.46,97,99,7,Indianapolis
+34,Rancho Cucamonga,CA,52.45,30,76,52,Rancho Cucamonga
+35,St. Petersburg,FL,52.3,35,67,67,St. Petersburg
+36,Santa Clarita,CA,52.23,51,113,11,Santa Clarita
+37,Buffalo,NY,52.19,119,25,51,Buffalo
+38,Charleston,SC,52.11,23,107,36,Charleston
+39,Boston,MA,52.0,170,18,14,Boston
+40,Madison,WI,51.94,63,45,80,Madison
+41,Baltimore,MD,51.9,105,28,64,Baltimore
+42,Lexington,KY,51.87,58,88,34,Lexington-Fayette
+43,Sacramento,CA,51.8,93,14,118,Sacramento
+44,Manchester,NH,51.76,101,80,19,Manchester
+45,Long Beach,CA,51.76,169,16,27,Long Beach
+46,Tempe,AZ,51.72,46,78,58,Tempe
+47,Sioux Falls,SD,51.62,33,137,17,Sioux Falls
+48,Lincoln,NE,51.46,49,104,38,Lincoln
+49,Garden Grove,CA,51.35,125,68,25,Garden Grove
+50,Des Moines,IA,51.34,65,125,15,Des Moines
+51,Overland Park,KS,51.2,8,141,54,Overland Park
+52,Rochester,NY,51.1,147,5,112,Rochester
+53,San Diego,CA,51.06,126,31,65,San Diego
+54,Tampa,FL,51.01,98,49,70,Tampa
+55,Seattle,WA,51.01,90,21,124,Seattle
+56,Orlando,FL,50.99,87,47,85,Orlando
+57,Charleston,WV,50.97,83,110,29,Charleston
+58,Jacksonville,FL,50.86,26,126,44,Jacksonville
+59,Jersey City,NJ,50.86,64,46,106,Jersey City
+60,Lewiston,ME,50.83,123,134,4,Lewiston
+61,Spokane,WA,50.75,84,59,73,Spokane
+62,Anaheim,CA,50.7,148,61,31,Anaheim
+63,Austin,TX,50.58,34,54,129,Austin
+64,Fremont,CA,50.51,80,81,53,Fremont
+65,Omaha,NE,50.36,102,93,35,Omaha
+66,Fort Lauderdale,FL,50.32,74,32,133,Fort Lauderdale
+67,Richmond,VA,50.31,154,26,72,Richmond
+68,Tacoma,WA,50.25,45,57,126,Tacoma
+69,Worcester,MA,50.22,117,101,26,Worcester
+70,Milwaukee,WI,50.19,108,79,41,Milwaukee
+71,Vancouver,WA,50.17,29,17,173,Vancouver
+72,Cleveland,OH,50.14,157,8,115,Cleveland
+73,Glendale,AZ,50.13,60,89,76,Glendale
+74,Akron,OH,50.11,89,64,86,Akron
+75,Louisville,KY,50.09,39,92,92,Louisville
+76,Boise,ID,49.98,129,112,9,Boise
+77,Phoenix,AZ,49.84,59,94,82,Phoenix
+78,Pembroke Pines,FL,49.73,41,96,99,Pembroke Pines
+79,Cincinnati,OH,49.7,114,6,156,Cincinnati
+80,Oceanside,CA,49.33,137,51,79,Oceanside
+81,Aurora,CO,49.33,47,106,89,Aurora
+82,Modesto,CA,49.32,71,77,103,Modesto
+83,Billings,MT,49.29,19,161,43,Billings
+84,Toledo,OH,49.29,78,62,120,Toledo
+85,Bismarck,ND,49.22,135,166,5,Bismarck
+86,Raleigh,NC,49.1,21,91,136,Raleigh
+87,Salem,OR,49.09,121,40,119,Salem
+88,Portland,OR,48.95,133,4,169,Portland
+89,Tucson,AZ,48.82,107,36,137,Tucson
+90,New York,NY,48.7,153,39,96,New York
+91,Los Angeles,CA,48.54,179,42,28,Los Angeles
+92,Cedar Rapids,IA,48.49,43,152,55,Cedar Rapids
+93,Miami,FL,48.43,162,13,127,Miami
+94,Chesapeake,VA,48.25,12,159,94,Chesapeake
+95,Port St. Lucie,FL,48.24,40,167,47,Port St. Lucie
+96,Fargo,ND,48.18,86,165,32,Fargo
+97,Durham,NC,48.18,44,124,105,Durham
+98,Salt Lake City,UT,48.17,132,10,164,Salt Lake City
+99,Bakersfield,CA,48.15,72,100,111,Bakersfield
+100,Chattanooga,TN,48.12,124,35,141,Chattanooga
+101,Fresno,CA,48.09,149,58,88,Fresno
+102,Santa Rosa,CA,48.08,144,37,128,Santa Rosa
+103,Chula Vista,CA,48.08,138,83,69,Chula Vista
+104,Washington,DC,48.07,160,15,139,Washington
+105,Oxnard,CA,48.03,143,75,78,Oxnard
+106,Atlanta,GA,47.96,131,34,140,Atlanta
+107,Oklahoma City,OK,47.89,17,158,101,Oklahoma City
+108,New Orleans,LA,47.76,139,60,109,New Orleans
+109,Moreno Valley,CA,47.74,54,144,81,Moreno Valley
+110,Fontana,CA,47.55,70,143,75,Fontana
+111,Casper,WY,47.55,67,147,84,Casper
+112,Ontario,CA,47.51,122,103,77,Ontario
+113,San Bernardino,CA,47.42,109,109,83,San Bernardino
+114,San Antonio,TX,47.34,52,121,122,San Antonio
+115,Norfolk,VA,47.27,112,86,114,Norfolk
+116,Columbus,GA,47.22,37,146,107,Columbus
+117,Providence,RI,47.2,128,74,117,Providence
+118,Albuquerque,NM,47.05,172,71,48,Albuquerque
+119,Missoula,MT,46.75,174,117,24,Missoula
+120,Fort Worth,TX,46.49,16,123,160,Fort Worth
+121,Huntington,WV,46.48,156,72,102,Huntington
+122,Stockton,CA,46.44,145,64,132,Stockton
+123,Little Rock,AR,46.42,151,153,30,Little Rock
+124,Chicago,IL,46.4,152,38,151,Chicago
+125,El Paso,TX,46.4,24,111,163,El Paso
+126,Las Cruces,NM,46.24,176,140,8,Las Cruces
+127,Dallas,TX,46.11,50,87,166,Dallas
+128,Reno,NV,45.87,118,70,148,Reno
+129,Amarillo,TX,45.81,20,150,146,Amarillo
+130,Knoxville,TN,45.77,146,115,87,Knoxville
+131,Newport News,VA,45.76,69,157,110,Newport News
+132,Tallahassee,FL,45.7,136,145,60,Tallahassee
+133,Fort Wayne,IN,45.7,167,120,45,Fort Wayne
+134,Las Vegas,NV,45.7,127,63,155,Las Vegas
+135,Fayetteville,NC,45.49,27,169,125,Fayetteville
+136,Augusta,GA,45.46,82,127,138,Augusta
+137,Detroit,MI,45.43,178,56,90,Detroit
+138,Nampa,ID,45.15,134,179,23,Nampa
+139,Cape Coral,FL,45.12,68,129,153,Cape Coral
+140,Rapid City,SD,45.02,141,130,97,Rapid City
+141,Henderson,NV,44.9,103,128,135,Henderson
+142,Corpus Christi,TX,44.83,85,131,143,Corpus Christi
+143,Houston,TX,44.71,81,97,171,Houston
+144,Nashville,TN,44.62,96,118,147,Nashville
+145,Anchorage,AK,44.61,55,178,93,Anchorage
+146,Irving,TX,44.58,11,164,172,Irving
+147,Aurora,IL,44.57,62,139,151,Aurora
+148,Hialeah,FL,44.47,155,105,123,Hialeah
+149,Arlington,TX,44.21,32,136,175,Arlington
+150,Tulsa,OK,44.08,99,138,142,Tulsa
+151,Grand Prairie,TX,44.02,28,163,162,Grand Prairie
+152,Wichita,KS,43.97,104,149,130,Wichita
+153,West Valley City,UT,43.58,22,142,179,West Valley City
+154,Warwick,RI,43.58,115,171,91,Warwick
+155,Honolulu,HI,43.51,120,43,182,Honolulu
+156,Birmingham,AL,43.5,88,135,158,Birmingham
+157,Columbia,SC,43.4,171,119,100,Columbia
+158,Brownsville,TX,43.36,76,176,121,Brownsville
+159,Lubbock,TX,43.24,94,156,145,Lubbock
+160,New Haven,CT,43.17,173,95,131,New Haven
+161,Greensboro,NC,43.13,73,151,159,Greensboro
+162,Mobile,AL,42.9,25,162,178,Mobile
+163,Huntsville,AL,42.73,14,170,174,Huntsville
+164,Bridgeport,CT,42.67,165,133,116,Bridgeport
+165,Charlotte,NC,42.65,57,148,176,Charlotte
+166,Baton Rouge,LA,42.6,177,116,108,Baton Rouge
+167,North Las Vegas,NV,42.59,75,168,154,North Las Vegas
+168,Memphis,TN,42.35,116,155,150,Memphis
+169,Garland,TX,42.33,18,174,177,Garland
+170,Newark,NJ,42.32,159,122,149,Newark
+171,Fort Smith,AR,41.92,164,154,113,Fort Smith
+172,Burlington,VT,41.3,181,20,170,Burlington
+173,Cheyenne,WY,41.0,166,108,157,Cheyenne
+174,Winston-Salem,NC,40.77,91,172,167,Winston-Salem
+175,Shreveport,LA,40.57,180,175,59,Shreveport
+176,Laredo,TX,40.5,106,181,144,Laredo
+177,Jackson,MS,39.49,175,180,95,Jackson
+178,Pearl City,HI,39.45,42,173,181,Pearl City
+179,Gulfport,MS,38.86,168,160,161,Gulfport
+180,Montgomery,AL,38.83,95,177,180,Montgomery
+181,South Burlington,VT,38.66,182,55,167,South Burlington
+182,Juneau,AK,37.94,142,182,165,Juneau
