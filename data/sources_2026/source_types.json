@@ -3,7 +3,7 @@
             "oxfam_bestStatesToWork_2025",
             "census_acsGiniIndex_2025",
             "infogram_socialEquityCitiesRanking",
-            "nationalEquityAtlas"
+            "nationalEquityAtlas_2024"
       ],
       "race": [
             "usNews_raceEqualityGaps_2026",
@@ -36,6 +36,7 @@
             "census_acsDisabilityEmploymentParity_2025",
             "newAmerica_competitiveIntegratedEmployment_2026",
             "fta_ntdAdaAccessibleStations_2025",
-            "ncaj_disabilityAccess"
+            "ncaj_disabilityAccess",
+            "aarp_ltssScorecard_2023"
       ]
 }

@@ -2,7 +2,6 @@
       "oxfam_bestStatesToWork_2025": "https://www.oxfamamerica.org/explore/research-publications/best-states-to-work-in-the-us-2025/",
       "census_acsGiniIndex_2025": "https://data.census.gov/table/ACSDT1Y2025.B19083",
       "infogram_socialEquityCitiesRanking": "https://infogram.com/social-equity-cities-ranking-1hkv2ne58kqn2x3",
-      "nationalEquityAtlas": "https://nationalequityatlas.org/research/racial_equity_index/index",
       "usNews_raceEqualityGaps_2026": "https://www.usnews.com/news/best-states/rankings/opportunity/equality",
       "wallethub_statesRacialEquality_2024": "https://wallethub.com/edu/state-economies-with-most-racial-equality/75810",
       "wallethub_racialIntegration_2026": "https://wallethub.com/edu/states-with-the-most-and-least-racial-progress/18428",
@@ -34,5 +33,8 @@
       "archbridge_socialMobility50States_2025": "https://www.archbridgeinstitute.org/social-mobility-in-the-50-states/",
       "usNews_stateRankingsEquality_2026": "https://www.usnews.com/news/best-states/rankings/opportunity/equality",
       "cawp_womenStateLegislators_2026": "https://cawp.rutgers.edu/data/levels-office/state-legislature",
-      "equaldex_equalityIndex_2026": "https://www.equaldex.com/equality-index/united-states"
+      "equaldex_equalityIndex_2026": "https://www.equaldex.com/equality-index/united-states",
+      "nationalEquityAtlas_2024": "https://nationalequityatlas.org/research/racial_equity_index/index",
+      "aarp_ltssScorecard_2023": "https://ltsschoices.aarp.org/",
+      "commonwealthFund_healthSystemPerformance_2025": "https://www.commonwealthfund.org/publications/scorecard/2025/jun/2025-scorecard-state-health-system-performance"
 }

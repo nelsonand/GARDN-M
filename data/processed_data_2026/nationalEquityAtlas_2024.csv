@@ -1,0 +1,151 @@
+State,City,Score,Source name,Data year
+AL,,41.36,AL,2022
+AK,,26.15,AK,2022
+AZ,,46.64,AZ,2022
+AR,,35.34,AR,2022
+CA,,43.5,CA,2022
+CO,,60.32,CO,2022
+CT,,55.91,CT,2022
+DE,,47.84,DE,2022
+FL,,45.04,FL,2022
+GA,,42.49,GA,2022
+HI,,59.84,HI,2022
+ID,,54.49,ID,2022
+IL,,51.32,IL,2022
+IN,,58.9,IN,2022
+IA,,44.21,IA,2022
+KS,,58.41,KS,2022
+KY,,47.09,KY,2022
+LA,,29.93,LA,2022
+ME,,50.32,ME,2022
+MD,,56.1,MD,2022
+MA,,55.97,MA,2022
+MI,,47.96,MI,2022
+MN,,41.65,MN,2022
+MS,,19.46,MS,2022
+MO,,53.23,MO,2022
+MT,,54.27,MT,2022
+NE,,54.27,NE,2022
+NV,,35.71,NV,2022
+NH,,61.05,NH,2022
+NJ,,49.85,NJ,2022
+NM,,27.12,NM,2022
+NY,,41.35,NY,2022
+NC,,43.59,NC,2022
+ND,,31.13,ND,2022
+OH,,50.7,OH,2022
+OK,,51.85,OK,2022
+OR,,47.26,OR,2022
+PA,,49.79,PA,2022
+RI,,58.77,RI,2022
+SC,,46.03,SC,2022
+SD,,36.21,SD,2022
+TN,,43.46,TN,2022
+TX,,48.98,TX,2022
+UT,,57.91,UT,2022
+VT,,57.28,VT,2022
+VA,,62.44,VA,2022
+WA,,54.65,WA,2022
+WV,,29.1,WV,2022
+WI,,55.59,WI,2022
+WY,,31.86,WY,2022
+HI,Honolulu,54.35,City and County of Honolulu,2022
+AL,Birmingham,39.01,Birmingham city,2022
+AK,Anchorage,61.89,Anchorage municipality,2022
+AZ,Chandler,66.1,Chandler city,2022
+AZ,Glendale,56.56,Glendale city,2022
+AZ,Mesa,65.41,Mesa city,2022
+AZ,Phoenix,59.15,Phoenix city,2022
+AZ,Scottsdale,44.16,Scottsdale city,2022
+AZ,Tucson,54.08,Tucson city,2022
+CA,Anaheim,51.13,Anaheim city,2022
+CA,Bakersfield,49.95,Bakersfield city,2022
+CA,Chula Vista,59.67,Chula Vista city,2022
+CA,Fremont,52.73,Fremont city,2022
+CA,Fresno,45.48,Fresno city,2022
+CA,Irvine,73.43,Irvine city,2022
+CA,Long Beach,58.17,Long Beach city,2022
+CA,Los Angeles,48.44,Los Angeles city,2022
+CA,Oakland,63.66,Oakland city,2022
+CA,Riverside,52.88,Riverside city,2022
+CA,Sacramento,55.75,Sacramento city,2022
+CA,San Bernardino,33.16,San Bernardino city,2022
+CA,San Diego,66.11,San Diego city,2022
+CA,San Francisco,64.3,San Francisco city,2022
+CA,San Jose,66.13,San Jose city,2022
+CA,Santa Ana,34.03,Santa Ana city,2022
+CA,Stockton,47.25,Stockton city,2022
+CO,Aurora,57.51,Aurora city,2022
+CO,Colorado Springs,69.78,Colorado Springs city,2022
+CO,Denver,64.25,Denver city,2022
+DC,Washington,56.09,Washington city,2022
+FL,Hialeah,39.37,Hialeah city,2022
+FL,Jacksonville,63.05,Jacksonville city,2022
+FL,Miami,28.37,Miami city,2022
+FL,Orlando,55.6,Orlando city,2022
+FL,St. Petersburg,67.12,St. Petersburg city,2022
+FL,Tampa,57.6,Tampa city,2022
+GA,Atlanta,52.88,Atlanta city,2022
+IL,Chicago,53.81,Chicago city,2022
+IN,Fort Wayne,58.66,Fort Wayne city,2022
+IN,Indianapolis,62.87,Indianapolis city (balance),2022
+KS,Wichita,54.61,Wichita city,2022
+KY,Lexington,61.75,Lexington-Fayette urban county,2022
+KY,Louisville,59.8,Louisville/Jefferson County metro government (bala,2022
+LA,Baton Rouge,47.27,Baton Rouge city,2022
+LA,New Orleans,48.32,New Orleans city,2022
+MD,Baltimore,53.51,Baltimore city,2022
+MA,Boston,60.53,Boston city,2022
+MI,Detroit,23.09,Detroit city,2022
+MN,Minneapolis,60.7,Minneapolis city,2022
+MN,St. Paul,60.8,St. Paul city,2022
+MO,Kansas City,59.03,Kansas City city,2022
+MO,St. Louis,54.8,St. Louis city,2022
+NE,Lincoln,72.96,Lincoln city,2022
+NE,Omaha,65.84,Omaha city,2022
+NV,Henderson,70.36,Henderson city,2022
+NV,Las Vegas,49.85,Las Vegas city,2022
+NV,North Las Vegas,53.94,North Las Vegas city,2022
+NV,Reno,65.0,Reno city,2022
+NJ,Jersey City,56.1,Jersey City city,2022
+NJ,Newark,38.47,Newark city,2022
+NM,Albuquerque,62.59,Albuquerque city,2022
+NY,Buffalo,57.08,Buffalo city,2022
+NY,New York,48.18,New York city,2022
+NY,Rochester,52.63,Rochester city,2022
+NC,Charlotte,57.97,Charlotte city,2022
+NC,Durham,63.54,Durham city,2022
+NC,Greensboro,47.41,Greensboro city,2022
+NC,Raleigh,56.79,Raleigh city,2022
+NC,Winston-Salem,54.58,Winston-Salem city,2022
+OH,Cincinnati,51.5,Cincinnati city,2022
+OH,Cleveland,40.99,Cleveland city,2022
+OH,Columbus,64.72,Columbus city,2022
+OH,Toledo,52.48,Toledo city,2022
+OK,Oklahoma City,56.79,Oklahoma City city,2022
+OK,Tulsa,62.5,Tulsa city,2022
+OR,Portland,58.32,Portland city,2022
+PA,Philadelphia,44.45,Philadelphia city,2022
+PA,Pittsburgh,46.75,Pittsburgh city,2022
+TN,Memphis,40.29,Memphis city,2022
+TN,Nashville,63.21,Nashville-Davidson metropolitan government (balanc,2022
+TX,Arlington,55.48,Arlington city,2022
+TX,Austin,67.29,Austin city,2022
+TX,Corpus Christi,54.51,Corpus Christi city,2022
+TX,Dallas,49.88,Dallas city,2022
+TX,El Paso,50.6,El Paso city,2022
+TX,Fort Worth,60.49,Fort Worth city,2022
+TX,Garland,55.34,Garland city,2022
+TX,Houston,49.09,Houston city,2022
+TX,Irving,51.32,Irving city,2022
+TX,Laredo,45.34,Laredo city,2022
+TX,Lubbock,62.18,Lubbock city,2022
+TX,Plano,56.2,Plano city,2022
+TX,San Antonio,57.2,San Antonio city,2022
+VA,Chesapeake,67.94,Chesapeake city,2022
+VA,Norfolk,62.13,Norfolk city,2022
+VA,Virginia Beach,71.62,Virginia Beach city,2022
+WA,Seattle,66.31,Seattle city,2022
+WA,Spokane,65.15,Spokane city,2022
+WI,Madison,69.64,Madison city,2022
+WI,Milwaukee,53.24,Milwaukee city,2022

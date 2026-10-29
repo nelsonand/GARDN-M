@@ -2,7 +2,6 @@
       "oxfam_bestStatesToWork_2025": "social_0",
       "census_acsGiniIndex_2025": "social_1",
       "infogram_socialEquityCitiesRanking": "social_2",
-      "nationalEquityAtlas": "social_3",
       "usNews_raceEqualityGaps_2026": "race_4",
       "wallethub_statesRacialEquality_2024": "race_5",
       "wallethub_racialIntegration_2026": "race_6",
@@ -29,5 +28,8 @@
       "fta_ntdAdaAccessibleStations_2025": "disabilities_27",
       "ncaj_disabilityAccess": "disabilities_28",
       "ilrc_stateImmigrationEnforcement_2026": "immigration_29",
-      "giffords_gunLawScorecard_2025": "safety_30"
+      "giffords_gunLawScorecard_2025": "safety_30",
+      "nationalEquityAtlas_2024": "social_nea",
+      "aarp_ltssScorecard_2023": "disabilities_ltss",
+      "commonwealthFund_healthSystemPerformance_2025": "health_access_cwf"
 }

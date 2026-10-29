@@ -144,3 +144,6 @@ docs/notebooks/*.md
 # Version file
 plasmapy/_version.py
 tags
+
+# Large files downloaded by hand (processed by scripts/gather/oct2026/manual/)
+manual_downloads/
