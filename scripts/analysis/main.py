@@ -24,6 +24,7 @@ def gardnm(
     ignore_subtypes = True, 
     verbose = False, 
     data_version = '2026',
+    extended = False,
 ):
     """Calculation of GARDN-M coefficients
 
@@ -35,20 +36,24 @@ def gardnm(
         verbose: some extra print statements that may be useful when debugging
         data_version: '2026' for the Oct 2026 update (data/sources_2026, data/processed_data_2026) or
             '2023' for the original data (data/sources, data/processed_data)
+        extended: also score the extra 2026 categories (immigration, safety) listed in
+            source_types_extended.json
 
     Returns:
         Nothing yet, but it saves stuff to a file
     """
 
     # set filename
+    filename += f'_{data_version}'
     if data_version == '2023':
-        filename += '_algorithm_rework' # based on git commit for the moment
         sourcedir = './data/sources/'
         datadir = './data/processed_data/'
     else:
-        filename += f'_{data_version}'
         sourcedir = f'./data/sources_{data_version}/'
         datadir = f'./data/processed_data_{data_version}/'
+    source_types_file = 'source_types_extended.json' if extended else 'source_types.json'
+    if extended:
+        filename += '_extended'
 
     if normalizeAll:
         filename += '_normalized'
@@ -61,7 +66,7 @@ def gardnm(
     with open(sourcedir+'source_ratings.json', 'r') as f:
         source_ratings = json.load(f)
 
-    with open(sourcedir+'source_types.json', 'r') as f:
+    with open(sourcedir+source_types_file, 'r') as f:
         source_types = json.load(f)
 
     with open(sourcedir+'source_subtypes.json', 'r') as f:
@@ -129,6 +134,10 @@ def gardnm(
         subrankings[source_type].drop(columns=['B'], inplace=True)
         subrankings[source_type].drop(columns=['PSW'], inplace=True)
 
+        # city rows inherit state-level data from their own state (city-level sources stay city-specific)
+        BPSWi = [x for x in subrankings[source_type].keys() if x.startswith(('B_', 'PSW_'))]
+        subrankings[source_type] = fill_from_state(subrankings[source_type], BPSWi)
+
         if ignore_subtypes:
              # we need to divide by the sum of the weights for each city
             PSWi = [x for x in subrankings[source_type].keys() if 'PSW_' in x]
@@ -148,11 +157,7 @@ def gardnm(
         subrankings[source_type]['n'] = subrankings[source_type][Mi].count(axis=1).astype(int) # number of non null Mi entries
         subrankings[source_type]['M'] = subrankings[source_type][Mi].mean(axis=1) 
 
-        # fill data from sets missing cities
-        subrankings[source_type].sort_values(by=['State', 'City'], inplace=True) # sort so that fillna(method='ffil')  is appropriate
-        subrankings[source_type] = subrankings[source_type].where(subrankings[source_type]['City']!='', subrankings[source_type].fillna('tmp')) # fill no-city entries with placeholders
-        subrankings[source_type] = subrankings[source_type].ffill() # fill city-specific rows with no-city entries
-        subrankings[source_type].replace('tmp', np.nan, inplace=True) # replace no-city placeholders
+        subrankings[source_type].sort_values(by=['State', 'City'], inplace=True)
 
         if verbose:
             print(subrankings[source_type][['State', 'City', 'M', 'n']].sort_values('City', ascending=False))#.to_string())
@@ -168,11 +173,9 @@ def gardnm(
     for source_type, stdata in subrankings.items():
         rankings = pd.merge(rankings, stdata[['State', 'City', 'M', 'n']], on=['State', 'City'], how='outer', suffixes=(None, f'_{source_type}'))
     
-    # fill data from source_types missing cities
-    rankings.sort_values(by=['State', 'City'], inplace=True) # sort so that fillna(method='ffil')  is appropriate
-    rankings = rankings.where(rankings['City']!='', rankings.fillna('tmp')) # fill no-city entries with placeholders
-    rankings = rankings.ffill() # fill city-specific rows with no-city entries
-    rankings.replace('tmp', np.nan, inplace=True) # replace no-city placeholders
+    # fill data from source_types missing cities with the state-level result for that source_type
+    rankings.sort_values(by=['State', 'City'], inplace=True)
+    rankings = fill_from_state(rankings, [f'{x}_{st}' for st in source_types for x in ('M', 'n')])
 
     rankings['n'] = rankings[[f'n_{st}' for st in source_types]].sum(axis=1).astype(int)
     rankings['M'] = rankings[[f'M_{st}' for st in source_types]].mean(axis=1)
@@ -195,6 +198,23 @@ def gardnm(
         items_to_print = ['State','City','M'] + [f'M_{st}' for st in source_types] #+ [f'M_{s}' for s in sources]
         print(rankings[items_to_print].iloc[inds_to_print].transpose().to_string())
     
+
+def fill_from_state(df, cols):
+    """Fill missing values in city rows with the values from the state-level (City == '') row of the same state
+
+    Args:
+        df: data with 'State' and 'City' columns, including one City == '' row per state
+        cols: columns to fill
+
+    Returns:
+        df: data with city rows filled
+    """
+    state_rows = df[df['City'] == ''].drop_duplicates('State').set_index('State')[cols]
+    is_city = df['City'] != ''
+    inherited = state_rows.reindex(df.loc[is_city, 'State']).set_index(df.index[is_city])
+    df.loc[is_city, cols] = df.loc[is_city, cols].fillna(inherited)
+
+    return df
 
 def assign_CompScore(sdata, source):
     """Assign composite scores 
