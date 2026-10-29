@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import main  # noqa: E402  (main sets the working directory to the repo root)
+import main  # noqa: E402
 
 
 def sensitivity(data_version='2026', extended=False, draws=1000, agreement=0.9, seed=0):
@@ -56,7 +56,8 @@ def sensitivity(data_version='2026', extended=False, draws=1000, agreement=0.9, 
     out['M_loo_max'] = loo.max(axis=1)
     out['loo_zones'] = [', '.join(z for z in zones if z in set(row)) for row in loo_zones.values]
     shift = loo.sub(base, axis=0)
-    out['most_influential_source'] = shift.abs().idxmax(axis=1)
+    has_shift = shift.notna().any(axis=1) # places without a composite score have no leave-one-out shifts
+    out['most_influential_source'] = shift[has_shift].abs().idxmax(axis=1).reindex(index)
     out['most_influential_shift'] = [shift.loc[i, s] if isinstance(s, str) else np.nan
                                      for i, s in zip(index, out['most_influential_source'])]
 
@@ -71,7 +72,7 @@ def sensitivity(data_version='2026', extended=False, draws=1000, agreement=0.9, 
     out['robust_zone'] = robust
 
     name = f'gardnm_{data_version}' + ('_extended' if extended else '') + '_sensitivity'
-    out.to_csv(f'data/outputs/{name}.csv')
+    out.to_csv(main.REPO / 'data' / 'outputs' / f'{name}.csv')
     return out, name
 
 

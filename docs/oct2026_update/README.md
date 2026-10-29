@@ -11,7 +11,7 @@ python3 -c "import sys; sys.path.insert(0,'scripts/analysis'); import main; \
   main.gardnm(extended=True); main.gardnm(data_version='2023')"
 python3 scripts/analysis/compare_2023_2026.py     # comparison tables + cross-check
 python3 scripts/analysis/sensitivity.py           # robustness of zones (add --extended for the extended run)
-python3 -m pytest tests                           # tests, including a regression check against the 2023 output
+python3 -m pytest tests                           # 17 tests, including a regression check against the 2023 output
 ```
 
 Optional methodology settings, all off by default (see "Methodology changes" below):
@@ -19,7 +19,7 @@ Optional methodology settings, all off by default (see "Methodology changes" bel
 ```python
 main.gardnm(absolute_scales=True)      # keep absolute-scale sources on their native scale
 main.gardnm(recency_half_life=5)       # age-based discount of P instead of the manual staleness adjustment
-main.gardnm(min_categories=3)          # no composite score for places with data in fewer categories
+main.gardnm(min_categories=4)          # no composite score for places with data in fewer categories
 ```
 
 | Run | Inputs | Output |
@@ -56,29 +56,28 @@ These put into code what the GARDN-M write-up already describes, or make its ass
      - the two disability employment-gap measures (Census and US News)
    - SafeHome's P went back from 2 to 3, because its overlap with MAP is now handled by W.
    - The 2023 subtypes are all distinct, so the 2023 results are unaffected.
-   - Effect on 2026: state scores change by 0.13 on average (at most 0.38; rank correlation 0.995). Five states change zone (Michigan up to Green; New Mexico and Nevada down to Amber; South Dakota and Texas down to Red), which shows how close many states sit to the cutoffs.
+   - Effect on 2026: state scores change by 0.14 on average (at most 0.38; rank correlation 0.995). Three states change zone (Nevada down to Amber; South Dakota and Texas down to Red), which shows how close many states sit to the cutoffs.
 2. **Sensitivity analysis.** `scripts/analysis/sensitivity.py` re-scores the model with each source left out in turn, and 1,000 times with every source's P shifted randomly by −1, 0 or +1.
    - For each place it reports the range of scores, how often each zone occurs, and the source with the most influence.
    - A place gets a "robust" zone if at least 90% of runs and every leave-one-out run agree with its baseline zone; otherwise it is "Borderline". See Results.
-3. **Input validation.** Every processed file is checked on load: exactly one scoring column, known state names, no duplicate locations, numeric scores in range (`Score` 0–100, `Processed` 0–10, `Rank` ≥ 1). Problems stop the run. Rows without a score are dropped with a warning. For the 2023 data, several scoring columns only produce a warning, so the original files still run.
-   - **Missing scores no longer distort the weighted average.** Previously a row with no score still added its source's weight to the denominator. This affected Baton Rouge (social) and Washington DC (disability) in the 2023 data; their city scores changed by about 0.8 in that category.
+3. **Input validation.** Every processed file is checked on load: exactly one scoring column, known state names, no duplicate locations, numeric scores in range (`Score` 0–100, `Processed` 0–10, `Rank` ≥ 1, with a warning if ranks run beyond the number of rows). Problems stop the run. For the 2023 data, several scoring columns only produce a warning, so the original files still run.
+   - **A source only counts towards the weights where it has a value.** Previously a row with no score still added its source's weight to the denominator of the weighted average. This affected Baton Rouge (social) and Washington DC (disability) in the 2023 data; their city scores changed by about 0.8 in that category. Rows without a score are now dropped with a warning, and a source with the same value everywhere (which has no information after normalization) is skipped.
    - The carried-over infogram file had both `Score` and `Rank` columns. Its `Rank` column was renamed `Source rank`.
-4. **Tests** (`tests/test_gardnm.py`, 15 tests):
-   - hand-checkable small examples of normalization, P×S×W weighting, how city and state data combine, W, and each option
-   - a test that fails under the old city-leak code
+4. **Tests** (`tests/test_gardnm.py`, 17 tests):
+   - hand-checkable small examples of normalization, P×S×W weighting, how city and state data combine, W, partial rank lists, and each option
+   - tests that fail under the old city-leak code and without the empty-weight fix
    - validation checks
    - a regression test that the 2023 state results still match the original committed output
 5. **Absolute scales (option `absolute_scales`).** By default every source is stretched so its worst place scores 0 and its best 10. So the zones are relative: Green means "better than most US places", not "meets a standard", and they would not change if every state got worse.
    - With this option, the 12 sources whose scores have a fixed meaning keep their native scale. These are marked `scale: absolute` in `source_metadata.json`: policy rubrics and tiers (HRC, CRR, Erin Reed, ILRC, Population Institute, Oxfam, New America, Out Leadership, NCAJ) and the ADA-station and disability-parity percentages.
    - Rankings and relative indices are still stretched.
-   - Effect: small (rank correlation 0.996). South Dakota and Texas move from Red to Amber. Relative sources still dominate the spread of scores, so this only partly answers the concern; the write-up should state that the zones are relative.
+   - Effect: small (rank correlation 0.998). South Dakota and Texas move from Red to Amber. Relative sources still dominate the spread of scores, so this only partly answers the concern; the write-up should state that the zones are relative.
 6. **Age-based discount (option `recency_half_life`).** By default, stale sources carry a manual `stale_adjustment` to P: −2 for the infogram cities ranking (2020 data) and −1 for NCAJ (2021).
-   - With this option, P is instead multiplied by 0.5^((age − grace)/half-life), with a 2-year grace period, using each source's `data_year`.
-   - Effect with a 5-year half-life: no zone changes, because the two approaches give similar discounts.
-7. **Missing categories are flagged (option `min_categories`).** The output now has `n_categories` and `missing_categories` columns.
-   - **Puerto Rico has data in only one of five categories (disability), so its Red rating rests on that alone.**
-   - With `min_categories=3`, Puerto Rico gets no composite score; no other place is affected.
-   - We suggest adopting this.
+   - With this option, P is instead multiplied by 0.5^((age − grace)/half-life), with a 2-year grace period.
+   - Age is measured from each source's `data_year`: the year of the underlying data where the source states it (for example the National Equity Atlas 2024 release uses 2022 data), and otherwise the edition year.
+   - Effect with a 5-year half-life: rank correlation 0.999. Nevada moves up to Green and South Dakota up to Amber.
+7. **Missing categories are flagged (option `min_categories`).** The output now has `n_categories` and `missing_categories` columns. All 50 states and DC have data in all five categories.
+   - Puerto Rico has data in three (social, race and disability; no gender or sexual-orientation source covers it). With `min_categories=4` or 5 it would get no composite score; `min_categories=3` changes nothing.
 
 The output also now includes a `GAR` zone column. The cutoffs (Green at 6.0 and above, Amber from 3.6, otherwise Red) are defined once in `main.py` and shared by all scripts.
 
@@ -134,7 +133,7 @@ Dropped: the Georgetown US WPS Index (2020; no new state-level edition), the US 
 | US News, disability unemployment gap | 2026 | 4 | refreshed (older editions measured the employment gap) |
 | Census ACS disability employment parity | 2025 | 5 | new |
 | New America, competitive integrated employment | 2026 | 4 | new |
-| FTA National Transit Database, % ADA-accessible stations | 2025 | 3 | new; city-level; little spread (43 of 52 areas at 100%) |
+| FTA National Transit Database, % ADA-accessible stations | 2025 | 3 | new; city-level; little spread (42 of 53 areas at 100%) |
 | NCAJ Justice Index, disability access | 2021 | 4 (−1 stale) | carried over: no new edition |
 | AARP long-term services and supports scorecard | 2023 (latest) | 4 | new, from a manual download; covers older adults and people with physical disabilities |
 
@@ -160,39 +159,62 @@ These are not in the core run because adding categories changes what the composi
 
 The full tables are in `data/outputs/comparison_states_2023_vs_2026.csv` and `comparison_cities_2023_vs_2026.csv`. The Green/Amber/Red cutoffs are unchanged: 6.0 and above is Green, 3.6–6.0 Amber, below 3.6 Red.
 
-- **Overall agreement.** State rankings stay broadly consistent (Spearman 0.89 between 2023 and 2026). By category, gender (0.94) and sexual orientation (0.93) agree closely; race (0.74), social (0.55) and disability (0.23) changed substantially because most of their sources were replaced.
-- **Zone counts.** 2023 had 19 Green, 31 Amber and 6 Red; 2026 has 20 Green, 24 Amber and 8 Red, plus 4 territories with no 2026 data.
-  - 2026 Red: Alabama, Arkansas, Louisiana, Mississippi, South Carolina, South Dakota, Texas and Puerto Rico (but see item 7 above).
-  - Michigan, Minnesota and New Hampshire move up from Amber to Green. Nevada and New Mexico drop to Amber.
+- **Overall agreement.** State rankings stay broadly consistent (Spearman 0.89 between 2023 and 2026). By category, gender (0.94) and sexual orientation (0.93) agree closely; race (0.69), social (0.54) and disability (0.23) changed substantially because most of their sources were replaced.
+- **Zone counts.** 2023 had 19 Green, 31 Amber and 6 Red; 2026 has 21 Green, 23 Amber and 8 Red, plus 4 territories with no 2026 data.
+  - The 2023 Red count includes American Samoa, Guam and the Northern Mariana Islands, which have no 2026 data. Among states, DC and Puerto Rico, Red grows from 3 (Louisiana, Mississippi, South Dakota) to 8.
+  - 2026 Red: Alabama, Arkansas, Louisiana, Mississippi, South Carolina, South Dakota, Texas and Puerto Rico.
+  - Moved from Amber to Red: Alabama, Arkansas, South Carolina, Texas and Puerto Rico. South Dakota was Red in both years.
+  - Moved from Amber to Green: Michigan, Minnesota and New Hampshire. Nevada moved from Green to Amber.
 - **Largest drops:**
 
-  | State | Change | Main drivers (category change) |
+  | Place | Change | Main drivers (category change) |
   |---|---|---|
-  | Florida | −1.8 | sexual orientation −2.9, disability −2.7, gender −1.8 |
-  | Texas | −1.5 | gender −2.9, social −2.5, disability −1.7 |
-  | Georgia | −1.4 | social −3.5, disability −2.2, gender −1.7 |
-  | North Carolina | −1.3 | social −3.5, gender −1.5 |
+  | Puerto Rico | −2.6 | mostly a change in coverage: 2023 data covered sexual orientation and disability; 2026 data covers social, race and disability (disability −0.7) |
+  | Florida | −1.7 | sexual orientation −2.9, disability −2.7, gender −1.8 |
+  | Texas | −1.4 | gender −2.9, social −2.3, disability −1.7 |
+  | Georgia | −1.4 | social −3.3, disability −2.2, gender −1.7 |
+  | North Carolina | −1.3 | social −3.3, gender −1.5 |
 
-- **Largest gains:** Minnesota (+1.0), South Dakota (+0.9) and Delaware (+0.8).
-  - South Dakota's and Delaware's gains come mostly from disability (+3.3 and +3.9), driven by disability-employment measures.
+- **Largest gains:** Minnesota (+1.0), South Dakota (+0.9), Delaware (+0.9) and New Hampshire (+0.8).
+  - South Dakota's, Delaware's and New Hampshire's gains come mostly from disability (+3.3, +3.9 and +3.7), driven by disability-employment measures.
   - Gap-based race measures and disability-employment parity favor states with small minority populations and tight labor markets. The team should review these sources' weights.
 - **Robustness (core run).** Of the 52 places with data:
-  - 41 keep the same zone under all perturbations: 18 Green, 17 Amber and 6 Red.
-  - 11 are borderline:
-    - Green/Amber: Alaska, DC, Michigan, New Mexico and Nevada.
-    - Amber/Red: North Dakota, Oklahoma, South Dakota, Tennessee, Texas and West Virginia.
+  - 43 keep the same zone under all perturbations: 19 Green, 18 Amber and 6 Red.
+  - 9 are borderline:
+    - Green/Amber: Alaska, DC, New Mexico and Nevada.
+    - Amber/Red: Oklahoma, South Dakota, Tennessee, Texas and West Virginia.
   - Their zones depend on modelling choices, so they need individual review rather than a mechanical label.
-  - The robust Red group is Alabama, Arkansas, Louisiana, Mississippi, South Carolina and Puerto Rico; Puerto Rico rests on a single category.
+  - The robust Red group is Alabama, Arkansas, Louisiana, Mississippi, South Carolina and Puerto Rico.
 - **Cross-check.** Agreement with the independent OBI Inclusiveness Index improved from 0.40 (2023) to 0.50 (2026). The agreement is moderate, partly because OBI's own ranking contains surprises such as Massachusetts at 48th.
 - **Example cities from the DPP list.**
   - Memphis moves from Red to Amber.
-  - Boston, Washington DC and Chicago fall slightly but remain Green.
+  - Boston, Washington DC and Chicago fall slightly but remain Green. Arlington, VA (Green, 6.8) is now matched; it had no city-level data in 2023.
   - Las Vegas drops from Green to Amber.
   - Atlanta, Houston and Orlando fall within Amber.
 - **The extended run** (adding immigration, safety and health access) is much harsher on the South.
   - Red grows to 15: the core-run Red states, plus Florida, Georgia, Missouri, Oklahoma, Tennessee, West Virginia and Wyoming.
   - Houston and Memphis become Red, and Pittsburgh rises to Green.
-  - Its robustness analysis gives 9 robust Red states and 8 borderline Amber/Red: Florida, Georgia, Idaho, Kentucky, Missouri, South Dakota, Tennessee and Wyoming.
+  - Its robustness analysis gives 8 robust Red places (Alabama, Arkansas, Louisiana, Mississippi, Oklahoma, South Carolina, Texas, Puerto Rico) and 9 borderline Amber/Red: Florida, Georgia, Idaho, Kentucky, Missouri, South Dakota, Tennessee, West Virginia and Wyoming.
+
+## Review fixes (Oct 29, 2026)
+
+A code review and an independent audit of the data and this document found the following, now fixed.
+
+- **Puerto Rico had been dropped** from five sources whose raw files include it: Census Gini, Census diversity, Census disability parity, Oxfam, and FTA (San Juan). `scripts/gather/oct2026/add_puerto_rico.py` restores these rows from the raw files, checking the method against an existing row each time. Puerto Rico now has data in three categories instead of one; its score fell from 3.48 to 2.03 and it stays Red. Adding it also slightly widens the ranges of those sources, so other states' scores shift a little.
+- **City names.** Three fixes in `harmonize_city_names.py`:
+  - The carried-over infogram file misspelled San Bernardino as "San Benandino", so it never merged with the other sources.
+  - Arlington, VA appears in HRC's data as "Arlington County"; it is now matched as Arlington.
+  - OBI lists Louisville, KY twice. The consolidated city–county government row is now used as Louisville, and the other row (population 246,161, apparently the pre-merger city limits) is labelled separately. This choice could not be confirmed against OBI's documentation.
+- **Data years.** Four sources now use the year of their underlying data rather than the edition year: National Equity Atlas (2022), Commonwealth women's health (2022), Population Institute (2025) and New America (2025). This affects only the optional age-based discount.
+- **Abortion-law categories.** The CRR raw page is a JavaScript shell with no per-state data. The screenshot used for verification and a per-state category table are now committed in `data/raw_data_2026/crr_abortionLawsByState_2026/`.
+- **Code.** The following were fixed in the scoring code:
+  - a constant source or an empty value could distort the weighted average
+  - truncated rank lists were scaled without warning; the special case for one partial ranking is now a per-source `n_ranked` setting
+  - sources outside the selected categories were loaded
+  - the sensitivity script crashed on places without a score
+  - asking for a city by name could print the wrong state's city; `'Portland, OR'` style is now accepted
+  - `main.py` no longer changes the working directory when imported
+- **Corrected figures in this document:** the effect of W, the number of FTA areas at 100% (42 of 53), the correlations, and the list of states that changed zone.
 
 ## Manual downloads (Oct 29, 2026)
 
@@ -251,6 +273,6 @@ The research reports in `research/` have the full citations.
   - CRR tiers: now verified against a screenshot.
   - CAWP women in state legislatures: still excluded until checked against https://cawp.rutgers.edu/data/levels-office/state-legislature.
 - **Gap-based measures favor homogeneous states.** The race-gap and disability-parity measures reward states with small minority populations or tight labor markets, and the OBI segregation index ranks homogeneous cities as integrated (Laredo, TX is #1).
-- **City names were harmonized** across city-level sources by `scripts/gather/oct2026/harmonize_city_names.py`. The original spellings are kept in a `City_source` column.
-- **Coverage gaps.** Coverage of DC and Puerto Rico varies by source. The 2026 data has no rows for the other territories.
+- **City names were harmonized** across all city-level sources, including the carried-over infogram file, by `scripts/gather/oct2026/harmonize_city_names.py`. The original spellings are kept in a `City_source` column.
+- **Coverage gaps.** Coverage of DC and Puerto Rico varies by source; Puerto Rico has no gender or sexual-orientation data. The 2026 data has no rows for the other territories.
 - **Parsing scripts.** The scripts the research agents used are in `scripts/gather/oct2026/<category>/` for reference. They were one-off scripts and may need path changes before they can be re-run.

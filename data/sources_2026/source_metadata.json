@@ -60,12 +60,12 @@
             "stale_adjustment": 0
       },
       "commonwealthFund_womensHealthReproCare_2024": {
-            "data_year": 2024,
+            "data_year": 2022,
             "scale": "relative",
             "stale_adjustment": 0
       },
       "populationInstitute_reproFreedomReportCard_2026": {
-            "data_year": 2026,
+            "data_year": 2025,
             "scale": "absolute",
             "stale_adjustment": 0
       },
@@ -125,7 +125,7 @@
             "stale_adjustment": 0
       },
       "newAmerica_competitiveIntegratedEmployment_2026": {
-            "data_year": 2026,
+            "data_year": 2025,
             "scale": "absolute",
             "stale_adjustment": 0
       },
@@ -150,7 +150,7 @@
             "stale_adjustment": 0
       },
       "nationalEquityAtlas_2024": {
-            "data_year": 2024,
+            "data_year": 2022,
             "scale": "relative",
             "stale_adjustment": 0
       },

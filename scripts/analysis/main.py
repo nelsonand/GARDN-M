@@ -14,8 +14,8 @@ import os
 import json
 import numpy as np
 
-# establish relative directories (use pathlib)
-os.chdir(Path(__file__).resolve().parents[2])
+# repository root; all data paths are built from here
+REPO = Path(__file__).resolve().parents[2]
 
 # Green/Amber/Red cutoffs on the composite metric M (from the original GARDN-M write-up)
 GAR_CUTOFFS = {'Amber': 3.6, 'Green': 6.0}
@@ -43,7 +43,7 @@ def gardnm(
     """Calculation of GARDN-M coefficients
 
     Args:
-        cities_to_print: print the output of these cities to the console
+        cities_to_print: print the output of these cities to the console ('City' or 'City, ST')
         normalizeAll: normalize raw data from every source to span the full 0-10 scale
         filename: prefix for filename to use when saving this run
         ignore_subtypes: ignore the repetition weight W (otherwise sources sharing a subtype within a
@@ -86,15 +86,17 @@ def gardnm(
 
     # (5) Save the output and print results
 
-    rankings.to_csv(f'data/outputs/{filename}.csv')
+    rankings.to_csv(REPO / 'data' / 'outputs' / f'{filename}.csv')
     if verbose:
         print(f'Data has been saved to data/outputs/{filename}.csv!')
 
     if len(cities_to_print):
         inds_to_print = []
-        for city_to_print in cities_to_print:
-            if city_to_print in rankings['City'].values:
-                inds_to_print += [np.where(rankings['City']==city_to_print)[0][0]]
+        for city_to_print in cities_to_print: # 'City' or 'City, ST'
+            city, _, state = [x.strip() for x in city_to_print.partition(',')]
+            match = (rankings['City'] == city) & ((rankings['State'] == state) if state else True)
+            if match.any():
+                inds_to_print += list(np.where(match)[0]) # all states with a city of this name
             else:
                 print(f'Sorry, {city_to_print} was not found in the data...')
         items_to_print = ['State','City','M','GAR'] + [f'M_{st}' for st in inputs['source_types']]
@@ -106,8 +108,8 @@ def gardnm(
 def data_dirs(data_version):
     """Source-metadata and processed-data directories for a data version"""
     if data_version == '2023':
-        return './data/sources/', './data/processed_data/'
-    return f'./data/sources_{data_version}/', f'./data/processed_data_{data_version}/'
+        return f'{REPO}/data/sources/', f'{REPO}/data/processed_data/'
+    return f'{REPO}/data/sources_{data_version}/', f'{REPO}/data/processed_data_{data_version}/'
 
 
 def load_inputs(sourcedir, datadir, extended=False, strict=True, verbose=False):
@@ -125,7 +127,7 @@ def load_inputs(sourcedir, datadir, extended=False, strict=True, verbose=False):
         inputs: dict of data (one DataFrame per source), source_ratings, source_types, source_subtypes
             and source_metadata
     """
-    with open('./data/utils/statename_to_abbr.json', 'r') as f:
+    with open(REPO / 'data' / 'utils' / 'statename_to_abbr.json', 'r') as f:
         statename_to_abbr = json.load(f)
 
     with open(sourcedir+'source_ratings.json', 'r') as f:
@@ -142,9 +144,10 @@ def load_inputs(sourcedir, datadir, extended=False, strict=True, verbose=False):
         with open(sourcedir+'source_metadata.json', 'r') as f:
             source_metadata = json.load(f)
 
-    # get processed data
+    # get processed data for the sources used by the selected categories
+    used = [s for st_list in source_types.values() for s in st_list]
     data = {}
-    for source in source_ratings:
+    for source in [s for s in source_ratings if s in used]:
         if verbose:
             print(f'Reading data from {source}...')
         try:
@@ -160,6 +163,9 @@ def load_inputs(sourcedir, datadir, extended=False, strict=True, verbose=False):
 
     # remove fail-to-find sources from the category lists
     for source_type, st_list in source_types.items():
+        unrated = [s for s in st_list if s not in source_ratings]
+        if unrated:
+            print(f' ---   WARNING: {source_type} sources without a rating in source_ratings.json: {unrated}')
         missing = [s for s in st_list if s not in data]
         if missing and verbose:
             print(f' ---   WARNING: {source_type} sources without data: {missing}')
@@ -285,7 +291,7 @@ def score(
 
     # Run standard analysis on each source
     for source, sdata in data.items():
-        sdata = assign_CompScore(sdata, source)
+        sdata = assign_CompScore(sdata, source, metadata.get(source, {}).get('n_ranked'))
         keep_native = absolute_scales and metadata.get(source, {}).get('scale') == 'absolute'
         if normalizeAll and not keep_native:
             sdata = normalize_CompScore(sdata)
@@ -319,6 +325,11 @@ def score(
         # city rows inherit state-level data from their own state (city-level sources stay city-specific)
         BPSWi = [f'{x}_{source}' for source in st_list for x in ('B', 'PSW')]
         subrankings[source_type] = fill_from_state(subrankings[source_type], BPSWi)
+
+        # a source only counts towards the weights where it has a value
+        for source in st_list:
+            no_value = subrankings[source_type][f'B_{source}'].isna()
+            subrankings[source_type].loc[no_value, f'PSW_{source}'] = np.nan
 
         # weighted average: sum(B*PSW) / sum(PSW), written as the mean of B*PSW/avgPSW
         PSWi = [f'PSW_{source}' for source in st_list]
@@ -358,9 +369,8 @@ def score(
 
     # flag categories without data (the composite averages over the categories that are present)
     rankings['n_categories'] = rankings[Mst].notna().sum(axis=1)
-    rankings['missing_categories'] = [
-        ', '.join(st for st in source_types if pd.isna(row[f'M_{st}'])) for _, row in rankings.iterrows()
-    ]
+    missing = rankings[Mst].isna().to_numpy()
+    rankings['missing_categories'] = [', '.join(st for st, m in zip(source_types, row) if m) for row in missing]
     if min_categories is not None:
         rankings.loc[rankings['n_categories'] < min_categories, 'M'] = np.nan
     rankings.insert(rankings.columns.get_loc('M') + 1, 'GAR', gar_zone(rankings['M']))
@@ -391,12 +401,14 @@ def fill_from_state(df, cols):
 
     return df
 
-def assign_CompScore(sdata, source):
+def assign_CompScore(sdata, source, n_ranked=None):
     """Assign composite scores
 
     Args:
         sdata: source data
         source: source name
+        n_ranked: for Rank sources, the number of places the ranking covers when the file lists only
+            some of them (n_ranked in source_metadata.json); otherwise the number of rows is used
 
     Returns:
         sdata: source data, but with composite scores assigned
@@ -404,9 +416,10 @@ def assign_CompScore(sdata, source):
     if 'Score' in sdata.keys():
         sdata['B'] = sdata.Score / 10 # Score is on a 0-100 scale (checked by validate_source)
     elif 'Rank' in sdata.keys():
-        nNorm = len(sdata.Rank) # this should be the number of states... (50, 51?)
-        if source == 'statusWomen_bestWorstStates':
-            nNorm = 50 # we know this dataset is incomplete, and expect it to be, but nNorm is still 50
+        nNorm = n_ranked or len(sdata.Rank) # this should be the number of states... (50, 51?)
+        if sdata.Rank.max() > nNorm:
+            print(f' ---   WARNING: {source} has ranks up to {sdata.Rank.max()} but only {nNorm} rows; set n_ranked in source_metadata.json if the list is partial')
+            nNorm = sdata.Rank.max()
         compscore = (nNorm-(sdata.Rank-1)) / (nNorm/10) # normalized ranking (0-10)
         sdata['B'] = compscore
     elif 'Processed' in sdata.keys():
@@ -425,6 +438,10 @@ def normalize_CompScore(sdata):
     """
     minScore = sdata['B'].min()
     maxScore = sdata['B'].max()
+    if maxScore == minScore:
+        print(' ---   WARNING: a source has the same score everywhere, so it carries no information after normalization and is skipped')
+        sdata['B'] = np.nan
+        return sdata
     sdata['B'] = (sdata['B']-minScore) / (maxScore-minScore) * 10
 
     return sdata

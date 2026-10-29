@@ -15,6 +15,10 @@ RENAMES = {
         ('GA', 'Augusta-Richmond County consolidated government (bal'): 'Augusta',
         ('TN', 'Nashville-Davidson metropolitan government (bal'): 'Nashville',
         ('IN', 'Indianapolis city (bal'): 'Indianapolis',
+        # OBI lists two Louisville rows; the consolidated city-county government is the jurisdiction other
+        # sources call Louisville. The other row (pop. 246,161) appears to be the pre-merger city limits.
+        ('KY', 'Louisville/Jefferson County metro government (bal'): 'Louisville',
+        ('KY', 'Louisville'): 'Louisville (pre-merger city limits)',
     },
     'hrc_municipalEqualityIndex_2025': {
         ('FL', 'Port Saint Lucie'): 'Port St. Lucie',
@@ -23,6 +27,10 @@ RENAMES = {
         ('GA', 'Augusta-Richmond County'): 'Augusta',
         ('HI', 'Honolulu County'): 'Honolulu',
         ('UT', 'Ogden City'): 'Ogden',
+        ('VA', 'Arlington County'): 'Arlington',  # Arlington, VA is a county with no incorporated city
+    },
+    'infogram_socialEquityCitiesRanking': {
+        ('CA', 'San Benandino'): 'San Bernardino',  # typo in the source
     },
     'wallethub_citiesDisabilities_2026': {
         ('KY', 'Lexington-Fayette'): 'Lexington',

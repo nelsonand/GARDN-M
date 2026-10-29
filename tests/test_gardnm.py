@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts' / 'analysis'))
-import main  # noqa: E402  (main sets the working directory to the repo root)
+import main  # noqa: E402
 
 
 def write_inputs(tmp, sources, categories, ratings, subtypes=None, metadata=None):
@@ -126,6 +126,22 @@ class TestToyModel(unittest.TestCase):
         self.assertEqual(row(r, 'VT')['GAR'], '')
         self.assertFalse(np.isnan(row(r, 'MA')['M']))
 
+    def test_constant_source_is_skipped(self):
+        # a constant source has no values after normalization, so its weight must not enter the average
+        # (with unequal weights, leaving it in the denominator would give MA 10 * 4 / 3 = 13.3)
+        self.sources['stateD'] = pd.DataFrame({'State': ['MA', 'TX'], 'Score': [50, 50]})
+        self.categories['one'].append('stateD')
+        self.ratings['stateD'] = 2
+        r = self.scored()
+        self.assertAlmostEqual(row(r, 'MA')['M_one'], 10)
+        self.assertEqual(row(r, 'MA')['n_one'], 1)
+
+    def test_partial_rank_list_uses_n_ranked(self):
+        self.sources['stateC'] = pd.DataFrame({'State': ['MA', 'TX'], 'Rank': [1, 50]})
+        r = self.scored(normalizeAll=False, metadata={'stateC': {'n_ranked': 50}})
+        self.assertAlmostEqual(row(r, 'MA')['M_two'], 10)
+        self.assertAlmostEqual(row(r, 'TX')['M_two'], (50 - 49) / 5)
+
     def test_gar_zones(self):
         self.assertEqual(list(main.gar_zone([6.0, 5.99, 3.6, 3.59, np.nan])), ['Green', 'Amber', 'Amber', 'Red', ''])
 
@@ -173,7 +189,7 @@ class TestRegression(unittest.TestCase):
     def test_2023_state_results_match_original_output(self):
         inputs = main.load_inputs(*main.data_dirs('2023'), strict=False)
         new = main.score(inputs).set_index(['State', 'City'])
-        old = pd.read_csv('data/outputs/gardnm_algorithm_rework_normalized.csv', index_col=0)
+        old = pd.read_csv(main.REPO / 'data' / 'outputs' / 'gardnm_algorithm_rework_normalized.csv', index_col=0)
         old = old[old.City.isna()].assign(City='').set_index(['State', 'City'])
         cols = [c for c in old.columns if c.startswith(('M', 'n'))]
         np.testing.assert_allclose(new.loc[old.index, cols].astype(float).values, old[cols].values, atol=1e-9)

@@ -1,0 +1,1 @@
+The US News rankings JSON used for this dataset (Wayback snapshot 2026-09-14) is the same file as ../usNews_equalityRankings_2026/rankings_json_from_wayback_20260914.json

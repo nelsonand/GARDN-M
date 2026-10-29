@@ -1,15 +1,37 @@
 State,City,Score,ADA accessible stations,Total stations,Urbanized area (UZA),Number of reporting agencies,City_source
 WA,Seattle,100.0,279,279,"Seattle--Tacoma, WA",8,Seattle
+HI,Honolulu,100.0,14,14,"Honolulu, HI",1,Honolulu
+TX,San Antonio,100.0,13,13,"San Antonio, TX",1,San Antonio
+OK,Oklahoma City,100.0,29,29,"Oklahoma City, OK",1,Oklahoma City
 OR,Portland,100.0,180,180,"Portland, OR--WA",5,Portland
+LA,New Orleans,100.0,12,12,"New Orleans, LA",3,New Orleans
+TX,Austin,100.0,14,14,"Austin, TX",1,Austin
+NE,Omaha,100.0,31,31,"Omaha, NE--IA",1,Omaha
+UT,Salt Lake City,100.0,152,152,"Salt Lake City, UT",1,Salt Lake City
+CO,Denver,100.0,89,89,"Denver--Aurora, CO",1,Denver
+CA,Bakersfield,100.0,12,12,"Bakersfield, CA",2,Bakersfield
+TX,Dallas,100.0,114,114,"Dallas--Fort Worth--Arlington, TX",3,Dallas
+CA,Los Angeles,100.0,273,273,"Los Angeles--Long Beach--Anaheim, CA",12,Los Angeles
+CA,Stockton,100.0,13,13,"Stockton, CA",2,Stockton
+CA,San Jose,100.0,65,65,"San Jose, CA",1,San Jose
+CA,Santa Rosa,100.0,19,19,"Santa Rosa, CA",3,Santa Rosa
+CA,Sacramento,100.0,57,57,"Sacramento, CA",3,Sacramento
+CA,San Diego,100.0,131,131,"San Diego, CA",2,San Diego
+CA,Riverside,100.0,18,18,"Riverside--San Bernardino, CA",4,Riverside
+AZ,Phoenix,100.0,79,79,"Phoenix--Mesa--Scottsdale, AZ",3,Phoenix
+TX,Houston,100.0,80,80,"Houston, TX",1,Houston
+NM,Albuquerque,100.0,36,36,"Albuquerque, NM",2,Albuquerque
+TX,El Paso,100.0,41,41,"El Paso, TX--NM",2,El Paso
+GA,Atlanta,100.0,56,56,"Atlanta, GA",3,Atlanta
 WA,Bremerton,100.0,12,12,"Bremerton, WA",1,Bremerton
 ME,Portland,100.0,16,16,"Portland, ME",2,Portland
 NY,Buffalo,100.0,27,27,"Buffalo, NY",1,Buffalo
 VA,Richmond,100.0,27,27,"Richmond, VA",1,Richmond
-VA,Virginia Beach,100.0,32,32,"Virginia Beach--Norfolk, VA",2,Virginia Beach
+MO,St. Louis,100.0,66,66,"St. Louis, MO--IL",3,St. Louis
 TN,Nashville,100.0,13,13,"Nashville-Davidson, TN",3,Nashville-Davidson
 NC,Charlotte,100.0,47,47,"Charlotte, NC--SC",1,Charlotte
 OH,Cincinnati,100.0,24,24,"Cincinnati, OH--KY",3,Cincinnati
-GA,Atlanta,100.0,56,56,"Atlanta, GA",3,Atlanta
+VA,Virginia Beach,100.0,32,32,"Virginia Beach--Norfolk, VA",2,Virginia Beach
 FL,Tampa,100.0,25,25,"Tampa--St. Petersburg, FL",2,Tampa
 FL,Miami,100.0,91,91,"Miami--Fort Lauderdale, FL",7,Miami
 FL,Orlando,100.0,18,18,"Orlando, FL",2,Orlando
@@ -19,30 +41,9 @@ MN,Minneapolis,100.0,115,115,"Minneapolis--St. Paul, MN",6,Minneapolis
 MI,Detroit,100.0,36,36,"Detroit, MI",4,Detroit
 IN,Indianapolis,100.0,53,53,"Indianapolis, IN",1,Indianapolis
 WI,Milwaukee,100.0,21,21,"Milwaukee, WI",2,Milwaukee
-MO,St. Louis,100.0,66,66,"St. Louis, MO--IL",3,St. Louis
-TX,El Paso,100.0,41,41,"El Paso, TX--NM",2,El Paso
-TX,Dallas,100.0,114,114,"Dallas--Fort Worth--Arlington, TX",3,Dallas
-TX,Houston,100.0,80,80,"Houston, TX",1,Houston
-TX,San Antonio,100.0,13,13,"San Antonio, TX",1,San Antonio
-OK,Oklahoma City,100.0,29,29,"Oklahoma City, OK",1,Oklahoma City
-NM,Albuquerque,100.0,36,36,"Albuquerque, NM",2,Albuquerque
-LA,New Orleans,100.0,12,12,"New Orleans, LA",3,New Orleans
-TX,Austin,100.0,14,14,"Austin, TX",1,Austin
-NE,Omaha,100.0,31,31,"Omaha, NE--IA",1,Omaha
-UT,Salt Lake City,100.0,152,152,"Salt Lake City, UT",1,Salt Lake City
-CO,Denver,100.0,89,89,"Denver--Aurora, CO",1,Denver
-HI,Honolulu,100.0,14,14,"Honolulu, HI",1,Honolulu
-CA,Bakersfield,100.0,12,12,"Bakersfield, CA",2,Bakersfield
-CA,Los Angeles,100.0,273,273,"Los Angeles--Long Beach--Anaheim, CA",12,Los Angeles
-CA,Stockton,100.0,13,13,"Stockton, CA",2,Stockton
-CA,San Jose,100.0,65,65,"San Jose, CA",1,San Jose
-CA,Santa Rosa,100.0,19,19,"Santa Rosa, CA",3,Santa Rosa
-CA,Sacramento,100.0,57,57,"Sacramento, CA",3,Sacramento
-CA,San Diego,100.0,131,131,"San Diego, CA",2,San Diego
-CA,Riverside,100.0,18,18,"Riverside--San Bernardino, CA",4,Riverside
-AZ,Phoenix,100.0,79,79,"Phoenix--Mesa--Scottsdale, AZ",3,Phoenix
 DC,Washington,99.29,139,140,"Washington--Arlington, DC--VA--MD",6,Washington
 CA,San Francisco,98.05,201,205,"San Francisco--Oakland, CA",10,San Francisco
+PR,San Juan,96.3,52,54,"San Juan, PR",17,San Juan
 OH,Cleveland,82.8,77,93,"Cleveland, OH",2,Cleveland
 MA,Boston,81.54,243,298,"Boston, MA--NH",5,Boston
 IL,Chicago,80.57,452,561,"Chicago, IL--IN",6,Chicago
