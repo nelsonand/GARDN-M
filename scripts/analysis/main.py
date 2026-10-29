@@ -8,15 +8,14 @@ The main script for running the GARDN-M model.
 @author: oaknelson
 """
 
-import git
+from pathlib import Path
 import pandas as pd
 import os
 import json
 import numpy as np
 
 # establish relative directories (use pathlib)
-repo = git.Repo('.', search_parent_directories=True)
-os.chdir(repo.working_tree_dir)
+os.chdir(Path(__file__).resolve().parents[2])
 
 def gardnm(
     cities_to_print = ['Atlanta', 'Boston', 'Memphis'],  
@@ -24,6 +23,7 @@ def gardnm(
     filename = 'gardnm', 
     ignore_subtypes = True, 
     verbose = False, 
+    data_version = '2026',
 ):
     """Calculation of GARDN-M coefficients
 
@@ -33,13 +33,22 @@ def gardnm(
         filename: prefix for filename to use when saving this run
         ignore_subtypes: option to ignore the various subtypes in source_subtypes
         verbose: some extra print statements that may be useful when debugging
+        data_version: '2026' for the Oct 2026 update (data/sources_2026, data/processed_data_2026) or
+            '2023' for the original data (data/sources, data/processed_data)
 
     Returns:
         Nothing yet, but it saves stuff to a file
     """
 
     # set filename
-    filename += '_algorithm_rework' # based on git commit for the moment
+    if data_version == '2023':
+        filename += '_algorithm_rework' # based on git commit for the moment
+        sourcedir = './data/sources/'
+        datadir = './data/processed_data/'
+    else:
+        filename += f'_{data_version}'
+        sourcedir = f'./data/sources_{data_version}/'
+        datadir = f'./data/processed_data_{data_version}/'
 
     if normalizeAll:
         filename += '_normalized'
@@ -49,20 +58,19 @@ def gardnm(
     with open('./data/utils/statename_to_abbr.json', 'r') as f:
         statename_to_abbr = json.load(f)
 
-    with open('./data/sources/source_ratings.json', 'r') as f:
+    with open(sourcedir+'source_ratings.json', 'r') as f:
         source_ratings = json.load(f)
 
-    with open('./data/sources/source_types.json', 'r') as f:
+    with open(sourcedir+'source_types.json', 'r') as f:
         source_types = json.load(f)
 
-    with open('./data/sources/source_subtypes.json', 'r') as f:
+    with open(sourcedir+'source_subtypes.json', 'r') as f:
         source_subtypes = json.load(f)
 
     sources = source_ratings.keys()
 
     # get processed data
     data = {}
-    datadir = './data/processed_data/'
     for source in sources:
         if verbose: 
             print(f'Reading data from {source}...')
@@ -83,7 +91,7 @@ def gardnm(
     for source, sdata in data.items():
 
         if 'City' not in sdata.keys():
-            sdata['City'] = np.NaN
+            sdata['City'] = np.nan
         sdata.City = sdata.City.fillna('')
         sdata = assign_CompScore(sdata, source)
         if normalizeAll:
@@ -108,9 +116,9 @@ def gardnm(
         subrankings[source_type] = subrankings[source_type].drop_duplicates(['State', 'City'])[['State', 'City']]
 
         # initialize results columns so that they appear in the beginning of the structure
-        subrankings[source_type]['M'] = np.NaN # initialize
-        subrankings[source_type]['n'] = np.NaN # initialize
-        subrankings[source_type]['avgPSW'] = np.NaN # this will later hold the average weight
+        subrankings[source_type]['M'] = np.nan # initialize
+        subrankings[source_type]['n'] = np.nan # initialize
+        subrankings[source_type]['avgPSW'] = np.nan # this will later hold the average weight
 
         # combine individual metrics into rankings
         subrankings[source_type]['B'] = '' # empty to force suffix on merge, will drop later
@@ -143,7 +151,7 @@ def gardnm(
         # fill data from sets missing cities
         subrankings[source_type].sort_values(by=['State', 'City'], inplace=True) # sort so that fillna(method='ffil')  is appropriate
         subrankings[source_type] = subrankings[source_type].where(subrankings[source_type]['City']!='', subrankings[source_type].fillna('tmp')) # fill no-city entries with placeholders
-        subrankings[source_type].fillna(method='ffill', inplace=True) # fill city-specific rows with no-city entries
+        subrankings[source_type] = subrankings[source_type].ffill() # fill city-specific rows with no-city entries
         subrankings[source_type].replace('tmp', np.nan, inplace=True) # replace no-city placeholders
 
         if verbose:
@@ -155,15 +163,15 @@ def gardnm(
 
     rankings = pd.DataFrame({'State':states}) 
     rankings['City'] = '' # initialize
-    rankings['M'] = np.NaN # initialize
-    rankings['n'] = np.NaN # initialize
+    rankings['M'] = np.nan # initialize
+    rankings['n'] = np.nan # initialize
     for source_type, stdata in subrankings.items():
         rankings = pd.merge(rankings, stdata[['State', 'City', 'M', 'n']], on=['State', 'City'], how='outer', suffixes=(None, f'_{source_type}'))
     
     # fill data from source_types missing cities
     rankings.sort_values(by=['State', 'City'], inplace=True) # sort so that fillna(method='ffil')  is appropriate
     rankings = rankings.where(rankings['City']!='', rankings.fillna('tmp')) # fill no-city entries with placeholders
-    rankings.fillna(method='ffill', inplace=True) # fill city-specific rows with no-city entries
+    rankings = rankings.ffill() # fill city-specific rows with no-city entries
     rankings.replace('tmp', np.nan, inplace=True) # replace no-city placeholders
 
     rankings['n'] = rankings[[f'n_{st}' for st in source_types]].sum(axis=1).astype(int)
@@ -248,8 +256,7 @@ def assign_PSW(sdata, source, source_ratings, source_subtypes, ignore_subtypes):
     # sensitivity index (S): Rank metric sensitivity and normalize from 1-2
     S_city = 2
     S_state = 1
-    sdata['S'] = S_state
-    sdata['S'].where(sdata.City == '', S_city, inplace=True)
+    sdata['S'] = np.where(sdata.City == '', S_state, S_city)
 
     # repetition weight (W): Score of 0-1 depending on how many repeated entries there are for this branch
     if ignore_subtypes:
